@@ -1,0 +1,28 @@
+{
+  "name": "observables.docs",
+  "version": "0.1.0",
+  "private": true,
+  "description": "VitePress documentation site for Skymly/Observables",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Skymly/Observables.Docs.git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
+  },
+  "keywords": [
+    "observables",
+    "vitepress",
+    "roslyn",
+    "source-generators",
+    "r3",
+    "system.reactive"
+  ],
+  "devDependencies": {
+    "vitepress": "^1.6.4",
+    "vue": "^3.5.35"
+  }
+}
