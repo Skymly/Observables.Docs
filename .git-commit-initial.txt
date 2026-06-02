@@ -1,5 +1,0 @@
-Initial Observables.Docs VitePress site scaffold
-
-1、Add English and Chinese starter pages, VitePress config, and GitHub Pages workflow.
-
-2、Add package.json, README, AGENTS.md, CONTRIBUTING, and MIT license.
