@@ -16,6 +16,8 @@
 | [Observables.Events.Reactive](https://www.nuget.org/packages/Observables.Events.Reactive/0.1.0-preview2) | nuget.org |
 | [Observables.RestAPI.R3](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.0-preview2) | nuget.org |
 | [Observables.RestAPI.Reactive](https://www.nuget.org/packages/Observables.RestAPI.Reactive/0.1.0-preview2) | nuget.org |
+| Observables.SignalR.R3 | Next preview (built in repo CI) |
+| Observables.SignalR.Reactive | Next preview (built in repo CI) |
 
 Also published to GitHub Packages (`https://nuget.pkg.github.com/Skymly/index.json`) when using org feed credentials.
 
@@ -25,7 +27,8 @@ Also published to GitHub Packages (`https://nuget.pkg.github.com/Skymly/index.js
 |--------|--------------|-------------------|--------|
 | Events | `Observables.Events.R3.SourceGenerators` | `Observables.Events.Reactive.SourceGenerators` | Includes classic + routed events (`ObservableRoutedEvents`) |
 | RestAPI | `Observables.RestAPI.R3.SourceGenerators` | `Observables.RestAPI.Reactive.SourceGenerators` | Runtime in meta-package |
-| SignalR, WebSocket, Mqtt, Grpc | skeleton | skeleton | Not packaged yet |
+| SignalR | `Observables.SignalR.R3.SourceGenerators` | `Observables.SignalR.Reactive.SourceGenerators` | Shipped in repo; NuGet with next preview |
+| WebSocket, Mqtt, Grpc | skeleton | skeleton | Not packaged yet |
 
 ## External runtimes
 
@@ -34,4 +37,4 @@ Also published to GitHub Packages (`https://nuget.pkg.github.com/Skymly/index.js
 
 ## Diagnostics
 
-See the [Diagnostics](diagnostics.md) page (Events `OBS2001`–`OBS2004`, RestAPI `OBS3001`–`OBS3005`).
+See the [Diagnostics](diagnostics.md) page (Events `OBS2001`–`OBS2004`, RestAPI `OBS3001`–`OBS3005`, SignalR `OBS4001`–`OBS4006`).

@@ -25,4 +25,15 @@ Category: `Observables.Events`.
 
 Category: `Observables.RestAPI`.
 
-Future domains (e.g. SignalR) will use new ID ranges (for example `OBS4xxx`).
+## SignalR (OBS4001–OBS4006)
+
+| ID | Severity | When |
+|----|----------|------|
+| **OBS4001** | Warning | Hub member missing boundary attribute or non-literal hub method name |
+| **OBS4002** | Error | Observables.SignalR runtime not referenced |
+| **OBS4003** | Error | Unsupported return type (must be `Observable<T>` / `IObservable<T>`; Send needs `Unit`) |
+| **OBS4004** | Error | Member shape mismatch (e.g. `[HubOn]` on a method) |
+| **OBS4005** | Error | `IObservable<T>` without Observables.SignalR.Reactive package |
+| **OBS4006** | Error | Unsupported client-to-server streaming parameter |
+
+Category: `Observables.SignalR`.

@@ -20,6 +20,8 @@ features:
     details: Interface-based observables for CLR events and optional UI routed events (Avalonia and similar).
   - title: RestAPI
     details: Declarative HTTP clients with generated Task and Observable adapters.
+  - title: SignalR
+    details: Hub client proxies — invoke, send, stream, and callbacks as observables.
 ---
 
 ## Status

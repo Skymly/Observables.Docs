@@ -15,6 +15,8 @@
 | `Observables.Events.Reactive` | Same → `IObservable<T>` |
 | `Observables.RestAPI.R3` | Declarative HTTP → `Task` + R3 `Observable<T>` |
 | `Observables.RestAPI.Reactive` | Same → System.Reactive |
+| `Observables.SignalR.R3` | SignalR hub client → R3 (next NuGet preview; available from repo now) |
+| `Observables.SignalR.Reactive` | Same → System.Reactive |
 
 Preview releases use **Git tag + NuGet only** (no GitHub Release). Always add the matching reactive runtime yourself (`R3` or `System.Reactive`).
 
@@ -49,6 +51,23 @@ using R3;
 var api = RestService.For<IMyApi>(httpClient);
 User user = await api.GetUserAsync(42);
 User reactive = await api.GetUserObservable(7).FirstAsync();
+```
+
+### SignalR (R3)
+
+See [SignalR](signalr.md). After the next preview is on NuGet, add:
+
+```xml
+<PackageReference Include="Observables.SignalR.R3" Version="…" />
+<PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="8.0.8" />
+<PackageReference Include="R3" Version="1.3.0" />
+```
+
+```csharp
+using Observables.SignalR;
+using R3;
+
+var hub = HubService.For<IMyHub>(hubConnection);
 ```
 
 ## Clone layout (optional)
