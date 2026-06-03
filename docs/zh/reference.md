@@ -34,4 +34,4 @@
 
 ## 诊断
 
-诊断 ID 按域分段（如 Events `OBS2001`–`OBS2004`、RestAPI `OBS3001`–`OBS3005`）。请参阅主仓库 `Observables.SourceGenerators.Shared` 与各域 `DiagnosticDescriptors`。
+见 [诊断](diagnostics.md) 专页（Events `OBS2001`–`OBS2004`、RestAPI `OBS3001`–`OBS3005`）。

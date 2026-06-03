@@ -9,6 +9,9 @@ const enSidebar = [
   { text: 'Introduction', link: '/' },
   { text: 'About this site', link: '/about-this-site' },
   { text: 'Getting started', link: '/getting-started' },
+  { text: 'Events', link: '/events' },
+  { text: 'RestAPI', link: '/restapi' },
+  { text: 'Diagnostics', link: '/diagnostics' },
   { text: 'Samples', link: '/samples' },
   { text: 'Reference & links', link: '/reference' },
 ]
@@ -17,6 +20,9 @@ const zhSidebar = [
   { text: '概览', link: '/zh/' },
   { text: '关于本站', link: '/zh/about-this-site' },
   { text: '快速开始', link: '/zh/getting-started' },
+  { text: 'Events', link: '/zh/events' },
+  { text: 'RestAPI', link: '/zh/restapi' },
+  { text: '诊断', link: '/zh/diagnostics' },
   { text: '示例', link: '/zh/samples' },
   { text: '参考与链接', link: '/zh/reference' },
 ]

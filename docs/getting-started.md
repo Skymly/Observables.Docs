@@ -33,7 +33,7 @@ var source = new ClickSource();
 source.Events().Click.Subscribe(_ => Console.WriteLine("Clicked"));
 ```
 
-Routed UI events (Avalonia, etc.) are included in **Events**; enable with `<ObservableRoutedEvents>true</ObservableRoutedEvents>` in your project (see package `buildTransitive/observables.events.props`).
+Routed UI events (Avalonia, etc.) are included in **Events**; enable with `<ObservableRoutedEvents>true</ObservableRoutedEvents>` in your project (see [Events](events.md#routed-events-avalonia--wpf)).
 
 ### RestAPI (R3)
 

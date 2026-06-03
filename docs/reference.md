@@ -34,4 +34,4 @@ Also published to GitHub Packages (`https://nuget.pkg.github.com/Skymly/index.js
 
 ## Diagnostics
 
-Diagnostic IDs are segmented by domain (for example Events `OBS2001`–`OBS2004`, RestAPI `OBS3001`–`OBS3005`). See `Observables.SourceGenerators.Shared` and domain `DiagnosticDescriptors` in the main repository.
+See the [Diagnostics](diagnostics.md) page (Events `OBS2001`–`OBS2004`, RestAPI `OBS3001`–`OBS3005`).
