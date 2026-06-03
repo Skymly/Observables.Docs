@@ -20,7 +20,7 @@ dotnet run --project Observables.Samples.RestAPI.Reactive
 dotnet run --project Observables.Samples.Events.Routed
 ```
 
-CI 使用 Nuke `./build.cmd Ci`（仅控制台示例）。包版本 **`0.1.0-preview1`**（[nuget.org](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview1)）。
+CI 使用 Nuke `./build.cmd Ci`（仅控制台示例）。包版本 **`0.1.0-preview2`**（[nuget.org](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview2)）。
 
 ## 项目
 

@@ -25,7 +25,7 @@ features:
 ## Status
 
 ::: info Preview on NuGet
-**`0.1.0-preview1`** — [Observables.Events.R3](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview1), [Observables.RestAPI.R3](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.0-preview1), and Reactive counterparts. Try [Observables.Samples](https://github.com/Skymly/Observables.Samples) or see [Getting started](./getting-started.md).
+**`0.1.0-preview2`** — [Observables.Events.R3](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview2), [Observables.RestAPI.R3](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.0-preview2), and Reactive counterparts. Try [Observables.Samples](https://github.com/Skymly/Observables.Samples) or see [Getting started](./getting-started.md).
 :::
 
 ## Where to read next

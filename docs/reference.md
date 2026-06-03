@@ -5,17 +5,17 @@
 | Repository | Role |
 |------------|------|
 | [Observables](https://github.com/Skymly/Observables) | Roslyn source generators, runtime, tests |
-| [Observables.Samples](https://github.com/Skymly/Observables.Samples) | Demo applications (NuGet `0.1.0-preview1` by default) |
+| [Observables.Samples](https://github.com/Skymly/Observables.Samples) | Demo applications (NuGet `0.1.0-preview2` by default) |
 | [Observables.Docs](https://github.com/Skymly/Observables.Docs) | This documentation site |
 
-## NuGet packages (`0.1.0-preview1`)
+## NuGet packages (`0.1.0-preview2`)
 
 | Package ID | Feed |
 |------------|------|
-| [Observables.Events.R3](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview1) | nuget.org |
-| [Observables.Events.Reactive](https://www.nuget.org/packages/Observables.Events.Reactive/0.1.0-preview1) | nuget.org |
-| [Observables.RestAPI.R3](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.0-preview1) | nuget.org |
-| [Observables.RestAPI.Reactive](https://www.nuget.org/packages/Observables.RestAPI.Reactive/0.1.0-preview1) | nuget.org |
+| [Observables.Events.R3](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview2) | nuget.org |
+| [Observables.Events.Reactive](https://www.nuget.org/packages/Observables.Events.Reactive/0.1.0-preview2) | nuget.org |
+| [Observables.RestAPI.R3](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.0-preview2) | nuget.org |
+| [Observables.RestAPI.Reactive](https://www.nuget.org/packages/Observables.RestAPI.Reactive/0.1.0-preview2) | nuget.org |
 
 Also published to GitHub Packages (`https://nuget.pkg.github.com/Skymly/index.json`) when using org feed credentials.
 

@@ -20,7 +20,7 @@ dotnet run --project Observables.Samples.RestAPI.Reactive
 dotnet run --project Observables.Samples.Events.Routed
 ```
 
-CI uses Nuke `./build.cmd Ci` (console samples only). Packages at **`0.1.0-preview1`** on [nuget.org](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview1).
+CI uses Nuke `./build.cmd Ci` (console samples only). Packages at **`0.1.0-preview2`** on [nuget.org](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview2).
 
 ## Projects
 

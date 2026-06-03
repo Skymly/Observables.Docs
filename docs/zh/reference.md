@@ -5,17 +5,17 @@
 | 仓库 | 作用 |
 |------|------|
 | [Observables](https://github.com/Skymly/Observables) | Roslyn 源生成器、运行时、测试 |
-| [Observables.Samples](https://github.com/Skymly/Observables.Samples) | 示例应用（默认 NuGet `0.1.0-preview1`） |
+| [Observables.Samples](https://github.com/Skymly/Observables.Samples) | 示例应用（默认 NuGet `0.1.0-preview2`） |
 | [Observables.Docs](https://github.com/Skymly/Observables.Docs) | 本文档站点 |
 
-## NuGet 包（`0.1.0-preview1`）
+## NuGet 包（`0.1.0-preview2`）
 
 | 包 ID | 源 |
 |-------|-----|
-| [Observables.Events.R3](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview1) | nuget.org |
-| [Observables.Events.Reactive](https://www.nuget.org/packages/Observables.Events.Reactive/0.1.0-preview1) | nuget.org |
-| [Observables.RestAPI.R3](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.0-preview1) | nuget.org |
-| [Observables.RestAPI.Reactive](https://www.nuget.org/packages/Observables.RestAPI.Reactive/0.1.0-preview1) | nuget.org |
+| [Observables.Events.R3](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview2) | nuget.org |
+| [Observables.Events.Reactive](https://www.nuget.org/packages/Observables.Events.Reactive/0.1.0-preview2) | nuget.org |
+| [Observables.RestAPI.R3](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.0-preview2) | nuget.org |
+| [Observables.RestAPI.Reactive](https://www.nuget.org/packages/Observables.RestAPI.Reactive/0.1.0-preview2) | nuget.org |
 
 亦可从 GitHub Packages（`https://nuget.pkg.github.com/Skymly/index.json`）还原（需凭据）。
 

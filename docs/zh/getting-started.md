@@ -7,7 +7,7 @@
 
 ## NuGet 包（预览）
 
-**`0.1.0-preview1`** 已发布至 [nuget.org](https://www.nuget.org/packages/Observables.Events.R3)。每个功能域有两个元包（R3 与 System.Reactive）：
+**`0.1.0-preview2`** 已发布至 [nuget.org](https://www.nuget.org/packages/Observables.Events.R3)。每个功能域有两个元包（R3 与 System.Reactive）：
 
 | 包 | 适用场景 |
 |----|----------|
@@ -21,7 +21,7 @@
 ### Events（R3）
 
 ```xml
-<PackageReference Include="Observables.Events.R3" Version="0.1.0-preview1" />
+<PackageReference Include="Observables.Events.R3" Version="0.1.0-preview2" />
 <PackageReference Include="R3" Version="1.3.0" />
 ```
 
@@ -38,7 +38,7 @@ source.Events().Click.Subscribe(_ => Console.WriteLine("Clicked"));
 ### RestAPI（R3）
 
 ```xml
-<PackageReference Include="Observables.RestAPI.R3" Version="0.1.0-preview1" />
+<PackageReference Include="Observables.RestAPI.R3" Version="0.1.0-preview2" />
 <PackageReference Include="R3" Version="1.3.0" />
 ```
 

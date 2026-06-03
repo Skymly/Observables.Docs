@@ -7,7 +7,7 @@
 
 ## NuGet packages (preview)
 
-**`0.1.0-preview1`** is on [nuget.org](https://www.nuget.org/packages/Observables.Events.R3). Each feature ships two meta-packages (R3 and System.Reactive):
+**`0.1.0-preview2`** is on [nuget.org](https://www.nuget.org/packages/Observables.Events.R3). Each feature ships two meta-packages (R3 and System.Reactive):
 
 | Package | Use when |
 |---------|----------|
@@ -21,7 +21,7 @@ Preview releases use **Git tag + NuGet only** (no GitHub Release). Always add th
 ### Events (R3)
 
 ```xml
-<PackageReference Include="Observables.Events.R3" Version="0.1.0-preview1" />
+<PackageReference Include="Observables.Events.R3" Version="0.1.0-preview2" />
 <PackageReference Include="R3" Version="1.3.0" />
 ```
 
@@ -38,7 +38,7 @@ Routed UI events (Avalonia, etc.) are included in **Events**; enable with `<Obse
 ### RestAPI (R3)
 
 ```xml
-<PackageReference Include="Observables.RestAPI.R3" Version="0.1.0-preview1" />
+<PackageReference Include="Observables.RestAPI.R3" Version="0.1.0-preview2" />
 <PackageReference Include="R3" Version="1.3.0" />
 ```
 
