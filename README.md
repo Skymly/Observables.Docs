@@ -4,9 +4,9 @@ Static documentation for **[Skymly/Observables](https://github.com/Skymly/Observ
 
 ## Live site
 
-After the first deploy, enable **GitHub Pages** with source **GitHub Actions**:
-
 **https://skymly.github.io/Observables.Docs/**
+
+Deployed from `main` via the **GitHub Pages** workflow (`build_type: workflow`).
 
 ## Prerequisites
 
