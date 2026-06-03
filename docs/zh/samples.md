@@ -12,17 +12,25 @@
 git clone https://github.com/Skymly/Observables.Samples.git
 cd Observables.Samples
 dotnet run --project Observables.Samples.Events
+dotnet run --project Observables.Samples.Events.Reactive
 dotnet run --project Observables.Samples.RestAPI
+dotnet run --project Observables.Samples.RestAPI.Reactive
+
+# Avalonia 路由事件（需图形环境；CI 不运行）
+dotnet run --project Observables.Samples.Events.Routed
 ```
 
-包版本：**`Observables.Events.R3`**、**`Observables.RestAPI.R3`** **`0.1.0-preview1`**。
+CI 使用 Nuke `./build.cmd Ci`（仅控制台示例）。包版本 **`0.1.0-preview1`**（[nuget.org](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview1)）。
 
 ## 项目
 
 | 示例 | 内容 |
 |------|------|
 | **Observables.Samples.Events** | `Events()`、`EventHandlers()`、多订阅同一事件流 |
+| **Observables.Samples.Events.Reactive** | 经典事件 → `IObservable` |
+| **Observables.Samples.Events.Routed** | Avalonia `AttachedRoutedEvent` + `<ObservableRoutedEvents>` |
 | **Observables.Samples.RestAPI** | `Task` / `Observable<T>`、列表 GET、`ApiException`（MockHttp） |
+| **Observables.Samples.RestAPI.Reactive** | `IObservable<T>`、`FirstAsync().ToTask()`、404 |
 
 ## 本地生成器开发
 

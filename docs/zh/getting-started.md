@@ -33,7 +33,7 @@ var source = new ClickSource();
 source.Events().Click.Subscribe(_ => Console.WriteLine("Clicked"));
 ```
 
-路由 UI 事件（如 Avalonia）已并入 **Events**；在项目中设置 `<ObservableRoutedEvents>true</ObservableRoutedEvents>`（见包内 `buildTransitive/observables.events.props`）。
+路由 UI 事件（如 Avalonia）已并入 **Events**；在项目中设置 `<ObservableRoutedEvents>true</ObservableRoutedEvents>`（见 [Events](events.md#路由事件avalonia--wpf)）。
 
 ### RestAPI（R3）
 
