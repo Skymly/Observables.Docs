@@ -4,7 +4,7 @@ layout: home
 hero:
   name: Observables
   text: Reactive boundaries from Roslyn
-  tagline: Source generators for classic events, routed events, RestAPI, and more — targeting R3 and System.Reactive
+  tagline: Source generators for classic and routed events, RestAPI, and more — R3 and System.Reactive
   actions:
     - theme: brand
       text: Get started
@@ -15,25 +15,25 @@ hero:
 
 features:
   - title: Dual runtimes
-    details: Each feature ships as Observables.&lt;Feature&gt;.R3 and Observables.&lt;Feature&gt;.Reactive NuGet packages (in development).
-  - title: Events & RoutedEvents
-    details: Interface-based event observables for CLR events and UI routed events (Avalonia and similar).
+    details: Each feature ships as Observables.&lt;Feature&gt;.R3 and Observables.&lt;Feature&gt;.Reactive NuGet meta-packages.
+  - title: Events
+    details: Interface-based observables for CLR events and optional UI routed events (Avalonia and similar).
   - title: RestAPI
-    details: Declarative HTTP clients with generated adapters (R3 and System.Reactive pipelines).
+    details: Declarative HTTP clients with generated Task and Observable adapters.
 ---
 
 ## Status
 
-::: info Early development
-Packages are not published to NuGet yet. Clone [Observables](https://github.com/Skymly/Observables) and reference analyzer projects locally, or follow [Observables.Samples](https://github.com/Skymly/Observables.Samples).
+::: info Preview on NuGet
+**`0.1.0-preview1`** — [Observables.Events.R3](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview1), [Observables.RestAPI.R3](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.0-preview1), and Reactive counterparts. Try [Observables.Samples](https://github.com/Skymly/Observables.Samples) or see [Getting started](./getting-started.md).
 :::
 
 ## Where to read next
 
 | Page | Purpose |
 |------|---------|
-| [Getting started](./getting-started.md) | Clone layout and first analyzer reference |
+| [Getting started](./getting-started.md) | NuGet install and optional local clone |
 | [Samples](./samples.md) | Runnable demo repository |
-| [Reference](./reference.md) | Repositories, diagnostics, and external links |
+| [Reference](./reference.md) | Packages, repositories, diagnostics |
 
 This site will grow as each **Feature** domain stabilizes. See [About this site](./about-this-site.md).

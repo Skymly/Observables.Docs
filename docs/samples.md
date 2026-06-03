@@ -1,23 +1,36 @@
 # Samples
 
-Runnable applications live in a separate repository:
+Runnable applications:
 
 **[github.com/Skymly/Observables.Samples](https://github.com/Skymly/Observables.Samples)**
 
-## Local sibling layout
+## Run (NuGet, default)
 
+Requires .NET 8 only — no sibling `Observables` clone.
+
+```powershell
+git clone https://github.com/Skymly/Observables.Samples.git
+cd Observables.Samples
+dotnet run --project Observables.Samples.Events
+dotnet run --project Observables.Samples.RestAPI
 ```
-Skymly/
-  Observables/
-  Observables.Samples/
+
+Packages: **`Observables.Events.R3`** and **`Observables.RestAPI.R3`** at **`0.1.0-preview1`**.
+
+## Projects
+
+| Sample | Demonstrates |
+|--------|------------|
+| **Observables.Samples.Events** | `Events()`, `EventHandlers()`, multiple subscribers on one stream |
+| **Observables.Samples.RestAPI** | `Task` / `Observable<T>`, list GET, `ApiException` with MockHttp |
+
+## Local generator development
+
+When `../Observables/Observables.slnx` exists:
+
+```powershell
+dotnet build -p:UseLocalObservables=true
+dotnet run --project Observables.Samples.Events -p:UseLocalObservables=true
 ```
 
-`Directory.Build.props` in the samples repo sets `UseLocalObservables=true` when `../Observables/Observables.slnx` exists.
-
-## Current projects
-
-| Sample | Description |
-|--------|-------------|
-| **Observables.Samples.Events** | Console — classic `Action` / `EventHandler` events with the Events R3 analyzer |
-
-Additional samples (RoutedEvents, RestAPI, SignalR, …) will be added as those domains ship stable packages.
+See the samples repo `build/README-LocalSourceGenerators.md`.

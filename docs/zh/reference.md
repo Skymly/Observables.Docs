@@ -5,16 +5,27 @@
 | 仓库 | 作用 |
 |------|------|
 | [Observables](https://github.com/Skymly/Observables) | Roslyn 源生成器、运行时、测试 |
-| [Observables.Samples](https://github.com/Skymly/Observables.Samples) | 示例应用 |
+| [Observables.Samples](https://github.com/Skymly/Observables.Samples) | 示例应用（默认 NuGet `0.1.0-preview1`） |
 | [Observables.Docs](https://github.com/Skymly/Observables.Docs) | 本文档站点 |
+
+## NuGet 包（`0.1.0-preview1`）
+
+| 包 ID | 源 |
+|-------|-----|
+| [Observables.Events.R3](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview1) | nuget.org |
+| [Observables.Events.Reactive](https://www.nuget.org/packages/Observables.Events.Reactive/0.1.0-preview1) | nuget.org |
+| [Observables.RestAPI.R3](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.0-preview1) | nuget.org |
+| [Observables.RestAPI.Reactive](https://www.nuget.org/packages/Observables.RestAPI.Reactive/0.1.0-preview1) | nuget.org |
+
+亦可从 GitHub Packages（`https://nuget.pkg.github.com/Skymly/index.json`）还原（需凭据）。
 
 ## 功能域（生成器仓库）
 
-| 域 | R3 生成器 | Reactive 生成器 |
-|----|-----------|-----------------|
-| Events | `Observables.Events.R3.SourceGenerators` | `Observables.Events.Reactive.SourceGenerators` |
-| RoutedEvents | `Observables.RoutedEvents.R3.SourceGenerators` | `Observables.RoutedEvents.Reactive.SourceGenerators` |
-| RestAPI | `Observables.RestAPI.R3.SourceGenerators` | `Observables.RestAPI.Reactive.SourceGenerators` |
+| 域 | R3 生成器 | Reactive 生成器 | 说明 |
+|----|-----------|-----------------|------|
+| Events | `Observables.Events.R3.SourceGenerators` | `Observables.Events.Reactive.SourceGenerators` | 含经典与路由事件（`ObservableRoutedEvents`） |
+| RestAPI | `Observables.RestAPI.R3.SourceGenerators` | `Observables.RestAPI.Reactive.SourceGenerators` | 运行时在元包内 |
+| SignalR、WebSocket、Mqtt、Grpc | 骨架 | 骨架 | 尚未打包 |
 
 ## 外部运行时
 
@@ -23,4 +34,4 @@
 
 ## 诊断
 
-诊断 ID 按域分段（例如 Events `OBS2xxx`、RestAPI `OBS300x`、RoutedEvents `OBS400x`）。公开 API 稳定后将在本站提供汇总页；目前请参阅主仓库 `Observables.SourceGenerators.Shared`。
+诊断 ID 按域分段（如 Events `OBS2001`–`OBS2004`、RestAPI `OBS3001`–`OBS3005`）。请参阅主仓库 `Observables.SourceGenerators.Shared` 与各域 `DiagnosticDescriptors`。

@@ -1,23 +1,36 @@
 # 示例
 
-可运行示例位于独立仓库：
+可运行示例仓库：
 
 **[github.com/Skymly/Observables.Samples](https://github.com/Skymly/Observables.Samples)**
 
-## 并列克隆
+## 运行（默认 NuGet）
 
+仅需 .NET 8，**无需** 克隆 `Observables`。
+
+```powershell
+git clone https://github.com/Skymly/Observables.Samples.git
+cd Observables.Samples
+dotnet run --project Observables.Samples.Events
+dotnet run --project Observables.Samples.RestAPI
 ```
-Skymly/
-  Observables/
-  Observables.Samples/
-```
 
-示例仓库中的 `Directory.Build.props` 在检测到 `../Observables/Observables.slnx` 时会自动 `UseLocalObservables=true`。
+包版本：**`Observables.Events.R3`**、**`Observables.RestAPI.R3`** **`0.1.0-preview1`**。
 
-## 当前项目
+## 项目
 
-| 示例 | 说明 |
+| 示例 | 内容 |
 |------|------|
-| **Observables.Samples.Events** | 控制台 — Events R3 分析器与经典 CLR 事件 |
+| **Observables.Samples.Events** | `Events()`、`EventHandlers()`、多订阅同一事件流 |
+| **Observables.Samples.RestAPI** | `Task` / `Observable<T>`、列表 GET、`ApiException`（MockHttp） |
 
-RoutedEvents、RestAPI、SignalR 等示例将随对应域稳定后补充。
+## 本地生成器开发
+
+存在 `../Observables/Observables.slnx` 时：
+
+```powershell
+dotnet build -p:UseLocalObservables=true
+dotnet run --project Observables.Samples.Events -p:UseLocalObservables=true
+```
+
+详见示例仓 `build/README-LocalSourceGenerators.md`。

@@ -2,39 +2,67 @@
 
 ## Prerequisites
 
-- [.NET SDK](https://dotnet.microsoft.com/download) — **.NET 8** for most libraries; **.NET 10** for the solution build script (see `global.json` in the generator repo)
+- [.NET SDK](https://dotnet.microsoft.com/download) — **.NET 8** for libraries and samples; **.NET 10** for the generator repo Nuke build (`global.json`)
 - Git
 
-## Clone layout
+## NuGet packages (preview)
 
-For local development, place repositories as siblings under one folder (for example `Skymly/`):
+**`0.1.0-preview1`** is on [nuget.org](https://www.nuget.org/packages/Observables.Events.R3). Each feature ships two meta-packages (R3 and System.Reactive):
 
-```
-Skymly/
-  Observables/              ← generators and runtime
-  Observables.Samples/      ← sample apps
-  Observables.Docs/         ← this documentation site
-```
+| Package | Use when |
+|---------|----------|
+| `Observables.Events.R3` | Classic / routed CLR events → R3 |
+| `Observables.Events.Reactive` | Same → `IObservable<T>` |
+| `Observables.RestAPI.R3` | Declarative HTTP → `Task` + R3 `Observable<T>` |
+| `Observables.RestAPI.Reactive` | Same → System.Reactive |
 
-## Reference the Events analyzer (local)
+Preview releases use **Git tag + NuGet only** (no GitHub Release). Always add the matching reactive runtime yourself (`R3` or `System.Reactive`).
 
-In a consuming project:
+### Events (R3)
 
 ```xml
-<ProjectReference Include="..\Observables\Observables.Events.R3.SourceGenerators\Observables.Events.R3.SourceGenerators.csproj"
-                  OutputItemType="Analyzer"
-                  ReferenceOutputAssembly="false" />
+<PackageReference Include="Observables.Events.R3" Version="0.1.0-preview1" />
 <PackageReference Include="R3" Version="1.3.0" />
 ```
 
-Example usage (entry method name may be `Events()` on newer branches; `FromEvents()` on `main` until the rename ships):
-
 ```csharp
+using Observables.Events.R3;
+using R3;
+
 var source = new ClickSource();
-source.FromEvents().Click.Subscribe(_ => Console.WriteLine("Clicked"));
+source.Events().Click.Subscribe(_ => Console.WriteLine("Clicked"));
 ```
 
-See [Observables.Samples](https://github.com/Skymly/Observables.Samples) for a complete console project and `Directory.Build.props` that auto-detects `../Observables`.
+Routed UI events (Avalonia, etc.) are included in **Events**; enable with `<ObservableRoutedEvents>true</ObservableRoutedEvents>` in your project (see package `buildTransitive/observables.events.props`).
+
+### RestAPI (R3)
+
+```xml
+<PackageReference Include="Observables.RestAPI.R3" Version="0.1.0-preview1" />
+<PackageReference Include="R3" Version="1.3.0" />
+```
+
+```csharp
+using Observables.RestAPI;
+using R3;
+
+var api = RestService.For<IMyApi>(httpClient);
+User user = await api.GetUserAsync(42);
+User reactive = await api.GetUserObservable(7).FirstAsync();
+```
+
+## Clone layout (optional)
+
+For generator development, place repositories as siblings:
+
+```
+Skymly/
+  Observables/
+  Observables.Samples/
+  Observables.Docs/
+```
+
+[Observables.Samples](https://github.com/Skymly/Observables.Samples) defaults to NuGet; use `-p:UseLocalObservables=true` when `../Observables` exists.
 
 ## Build the generator solution
 
