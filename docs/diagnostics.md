@@ -37,3 +37,16 @@ Category: `Observables.RestAPI`.
 | **OBS4006** | Error | Unsupported client-to-server streaming parameter |
 
 Category: `Observables.SignalR`.
+
+## Mqtt (OBS5001–OBS5006)
+
+| ID | Severity | When |
+|----|----------|------|
+| **OBS5001** | Warning | Mqtt member missing boundary attribute or non-literal topic template |
+| **OBS5002** | Error | Observables.Mqtt runtime not referenced |
+| **OBS5003** | Error | Unsupported return type on Mqtt member |
+| **OBS5004** | Error | Member shape mismatch (e.g. `[MqttSubscribe]` on a method) |
+| **OBS5005** | Error | `IObservable<T>` without Observables.Mqtt.Reactive package |
+| **OBS5006** | Error | Unsupported topic template, extra parameters, or subscribe placeholder syntax |
+
+Category: `Observables.Mqtt`.
