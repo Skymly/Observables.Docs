@@ -15,12 +15,13 @@ dotnet run --project Observables.Samples.Events
 dotnet run --project Observables.Samples.Events.Reactive
 dotnet run --project Observables.Samples.RestAPI
 dotnet run --project Observables.Samples.RestAPI.Reactive
+dotnet run --project Observables.Samples.SignalR
 
 # Avalonia routed events (desktop only; not run in CI)
 dotnet run --project Observables.Samples.Events.Routed
 ```
 
-CI uses Nuke `./build.cmd Ci` (console samples only). Default NuGet version **`0.1.0-preview3`** ([Events](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview3), [RestAPI](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.0-preview3), [SignalR](https://www.nuget.org/packages/Observables.SignalR.R3/0.1.0-preview3) — SignalR has no sample project here; see [SignalR](./signalr.md)).
+CI uses Nuke `./build.cmd Ci` (console samples only). Default NuGet version **`0.1.0-preview3`** ([Events](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview3), [RestAPI](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.0-preview3), [SignalR](https://www.nuget.org/packages/Observables.SignalR.R3/0.1.0-preview3)).
 
 ## Projects
 
@@ -31,6 +32,7 @@ CI uses Nuke `./build.cmd Ci` (console samples only). Default NuGet version **`0
 | **Observables.Samples.Events.Routed** | Avalonia `AttachedRoutedEvent` + `<ObservableRoutedEvents>` |
 | **Observables.Samples.RestAPI** | `Task` / `Observable<T>`, list GET, `ApiException` with MockHttp |
 | **Observables.Samples.RestAPI.Reactive** | `IObservable<T>` + `FirstAsync().ToTask()`, 404 handling |
+| **Observables.Samples.SignalR** | `[Hub]` interface, `HubService.For` factory registration (CI skips live hub) |
 
 ## Local generator development
 
