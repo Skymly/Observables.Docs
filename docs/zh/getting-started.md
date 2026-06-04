@@ -7,7 +7,7 @@
 
 ## NuGet 包（预览）
 
-**`0.1.0-preview2`** 已发布至 [nuget.org](https://www.nuget.org/packages/Observables.Events.R3)。每个功能域有两个元包（R3 与 System.Reactive）：
+**`0.1.0-preview3`** 已发布至 [nuget.org](https://www.nuget.org/packages/Observables.Events.R3)。每个功能域有两个元包（R3 与 System.Reactive）：
 
 | 包 | 适用场景 |
 |----|----------|
@@ -15,7 +15,7 @@
 | `Observables.Events.Reactive` | 同上 → `IObservable<T>` |
 | `Observables.RestAPI.R3` | 声明式 HTTP → `Task` + R3 `Observable<T>` |
 | `Observables.RestAPI.Reactive` | 同上 → System.Reactive |
-| `Observables.SignalR.R3` | SignalR 客户端 Hub → R3（下一 NuGet 预览；仓库已可构建） |
+| `Observables.SignalR.R3` | SignalR 客户端 Hub → R3 |
 | `Observables.SignalR.Reactive` | 同上 → System.Reactive |
 
 预览版仅 **打 tag + 推 NuGet**，**不**创建 GitHub Release。请自行添加 `R3` 或 `System.Reactive`。
@@ -23,7 +23,7 @@
 ### Events（R3）
 
 ```xml
-<PackageReference Include="Observables.Events.R3" Version="0.1.0-preview2" />
+<PackageReference Include="Observables.Events.R3" Version="0.1.0-preview3" />
 <PackageReference Include="R3" Version="1.3.0" />
 ```
 
@@ -40,7 +40,7 @@ source.Events().Click.Subscribe(_ => Console.WriteLine("Clicked"));
 ### RestAPI（R3）
 
 ```xml
-<PackageReference Include="Observables.RestAPI.R3" Version="0.1.0-preview2" />
+<PackageReference Include="Observables.RestAPI.R3" Version="0.1.0-preview3" />
 <PackageReference Include="R3" Version="1.3.0" />
 ```
 
@@ -55,10 +55,10 @@ User reactive = await api.GetUserObservable(7).FirstAsync();
 
 ### SignalR（R3）
 
-见 [SignalR](signalr.md)。下一版预览上架 NuGet 后：
+见 [SignalR](signalr.md)。
 
 ```xml
-<PackageReference Include="Observables.SignalR.R3" Version="…" />
+<PackageReference Include="Observables.SignalR.R3" Version="0.1.0-preview3" />
 <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="8.0.8" />
 <PackageReference Include="R3" Version="1.3.0" />
 ```

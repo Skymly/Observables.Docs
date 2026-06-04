@@ -27,7 +27,7 @@ features:
 ## 状态
 
 ::: info NuGet 预览版
-**`0.1.0-preview2`** — [Observables.Events.R3](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview2)、[Observables.RestAPI.R3](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.0-preview2) 及 Reactive 对应包。参见 [Observables.Samples](https://github.com/Skymly/Observables.Samples) 或 [快速开始](./getting-started.md)。
+**`0.1.0-preview3`** — [Events](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview3)、[RestAPI](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.0-preview3)、[SignalR](https://www.nuget.org/packages/Observables.SignalR.R3/0.1.0-preview3) 及 Reactive 对应包。参见 [Observables.Samples](https://github.com/Skymly/Observables.Samples) 或 [快速开始](./getting-started.md)。
 :::
 
 ## 下一步

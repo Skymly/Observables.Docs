@@ -7,7 +7,7 @@
 
 ## NuGet packages (preview)
 
-**`0.1.0-preview2`** is on [nuget.org](https://www.nuget.org/packages/Observables.Events.R3). Each feature ships two meta-packages (R3 and System.Reactive):
+**`0.1.0-preview3`** is on [nuget.org](https://www.nuget.org/packages/Observables.Events.R3). Each feature ships two meta-packages (R3 and System.Reactive):
 
 | Package | Use when |
 |---------|----------|
@@ -15,7 +15,7 @@
 | `Observables.Events.Reactive` | Same → `IObservable<T>` |
 | `Observables.RestAPI.R3` | Declarative HTTP → `Task` + R3 `Observable<T>` |
 | `Observables.RestAPI.Reactive` | Same → System.Reactive |
-| `Observables.SignalR.R3` | SignalR hub client → R3 (next NuGet preview; available from repo now) |
+| `Observables.SignalR.R3` | SignalR hub client → R3 |
 | `Observables.SignalR.Reactive` | Same → System.Reactive |
 
 Preview releases use **Git tag + NuGet only** (no GitHub Release). Always add the matching reactive runtime yourself (`R3` or `System.Reactive`).
@@ -23,7 +23,7 @@ Preview releases use **Git tag + NuGet only** (no GitHub Release). Always add th
 ### Events (R3)
 
 ```xml
-<PackageReference Include="Observables.Events.R3" Version="0.1.0-preview2" />
+<PackageReference Include="Observables.Events.R3" Version="0.1.0-preview3" />
 <PackageReference Include="R3" Version="1.3.0" />
 ```
 
@@ -40,7 +40,7 @@ Routed UI events (Avalonia, etc.) are included in **Events**; enable with `<Obse
 ### RestAPI (R3)
 
 ```xml
-<PackageReference Include="Observables.RestAPI.R3" Version="0.1.0-preview2" />
+<PackageReference Include="Observables.RestAPI.R3" Version="0.1.0-preview3" />
 <PackageReference Include="R3" Version="1.3.0" />
 ```
 
@@ -55,10 +55,10 @@ User reactive = await api.GetUserObservable(7).FirstAsync();
 
 ### SignalR (R3)
 
-See [SignalR](signalr.md). After the next preview is on NuGet, add:
+See [SignalR](signalr.md).
 
 ```xml
-<PackageReference Include="Observables.SignalR.R3" Version="…" />
+<PackageReference Include="Observables.SignalR.R3" Version="0.1.0-preview3" />
 <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="8.0.8" />
 <PackageReference Include="R3" Version="1.3.0" />
 ```
