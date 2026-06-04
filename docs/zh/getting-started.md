@@ -15,6 +15,8 @@
 | `Observables.Events.Reactive` | 同上 → `IObservable<T>` |
 | `Observables.RestAPI.R3` | 声明式 HTTP → `Task` + R3 `Observable<T>` |
 | `Observables.RestAPI.Reactive` | 同上 → System.Reactive |
+| `Observables.SignalR.R3` | SignalR 客户端 Hub → R3（下一 NuGet 预览；仓库已可构建） |
+| `Observables.SignalR.Reactive` | 同上 → System.Reactive |
 
 预览版仅 **打 tag + 推 NuGet**，**不**创建 GitHub Release。请自行添加 `R3` 或 `System.Reactive`。
 
@@ -49,6 +51,23 @@ using R3;
 var api = RestService.For<IMyApi>(httpClient);
 User user = await api.GetUserAsync(42);
 User reactive = await api.GetUserObservable(7).FirstAsync();
+```
+
+### SignalR（R3）
+
+见 [SignalR](signalr.md)。下一版预览上架 NuGet 后：
+
+```xml
+<PackageReference Include="Observables.SignalR.R3" Version="…" />
+<PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="8.0.8" />
+<PackageReference Include="R3" Version="1.3.0" />
+```
+
+```csharp
+using Observables.SignalR;
+using R3;
+
+var hub = HubService.For<IMyHub>(hubConnection);
 ```
 
 ## 并列克隆（可选）

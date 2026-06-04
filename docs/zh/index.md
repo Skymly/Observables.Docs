@@ -20,6 +20,8 @@ features:
     details: 基于接口的 CLR 事件与可选 UI 路由事件（如 Avalonia）可观察封装。
   - title: RestAPI
     details: 声明式 HTTP 客户端，生成 Task 与 Observable 适配器。
+  - title: SignalR
+    details: Hub 客户端代理：Invoke、Send、流与回调均可观察化。
 ---
 
 ## 状态
