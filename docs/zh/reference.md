@@ -28,7 +28,8 @@
 | Events | `Observables.Events.R3.SourceGenerators` | `Observables.Events.Reactive.SourceGenerators` | 含经典与路由事件（`ObservableRoutedEvents`） |
 | RestAPI | `Observables.RestAPI.R3.SourceGenerators` | `Observables.RestAPI.Reactive.SourceGenerators` | 运行时在元包内 |
 | SignalR | `Observables.SignalR.R3.SourceGenerators` | `Observables.SignalR.Reactive.SourceGenerators` | 运行时在元包内 |
-| WebSocket、Mqtt、Grpc | 骨架 | 骨架 | 尚未打包 |
+| Mqtt | `Observables.Mqtt.R3.SourceGenerators` | `Observables.Mqtt.Reactive.SourceGenerators` | 运行时在元包内；**NuGet 待下一预览** |
+| WebSocket、Grpc | 骨架 | 骨架 | 尚未打包 |
 
 ## 外部运行时
 
@@ -37,4 +38,4 @@
 
 ## 诊断
 
-见 [诊断](diagnostics.md) 专页（Events `OBS2001`–`OBS2004`、RestAPI `OBS3001`–`OBS3005`、SignalR `OBS4001`–`OBS4006`）。
+见 [诊断](diagnostics.md) 专页（Events `OBS2001`–`OBS2004`、RestAPI `OBS3001`–`OBS3005`、SignalR `OBS4001`–`OBS4006`、Mqtt `OBS5001`–`OBS5006`）。

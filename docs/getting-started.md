@@ -17,6 +17,8 @@
 | `Observables.RestAPI.Reactive` | Same → System.Reactive |
 | `Observables.SignalR.R3` | SignalR hub client → R3 |
 | `Observables.SignalR.Reactive` | Same → System.Reactive |
+| `Observables.Mqtt.R3` | MQTT topic proxy → R3 ([repo only](mqtt.md) until next preview NuGet) |
+| `Observables.Mqtt.Reactive` | Same → System.Reactive |
 
 Preview releases use **Git tag + NuGet only** (no GitHub Release). Always add the matching reactive runtime yourself (`R3` or `System.Reactive`).
 
@@ -68,6 +70,23 @@ using Observables.SignalR;
 using R3;
 
 var hub = HubService.For<IMyHub>(hubConnection);
+```
+
+### Mqtt (R3)
+
+See [Mqtt](mqtt.md). Packages are on **Observables `main`**; NuGet feed follows the next preview after `0.1.0-preview3`.
+
+```xml
+<PackageReference Include="Observables.Mqtt.R3" Version="0.1.0-preview3" />
+<PackageReference Include="MQTTnet" Version="4.3.7.1207" />
+<PackageReference Include="R3" Version="1.3.0" />
+```
+
+```csharp
+using Observables.Mqtt;
+using R3;
+
+var topics = MqttService.For<IMyTopics>(mqttClient);
 ```
 
 ## Clone layout (optional)

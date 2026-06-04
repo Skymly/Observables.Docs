@@ -28,7 +28,8 @@ Also published to GitHub Packages (`https://nuget.pkg.github.com/Skymly/index.js
 | Events | `Observables.Events.R3.SourceGenerators` | `Observables.Events.Reactive.SourceGenerators` | Includes classic + routed events (`ObservableRoutedEvents`) |
 | RestAPI | `Observables.RestAPI.R3.SourceGenerators` | `Observables.RestAPI.Reactive.SourceGenerators` | Runtime in meta-package |
 | SignalR | `Observables.SignalR.R3.SourceGenerators` | `Observables.SignalR.Reactive.SourceGenerators` | Runtime in meta-package |
-| WebSocket, Mqtt, Grpc | skeleton | skeleton | Not packaged yet |
+| Mqtt | `Observables.Mqtt.R3.SourceGenerators` | `Observables.Mqtt.Reactive.SourceGenerators` | Runtime in meta-package; **NuGet pending next preview** |
+| WebSocket, Grpc | skeleton | skeleton | Not packaged yet |
 
 ## External runtimes
 
@@ -37,4 +38,4 @@ Also published to GitHub Packages (`https://nuget.pkg.github.com/Skymly/index.js
 
 ## Diagnostics
 
-See the [Diagnostics](diagnostics.md) page (Events `OBS2001`–`OBS2004`, RestAPI `OBS3001`–`OBS3005`, SignalR `OBS4001`–`OBS4006`).
+See the [Diagnostics](diagnostics.md) page (Events `OBS2001`–`OBS2004`, RestAPI `OBS3001`–`OBS3005`, SignalR `OBS4001`–`OBS4006`, Mqtt `OBS5001`–`OBS5006`).
