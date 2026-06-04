@@ -7,7 +7,7 @@
 
 ## NuGet packages (preview)
 
-**`0.1.0-preview4`** is on [nuget.org](https://www.nuget.org/packages/Observables.Events.R3). Each feature ships two meta-packages (R3 and System.Reactive):
+**`0.1.0-preview4`** is on [nuget.org](https://www.nuget.org/packages/Observables.Events.R3) (**8** meta-packages: Events, RestAPI, SignalR, and Mqtt). Each feature ships two packages (R3 and System.Reactive):
 
 | Package | Use when |
 |---------|----------|

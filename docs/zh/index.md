@@ -4,7 +4,7 @@ layout: home
 hero:
   name: Observables
   text: 用 Roslyn 连接反应式边界
-  tagline: 面向 R3 与 System.Reactive 的源生成器：经典与路由事件、RestAPI 等
+  tagline: 面向 R3 与 System.Reactive 的源生成器：Events、RestAPI、SignalR、Mqtt 等
   actions:
     - theme: brand
       text: 快速开始

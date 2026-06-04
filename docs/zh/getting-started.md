@@ -7,7 +7,7 @@
 
 ## NuGet 包（预览）
 
-**`0.1.0-preview4`** 已发布至 [nuget.org](https://www.nuget.org/packages/Observables.Events.R3)。每个功能域有两个元包（R3 与 System.Reactive）：
+**`0.1.0-preview4`** 已发布至 [nuget.org](https://www.nuget.org/packages/Observables.Events.R3)（**8** 个元包：Events、RestAPI、SignalR、Mqtt）。每个功能域有两个包（R3 与 System.Reactive）：
 
 | 包 | 适用场景 |
 |----|----------|

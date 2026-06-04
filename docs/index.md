@@ -4,7 +4,7 @@ layout: home
 hero:
   name: Observables
   text: Reactive boundaries from Roslyn
-  tagline: Source generators for classic and routed events, RestAPI, and more — R3 and System.Reactive
+  tagline: Source generators for events, RestAPI, SignalR, Mqtt, and more — R3 and System.Reactive
   actions:
     - theme: brand
       text: Get started
