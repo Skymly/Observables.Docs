@@ -7,7 +7,7 @@
 
 ## NuGet packages (preview)
 
-**`0.1.0-preview3`** is on [nuget.org](https://www.nuget.org/packages/Observables.Events.R3). Each feature ships two meta-packages (R3 and System.Reactive):
+**`0.1.0-preview4`** is on [nuget.org](https://www.nuget.org/packages/Observables.Events.R3). Each feature ships two meta-packages (R3 and System.Reactive):
 
 | Package | Use when |
 |---------|----------|
@@ -17,7 +17,7 @@
 | `Observables.RestAPI.Reactive` | Same → System.Reactive |
 | `Observables.SignalR.R3` | SignalR hub client → R3 |
 | `Observables.SignalR.Reactive` | Same → System.Reactive |
-| `Observables.Mqtt.R3` | MQTT topic proxy → R3 ([repo only](mqtt.md) until next preview NuGet) |
+| `Observables.Mqtt.R3` | MQTT topic proxy → R3 |
 | `Observables.Mqtt.Reactive` | Same → System.Reactive |
 
 Preview releases use **Git tag + NuGet only** (no GitHub Release). Always add the matching reactive runtime yourself (`R3` or `System.Reactive`).
@@ -25,7 +25,7 @@ Preview releases use **Git tag + NuGet only** (no GitHub Release). Always add th
 ### Events (R3)
 
 ```xml
-<PackageReference Include="Observables.Events.R3" Version="0.1.0-preview3" />
+<PackageReference Include="Observables.Events.R3" Version="0.1.0-preview4" />
 <PackageReference Include="R3" Version="1.3.0" />
 ```
 
@@ -42,7 +42,7 @@ Routed UI events (Avalonia, etc.) are included in **Events**; enable with `<Obse
 ### RestAPI (R3)
 
 ```xml
-<PackageReference Include="Observables.RestAPI.R3" Version="0.1.0-preview3" />
+<PackageReference Include="Observables.RestAPI.R3" Version="0.1.0-preview4" />
 <PackageReference Include="R3" Version="1.3.0" />
 ```
 
@@ -60,7 +60,7 @@ User reactive = await api.GetUserObservable(7).FirstAsync();
 See [SignalR](signalr.md).
 
 ```xml
-<PackageReference Include="Observables.SignalR.R3" Version="0.1.0-preview3" />
+<PackageReference Include="Observables.SignalR.R3" Version="0.1.0-preview4" />
 <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="8.0.8" />
 <PackageReference Include="R3" Version="1.3.0" />
 ```
@@ -74,10 +74,10 @@ var hub = HubService.For<IMyHub>(hubConnection);
 
 ### Mqtt (R3)
 
-See [Mqtt](mqtt.md). Packages are on **Observables `main`**; NuGet feed follows the next preview after `0.1.0-preview3`.
+See [Mqtt](mqtt.md).
 
 ```xml
-<PackageReference Include="Observables.Mqtt.R3" Version="0.1.0-preview3" />
+<PackageReference Include="Observables.Mqtt.R3" Version="0.1.0-preview4" />
 <PackageReference Include="MQTTnet" Version="4.3.7.1207" />
 <PackageReference Include="R3" Version="1.3.0" />
 ```

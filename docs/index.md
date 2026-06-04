@@ -23,13 +23,13 @@ features:
   - title: SignalR
     details: Hub client proxies — invoke, send, stream, and callbacks as observables.
   - title: Mqtt
-    details: Topic publish/subscribe proxies over MQTTnet — on Observables main; NuGet with the next preview after `0.1.0-preview3`.
+    details: Topic publish/subscribe proxies over MQTTnet — `Observables.Mqtt.R3` / `.Reactive` on nuget.org from preview4.
 ---
 
 ## Status
 
 ::: info Preview on NuGet
-**`0.1.0-preview3`** — [Events](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview3), [RestAPI](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.0-preview3), [SignalR](https://www.nuget.org/packages/Observables.SignalR.R3/0.1.0-preview3), and Reactive counterparts. **Mqtt** is implemented on [Observables `main`](https://github.com/Skymly/Observables) — see [Mqtt](./mqtt.md) (packages not on nuget.org yet). Try [Observables.Samples](https://github.com/Skymly/Observables.Samples) or [Getting started](./getting-started.md).
+**`0.1.0-preview4`** — [Events](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview4), [RestAPI](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.0-preview4), [SignalR](https://www.nuget.org/packages/Observables.SignalR.R3/0.1.0-preview4), [Mqtt](https://www.nuget.org/packages/Observables.Mqtt.R3/0.1.0-preview4), and Reactive counterparts. Try [Observables.Samples](https://github.com/Skymly/Observables.Samples) or [Getting started](./getting-started.md).
 :::
 
 ## Where to read next

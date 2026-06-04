@@ -11,9 +11,7 @@ Declarative **MQTT client** topic interfaces with compile-time proxy generation.
 
 Both include the **Observables.Mqtt** runtime (`MqttService`, `MqttObservable` bridges) and the matching Roslyn analyzer.
 
-::: info NuGet availability
-**`Observables.Mqtt.R3` / `.Reactive` are implemented on [Observables `main`](https://github.com/Skymly/Observables)** but are **not** on [nuget.org](https://www.nuget.org) yet as of **`0.1.0-preview3`**. They will ship with the **next preview** package line. Until then, reference the projects from a local clone or wait for the upcoming feed release.
-:::
+Both packages ship on [nuget.org](https://www.nuget.org/packages/Observables.Mqtt.R3) from **`0.1.0-preview4`** (same model as Events/RestAPI/SignalR).
 
 Also reference [MQTTnet](https://www.nuget.org/packages/MQTTnet) and **R3** or **System.Reactive** in your app.
 

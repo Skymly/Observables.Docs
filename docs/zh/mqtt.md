@@ -11,9 +11,7 @@
 
 两包均含 **Observables.Mqtt** 运行时（`MqttService`、`MqttObservable` 桥接）及对应 Roslyn 分析器。
 
-::: info NuGet 可用性
-**`Observables.Mqtt.R3` / `.Reactive` 已在 [Observables `main`](https://github.com/Skymly/Observables) 实现**，但截至 **`0.1.0-preview3`** 尚未发布到 [nuget.org](https://www.nuget.org)。将在**下一预览线**随包发布。在此之前可本地引用仓库项目，或等待后续 feed 更新。
-:::
+自 **`0.1.0-preview4`** 起，两包已发布至 [nuget.org](https://www.nuget.org/packages/Observables.Mqtt.R3)（与 Events/RestAPI/SignalR 相同）。
 
 应用侧还需引用 [MQTTnet](https://www.nuget.org/packages/MQTTnet) 以及 **R3** 或 **System.Reactive**。
 

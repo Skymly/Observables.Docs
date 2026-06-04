@@ -9,7 +9,7 @@ Declarative **ASP.NET Core SignalR client** hub interfaces with compile-time pro
 | `Observables.SignalR.R3` | R3 `Observable<T>`, `Observable<Unit>` for sends |
 | `Observables.SignalR.Reactive` | `IObservable<T>`, `IObservable<Unit>` |
 
-Both include the **Observables.SignalR** runtime (`HubService`, `SignalRObservable` bridges) and the matching Roslyn analyzer. **`0.1.0-preview3`** and later are on [nuget.org](https://www.nuget.org/packages/Observables.SignalR.R3) (same model as Events/RestAPI).
+Both include the **Observables.SignalR** runtime (`HubService`, `SignalRObservable` bridges) and the matching Roslyn analyzer. **`0.1.0-preview4`** and later are on [nuget.org](https://www.nuget.org/packages/Observables.SignalR.R3) (same model as Events/RestAPI).
 
 Also reference [Microsoft.AspNetCore.SignalR.Client](https://www.nuget.org/packages/Microsoft.AspNetCore.SignalR.Client) and **R3** or **System.Reactive** in your app.
 

@@ -7,7 +7,7 @@
 
 ## NuGet 包（预览）
 
-**`0.1.0-preview3`** 已发布至 [nuget.org](https://www.nuget.org/packages/Observables.Events.R3)。每个功能域有两个元包（R3 与 System.Reactive）：
+**`0.1.0-preview4`** 已发布至 [nuget.org](https://www.nuget.org/packages/Observables.Events.R3)。每个功能域有两个元包（R3 与 System.Reactive）：
 
 | 包 | 适用场景 |
 |----|----------|
@@ -17,7 +17,7 @@
 | `Observables.RestAPI.Reactive` | 同上 → System.Reactive |
 | `Observables.SignalR.R3` | SignalR 客户端 Hub → R3 |
 | `Observables.SignalR.Reactive` | 同上 → System.Reactive |
-| `Observables.Mqtt.R3` | MQTT 主题代理 → R3（[仓库已实现](mqtt.md)，待下一预览 NuGet） |
+| `Observables.Mqtt.R3` | MQTT 主题代理 → R3 |
 | `Observables.Mqtt.Reactive` | 同上 → System.Reactive |
 
 预览版仅 **打 tag + 推 NuGet**，**不**创建 GitHub Release。请自行添加 `R3` 或 `System.Reactive`。
@@ -25,7 +25,7 @@
 ### Events（R3）
 
 ```xml
-<PackageReference Include="Observables.Events.R3" Version="0.1.0-preview3" />
+<PackageReference Include="Observables.Events.R3" Version="0.1.0-preview4" />
 <PackageReference Include="R3" Version="1.3.0" />
 ```
 
@@ -42,7 +42,7 @@ source.Events().Click.Subscribe(_ => Console.WriteLine("Clicked"));
 ### RestAPI（R3）
 
 ```xml
-<PackageReference Include="Observables.RestAPI.R3" Version="0.1.0-preview3" />
+<PackageReference Include="Observables.RestAPI.R3" Version="0.1.0-preview4" />
 <PackageReference Include="R3" Version="1.3.0" />
 ```
 
@@ -60,7 +60,7 @@ User reactive = await api.GetUserObservable(7).FirstAsync();
 见 [SignalR](signalr.md)。
 
 ```xml
-<PackageReference Include="Observables.SignalR.R3" Version="0.1.0-preview3" />
+<PackageReference Include="Observables.SignalR.R3" Version="0.1.0-preview4" />
 <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="8.0.8" />
 <PackageReference Include="R3" Version="1.3.0" />
 ```
@@ -74,10 +74,10 @@ var hub = HubService.For<IMyHub>(hubConnection);
 
 ### Mqtt（R3）
 
-见 [Mqtt](mqtt.md)。代码已在 **Observables `main`**；NuGet 将随 `0.1.0-preview3` 之后的下一预览线发布。
+见 [Mqtt](mqtt.md)。
 
 ```xml
-<PackageReference Include="Observables.Mqtt.R3" Version="0.1.0-preview3" />
+<PackageReference Include="Observables.Mqtt.R3" Version="0.1.0-preview4" />
 <PackageReference Include="MQTTnet" Version="4.3.7.1207" />
 <PackageReference Include="R3" Version="1.3.0" />
 ```

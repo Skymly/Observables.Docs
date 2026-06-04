@@ -23,13 +23,13 @@ features:
   - title: SignalR
     details: Hub 客户端代理：Invoke、Send、流与回调均可观察化。
   - title: Mqtt
-    details: 基于 MQTTnet 的主题发布/订阅代理 — 已在 Observables `main` 实现；NuGet 待 `0.1.0-preview3` 之后下一预览线。
+    details: 基于 MQTTnet 的主题发布/订阅代理 — `0.1.0-preview4` 起已上 nuget.org。
 ---
 
 ## 状态
 
 ::: info NuGet 预览版
-**`0.1.0-preview3`** — [Events](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview3)、[RestAPI](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.0-preview3)、[SignalR](https://www.nuget.org/packages/Observables.SignalR.R3/0.1.0-preview3) 及 Reactive 对应包。**Mqtt** 已在 [Observables `main`](https://github.com/Skymly/Observables) 实现 — 见 [Mqtt](./mqtt.md)（尚未上 nuget.org）。参见 [Observables.Samples](https://github.com/Skymly/Observables.Samples) 或 [快速开始](./getting-started.md)。
+**`0.1.0-preview4`** — [Events](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview4)、[RestAPI](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.0-preview4)、[SignalR](https://www.nuget.org/packages/Observables.SignalR.R3/0.1.0-preview4)、[Mqtt](https://www.nuget.org/packages/Observables.Mqtt.R3/0.1.0-preview4) 及 Reactive 对应包。参见 [Observables.Samples](https://github.com/Skymly/Observables.Samples) 或 [快速开始](./getting-started.md)。
 :::
 
 ## 下一步
