@@ -20,7 +20,7 @@ dotnet run --project Observables.Samples.RestAPI.Reactive
 dotnet run --project Observables.Samples.Events.Routed
 ```
 
-CI uses Nuke `./build.cmd Ci` (console samples only). Packages at **`0.1.0-preview3`** on [nuget.org](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview3).
+CI uses Nuke `./build.cmd Ci` (console samples only). Default NuGet version **`0.1.0-preview3`** ([Events](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview3), [RestAPI](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.0-preview3), [SignalR](https://www.nuget.org/packages/Observables.SignalR.R3/0.1.0-preview3) — SignalR has no sample project here; see [SignalR](./signalr.md)).
 
 ## Projects
 

@@ -20,7 +20,7 @@ dotnet run --project Observables.Samples.RestAPI.Reactive
 dotnet run --project Observables.Samples.Events.Routed
 ```
 
-CI 使用 Nuke `./build.cmd Ci`（仅控制台示例）。包版本 **`0.1.0-preview3`**（[nuget.org](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview3)）。
+CI 使用 Nuke `./build.cmd Ci`（仅控制台示例）。默认 NuGet 版本 **`0.1.0-preview3`**（[Events](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview3)、[RestAPI](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.0-preview3)、[SignalR](https://www.nuget.org/packages/Observables.SignalR.R3/0.1.0-preview3) — 本仓库暂无 SignalR 示例，见 [SignalR](./zh/signalr.md)）。
 
 ## 项目
 
