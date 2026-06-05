@@ -82,6 +82,8 @@ See [Mqtt](mqtt.md).
 <PackageReference Include="R3" Version="1.3.0" />
 ```
 
+Pin **MQTTnet 4.x** (not 5.x) — see [Mqtt — Why MQTTnet 4.x](mqtt.md#why-mqttnet-4-x-not-5-x).
+
 ```csharp
 using Observables.Mqtt;
 using R3;

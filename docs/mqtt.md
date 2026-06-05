@@ -13,7 +13,20 @@ Both include the **Observables.Mqtt** runtime (`MqttService`, `MqttObservable` b
 
 Both packages ship on [nuget.org](https://www.nuget.org/packages/Observables.Mqtt.R3) from **`0.1.0-preview4`** (same model as Events/RestAPI/SignalR).
 
-Also reference [MQTTnet](https://www.nuget.org/packages/MQTTnet) and **R3** or **System.Reactive** in your app.
+Also reference [MQTTnet](https://www.nuget.org/packages/MQTTnet) **4.3.7.1207** (4.x line) and **R3** or **System.Reactive** in your app. Use the **same major version** as the meta-package — do not mix **MQTTnet 5.x** with `Observables.Mqtt` until a future release documents support.
+
+## Why MQTTnet 4.x (not 5.x)
+
+Observables.Mqtt is built and tested against **[MQTTnet 4.3.7.1207](https://www.nuget.org/packages/MQTTnet/4.3.7.1207)**. This is the **library** major version (NuGet package `MQTTnet`), not the same thing as the **MQTT wire protocol** version (3.1.1 vs 5.0).
+
+| Reason | Explanation |
+|--------|-------------|
+| **Target frameworks** | `Observables.Mqtt.R3` / `.Reactive` include a `netstandard2.0` build. [MQTTnet 5](https://github.com/dotnet/MQTTnet/wiki/Upgrading-guide) targets **.NET 8+ only** and drops netstandard. |
+| **Public API alignment** | The runtime uses 4.x types such as `IMqttClient`, `MqttFactory`, and `ApplicationMessageReceivedAsync`. MQTTnet 5 removes several interfaces, splits `MqttClientFactory` / `MqttServerFactory`, and changes event patterns — a breaking migration for `MqttService.For<T>`. |
+| **Feature scope** | The first release maps **publish / subscribe** only (MQTT 3.1.1-style pub/sub). MQTT-5-only features (request/response, user properties, reason codes) and a MQTTnet 5 upgrade are **follow-up** work in the Observables repo. |
+| **Broker compatibility** | MQTTnet 4 typically negotiates **MQTT 3.1.1** by default. Most brokers still support that; you can configure protocol version in your own `ConnectAsync` options when the broker requires it. Observables does not depend on MQTT-5-only wire features today. |
+
+When Observables adds MQTTnet 5 support, it will be called out in release notes and this page. Until then, pin **4.3.7.1207** (or another **4.x** version compatible with your app, matching the transitive dependency from the meta-package). See the [MQTTnet upgrading guide](https://github.com/dotnet/MQTTnet/wiki/Upgrading-guide) for differences between 4.x and 5.x.
 
 ## Define a topic proxy
 

@@ -82,6 +82,8 @@ var hub = HubService.For<IMyHub>(hubConnection);
 <PackageReference Include="R3" Version="1.3.0" />
 ```
 
+请固定 **MQTTnet 4.x**（勿用 5.x），说明见 [Mqtt — 为何使用 MQTTnet 4.x](mqtt.md#为何使用-mqttnet-4x-而非-5x)。
+
 ```csharp
 using Observables.Mqtt;
 using R3;
