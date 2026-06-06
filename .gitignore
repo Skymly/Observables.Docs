@@ -3,3 +3,6 @@ node_modules/
 .vitepress/cache/
 .DS_Store
 *.log
+
+## Local scratch (see Skymly/AGENTS.md § `.Local`)
+.Local/
