@@ -5,21 +5,23 @@
 | Repository | Role |
 |------------|------|
 | [Observables](https://github.com/Skymly/Observables) | Roslyn source generators, runtime, tests |
-| [Observables.Samples](https://github.com/Skymly/Observables.Samples) | Demo applications (NuGet `0.1.0-preview4` by default) |
+| [Observables.Samples](https://github.com/Skymly/Observables.Samples) | Demo applications (NuGet `0.1.0-preview5` by default) |
 | [Observables.Docs](https://github.com/Skymly/Observables.Docs) | This documentation site |
 
-## NuGet packages (`0.1.0-preview4`)
+## NuGet packages (`0.1.0-preview5`)
 
 | Package ID | Feed |
 |------------|------|
-| [Observables.Events.R3](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview4) | nuget.org |
-| [Observables.Events.Reactive](https://www.nuget.org/packages/Observables.Events.Reactive/0.1.0-preview4) | nuget.org |
-| [Observables.RestAPI.R3](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.0-preview4) | nuget.org |
-| [Observables.RestAPI.Reactive](https://www.nuget.org/packages/Observables.RestAPI.Reactive/0.1.0-preview4) | nuget.org |
-| [Observables.SignalR.R3](https://www.nuget.org/packages/Observables.SignalR.R3/0.1.0-preview4) | nuget.org |
-| [Observables.SignalR.Reactive](https://www.nuget.org/packages/Observables.SignalR.Reactive/0.1.0-preview4) | nuget.org |
-| [Observables.Mqtt.R3](https://www.nuget.org/packages/Observables.Mqtt.R3/0.1.0-preview4) | nuget.org |
-| [Observables.Mqtt.Reactive](https://www.nuget.org/packages/Observables.Mqtt.Reactive/0.1.0-preview4) | nuget.org |
+| [Observables.Events.R3](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview5) | nuget.org |
+| [Observables.Events.Reactive](https://www.nuget.org/packages/Observables.Events.Reactive/0.1.0-preview5) | nuget.org |
+| [Observables.RestAPI.R3](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.0-preview5) | nuget.org |
+| [Observables.RestAPI.Reactive](https://www.nuget.org/packages/Observables.RestAPI.Reactive/0.1.0-preview5) | nuget.org |
+| [Observables.SignalR.R3](https://www.nuget.org/packages/Observables.SignalR.R3/0.1.0-preview5) | nuget.org |
+| [Observables.SignalR.Reactive](https://www.nuget.org/packages/Observables.SignalR.Reactive/0.1.0-preview5) | nuget.org |
+| [Observables.Mqtt.R3](https://www.nuget.org/packages/Observables.Mqtt.R3/0.1.0-preview5) | nuget.org |
+| [Observables.Mqtt.Reactive](https://www.nuget.org/packages/Observables.Mqtt.Reactive/0.1.0-preview5) | nuget.org |
+| [Observables.WebSocket.R3](https://www.nuget.org/packages/Observables.WebSocket.R3/0.1.0-preview5) | nuget.org |
+| [Observables.WebSocket.Reactive](https://www.nuget.org/packages/Observables.WebSocket.Reactive/0.1.0-preview5) | nuget.org |
 
 Also published to GitHub Packages (`https://nuget.pkg.github.com/Skymly/index.json`) when using org feed credentials.
 
@@ -31,7 +33,8 @@ Also published to GitHub Packages (`https://nuget.pkg.github.com/Skymly/index.js
 | RestAPI | `Observables.RestAPI.R3.SourceGenerators` | `Observables.RestAPI.Reactive.SourceGenerators` | Runtime in meta-package |
 | SignalR | `Observables.SignalR.R3.SourceGenerators` | `Observables.SignalR.Reactive.SourceGenerators` | Runtime in meta-package |
 | Mqtt | `Observables.Mqtt.R3.SourceGenerators` | `Observables.Mqtt.Reactive.SourceGenerators` | Runtime in meta-package |
-| WebSocket, Grpc | skeleton | skeleton | Not packaged yet |
+| WebSocket | `Observables.WebSocket.R3.SourceGenerators` | `Observables.WebSocket.Reactive.SourceGenerators` | Runtime in meta-package |
+| Grpc | skeleton | — | Not packaged yet |
 
 ## External runtimes
 
@@ -40,4 +43,4 @@ Also published to GitHub Packages (`https://nuget.pkg.github.com/Skymly/index.js
 
 ## Diagnostics
 
-See the [Diagnostics](diagnostics.md) page (Events `OBS2001`–`OBS2004`, RestAPI `OBS3001`–`OBS3005`, SignalR `OBS4001`–`OBS4006`, Mqtt `OBS5001`–`OBS5006`).
+See the [Diagnostics](diagnostics.md) page (Events `OBS2001`–`OBS2004`, RestAPI `OBS3001`–`OBS3005`, SignalR `OBS4001`–`OBS4006`, Mqtt `OBS5001`–`OBS5006`, WebSocket `OBS6001`–`OBS6006`).

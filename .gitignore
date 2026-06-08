@@ -4,5 +4,5 @@ node_modules/
 .DS_Store
 *.log
 
-## Local scratch (see Skymly/AGENTS.md § `.Local`)
+## Local scratch (see ../../../AGENTS.md § `.Local`)
 .Local/

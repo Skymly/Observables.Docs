@@ -4,7 +4,7 @@ layout: home
 hero:
   name: Observables
   text: 用 Roslyn 连接反应式边界
-  tagline: 面向 R3 与 System.Reactive 的源生成器：Events、RestAPI、SignalR、Mqtt 等
+  tagline: 面向 R3 与 System.Reactive 的源生成器：Events、RestAPI、SignalR、Mqtt、WebSocket 等
   actions:
     - theme: brand
       text: 快速开始
@@ -23,13 +23,15 @@ features:
   - title: SignalR
     details: Hub 客户端代理：Invoke、Send、流与回调均可观察化。
   - title: Mqtt
-    details: 基于 MQTTnet 的主题发布/订阅代理 — `0.1.0-preview4` 起已上 nuget.org。
+    details: 基于 MQTTnet 的主题发布/订阅代理 — `0.1.0-preview5` 起已上 nuget.org。
+  - title: WebSocket
+    details: 基于 BCL `ClientWebSocket` 的客户端代理 — `Observables.WebSocket.R3` / `.Reactive` 自 preview5 起。
 ---
 
 ## 状态
 
 ::: info NuGet 预览版
-**`0.1.0-preview4`** — [Events](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview4)、[RestAPI](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.0-preview4)、[SignalR](https://www.nuget.org/packages/Observables.SignalR.R3/0.1.0-preview4)、[Mqtt](https://www.nuget.org/packages/Observables.Mqtt.R3/0.1.0-preview4) 及 Reactive 对应包。参见 [Observables.Samples](https://github.com/Skymly/Observables.Samples) 或 [快速开始](./getting-started.md)。
+**`0.1.0-preview5`** — [Events](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview5)、[RestAPI](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.0-preview5)、[SignalR](https://www.nuget.org/packages/Observables.SignalR.R3/0.1.0-preview5)、[Mqtt](https://www.nuget.org/packages/Observables.Mqtt.R3/0.1.0-preview5)、[WebSocket](https://www.nuget.org/packages/Observables.WebSocket.R3/0.1.0-preview5) 及 Reactive 对应包。参见 [Observables.Samples](https://github.com/Skymly/Observables.Samples) 或 [快速开始](./getting-started.md)。
 :::
 
 ## 下一步

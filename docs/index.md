@@ -4,7 +4,7 @@ layout: home
 hero:
   name: Observables
   text: Reactive boundaries from Roslyn
-  tagline: Source generators for events, RestAPI, SignalR, Mqtt, and more — R3 and System.Reactive
+  tagline: Source generators for events, RestAPI, SignalR, Mqtt, WebSocket, and more — R3 and System.Reactive
   actions:
     - theme: brand
       text: Get started
@@ -23,13 +23,15 @@ features:
   - title: SignalR
     details: Hub client proxies — invoke, send, stream, and callbacks as observables.
   - title: Mqtt
-    details: Topic publish/subscribe proxies over MQTTnet — `Observables.Mqtt.R3` / `.Reactive` on nuget.org from preview4.
+    details: Topic publish/subscribe proxies over MQTTnet — `Observables.Mqtt.R3` / `.Reactive` on nuget.org from preview5.
+  - title: WebSocket
+    details: Client WebSocket proxies over BCL `ClientWebSocket` — `Observables.WebSocket.R3` / `.Reactive` from preview5.
 ---
 
 ## Status
 
 ::: info Preview on NuGet
-**`0.1.0-preview4`** — [Events](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview4), [RestAPI](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.0-preview4), [SignalR](https://www.nuget.org/packages/Observables.SignalR.R3/0.1.0-preview4), [Mqtt](https://www.nuget.org/packages/Observables.Mqtt.R3/0.1.0-preview4), and Reactive counterparts. Try [Observables.Samples](https://github.com/Skymly/Observables.Samples) or [Getting started](./getting-started.md).
+**`0.1.0-preview5`** — [Events](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview5), [RestAPI](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.0-preview5), [SignalR](https://www.nuget.org/packages/Observables.SignalR.R3/0.1.0-preview5), [Mqtt](https://www.nuget.org/packages/Observables.Mqtt.R3/0.1.0-preview5), [WebSocket](https://www.nuget.org/packages/Observables.WebSocket.R3/0.1.0-preview5), and Reactive counterparts. Try [Observables.Samples](https://github.com/Skymly/Observables.Samples) or [Getting started](./getting-started.md).
 :::
 
 ## Where to read next

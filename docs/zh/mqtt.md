@@ -11,7 +11,7 @@
 
 两包均含 **Observables.Mqtt** 运行时（`MqttService`、`MqttObservable` 桥接）及对应 Roslyn 分析器。
 
-自 **`0.1.0-preview4`** 起，两包已发布至 [nuget.org](https://www.nuget.org/packages/Observables.Mqtt.R3)（与 Events/RestAPI/SignalR 相同）。
+自 **`0.1.0-preview5`** 起，两包已发布至 [nuget.org](https://www.nuget.org/packages/Observables.Mqtt.R3)（与 Events/RestAPI/SignalR 相同）。
 
 应用侧还需引用 [MQTTnet](https://www.nuget.org/packages/MQTTnet) **4.3.7.1207**（4.x 线）以及 **R3** 或 **System.Reactive**。请与元包使用**相同主版本**，在 Observables 明确支持之前**不要**与 **MQTTnet 5.x** 混用。
 
@@ -63,6 +63,26 @@ var topics = MqttService.For<ISensorTopics>(client);
 | `[MqttSubscribe]` | 属性 | `SubscribeAsync` + `ApplicationMessageReceived`（热流） |
 
 主题模板中的 `{parameter}` 与方法参数绑定（`MqttTopic.Format`）。`+` / `#` 通配符保留在模板字面量中。订阅须为**无参属性**；发布须为**方法**。
+
+## 载荷序列化
+
+`MqttObservable` 与生成代理通过 **`MqttPayloadSerializers.Current`**（`IMqttPayloadSerializer`）反序列化订阅载荷。内置默认仅支持 **`byte[]`** 与 UTF-8 **`string`** — **Observables.Mqtt 不引用** System.Text.Json 等序列化库。
+
+对 DTO（JSON、Protobuf 等），注册**按类型**的 serializer（推荐）或替换全局 fallback：
+
+```csharp
+// 按类型（推荐）
+MqttPayloadSerializers.Register<TemperatureReading>(myReadingSerializer);
+// 或使用委托
+MqttPayloadSerializers.Register<int>(
+    payload => int.Parse(Encoding.UTF8.GetString(payload)),
+    value => Encoding.UTF8.GetBytes(value.ToString()));
+
+// 未注册类型的全局 fallback
+MqttPayloadSerializers.Current = myFallbackSerializer;
+```
+
+后续可能提供可选 NuGet 适配包；运行时本身与具体序列化实现解耦。
 
 ## System.Reactive
 

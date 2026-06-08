@@ -7,7 +7,7 @@
 
 ## NuGet 包（预览）
 
-**`0.1.0-preview4`** 已发布至 [nuget.org](https://www.nuget.org/packages/Observables.Events.R3)（**8** 个元包：Events、RestAPI、SignalR、Mqtt）。每个功能域有两个包（R3 与 System.Reactive）：
+**`0.1.0-preview5`** 已发布至 [nuget.org](https://www.nuget.org/packages/Observables.Events.R3)（**10** 个元包：Events、RestAPI、SignalR、Mqtt、WebSocket）。每个功能域有两个包（R3 与 System.Reactive）：
 
 | 包 | 适用场景 |
 |----|----------|
@@ -19,13 +19,15 @@
 | `Observables.SignalR.Reactive` | 同上 → System.Reactive |
 | `Observables.Mqtt.R3` | MQTT 主题代理 → R3 |
 | `Observables.Mqtt.Reactive` | 同上 → System.Reactive |
+| `Observables.WebSocket.R3` | WebSocket 客户端代理 → R3 |
+| `Observables.WebSocket.Reactive` | 同上 → System.Reactive |
 
 预览版仅 **打 tag + 推 NuGet**，**不**创建 GitHub Release。请自行添加 `R3` 或 `System.Reactive`。
 
 ### Events（R3）
 
 ```xml
-<PackageReference Include="Observables.Events.R3" Version="0.1.0-preview4" />
+<PackageReference Include="Observables.Events.R3" Version="0.1.0-preview5" />
 <PackageReference Include="R3" Version="1.3.0" />
 ```
 
@@ -42,7 +44,7 @@ source.Events().Click.Subscribe(_ => Console.WriteLine("Clicked"));
 ### RestAPI（R3）
 
 ```xml
-<PackageReference Include="Observables.RestAPI.R3" Version="0.1.0-preview4" />
+<PackageReference Include="Observables.RestAPI.R3" Version="0.1.0-preview5" />
 <PackageReference Include="R3" Version="1.3.0" />
 ```
 
@@ -60,7 +62,7 @@ User reactive = await api.GetUserObservable(7).FirstAsync();
 见 [SignalR](signalr.md)。
 
 ```xml
-<PackageReference Include="Observables.SignalR.R3" Version="0.1.0-preview4" />
+<PackageReference Include="Observables.SignalR.R3" Version="0.1.0-preview5" />
 <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="8.0.8" />
 <PackageReference Include="R3" Version="1.3.0" />
 ```
@@ -77,7 +79,7 @@ var hub = HubService.For<IMyHub>(hubConnection);
 见 [Mqtt](mqtt.md)。
 
 ```xml
-<PackageReference Include="Observables.Mqtt.R3" Version="0.1.0-preview4" />
+<PackageReference Include="Observables.Mqtt.R3" Version="0.1.0-preview5" />
 <PackageReference Include="MQTTnet" Version="4.3.7.1207" />
 <PackageReference Include="R3" Version="1.3.0" />
 ```
@@ -91,15 +93,33 @@ using R3;
 var topics = MqttService.For<IMyTopics>(mqttClient);
 ```
 
+### WebSocket（R3）
+
+见 [WebSocket](websocket.md)。
+
+```xml
+<PackageReference Include="Observables.WebSocket.R3" Version="0.1.0-preview5" />
+<PackageReference Include="R3" Version="1.3.0" />
+```
+
+```csharp
+using Observables.WebSocket;
+using R3;
+
+var hub = WebSocketService.For<IMyHub>(clientWebSocket);
+```
+
 ## 并列克隆（可选）
 
-开发生成器时可并列放置：
+开发生成器时可并列放置于 **Observables** 项目目录下（与 Code Root 工作区布局一致）：
 
 ```
-Skymly/
-  Observables/
-  Observables.Samples/
-  Observables.Docs/
+<workspace-root>/
+  Skymly/
+    Observables/
+      Observables/
+      Observables.Samples/
+      Observables.Docs/
 ```
 
 [Observables.Samples](https://github.com/Skymly/Observables.Samples) 默认用 NuGet；存在 `../Observables` 时可用 `-p:UseLocalObservables=true`。

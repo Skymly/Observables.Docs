@@ -7,7 +7,7 @@
 
 ## NuGet packages (preview)
 
-**`0.1.0-preview4`** is on [nuget.org](https://www.nuget.org/packages/Observables.Events.R3) (**8** meta-packages: Events, RestAPI, SignalR, and Mqtt). Each feature ships two packages (R3 and System.Reactive):
+**`0.1.0-preview5`** is on [nuget.org](https://www.nuget.org/packages/Observables.Events.R3) (**10** meta-packages: Events, RestAPI, SignalR, Mqtt, and WebSocket). Each feature ships two packages (R3 and System.Reactive):
 
 | Package | Use when |
 |---------|----------|
@@ -19,13 +19,15 @@
 | `Observables.SignalR.Reactive` | Same → System.Reactive |
 | `Observables.Mqtt.R3` | MQTT topic proxy → R3 |
 | `Observables.Mqtt.Reactive` | Same → System.Reactive |
+| `Observables.WebSocket.R3` | WebSocket client proxy → R3 |
+| `Observables.WebSocket.Reactive` | Same → System.Reactive |
 
 Preview releases use **Git tag + NuGet only** (no GitHub Release). Always add the matching reactive runtime yourself (`R3` or `System.Reactive`).
 
 ### Events (R3)
 
 ```xml
-<PackageReference Include="Observables.Events.R3" Version="0.1.0-preview4" />
+<PackageReference Include="Observables.Events.R3" Version="0.1.0-preview5" />
 <PackageReference Include="R3" Version="1.3.0" />
 ```
 
@@ -42,7 +44,7 @@ Routed UI events (Avalonia, etc.) are included in **Events**; enable with `<Obse
 ### RestAPI (R3)
 
 ```xml
-<PackageReference Include="Observables.RestAPI.R3" Version="0.1.0-preview4" />
+<PackageReference Include="Observables.RestAPI.R3" Version="0.1.0-preview5" />
 <PackageReference Include="R3" Version="1.3.0" />
 ```
 
@@ -60,7 +62,7 @@ User reactive = await api.GetUserObservable(7).FirstAsync();
 See [SignalR](signalr.md).
 
 ```xml
-<PackageReference Include="Observables.SignalR.R3" Version="0.1.0-preview4" />
+<PackageReference Include="Observables.SignalR.R3" Version="0.1.0-preview5" />
 <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="8.0.8" />
 <PackageReference Include="R3" Version="1.3.0" />
 ```
@@ -77,7 +79,7 @@ var hub = HubService.For<IMyHub>(hubConnection);
 See [Mqtt](mqtt.md).
 
 ```xml
-<PackageReference Include="Observables.Mqtt.R3" Version="0.1.0-preview4" />
+<PackageReference Include="Observables.Mqtt.R3" Version="0.1.0-preview5" />
 <PackageReference Include="MQTTnet" Version="4.3.7.1207" />
 <PackageReference Include="R3" Version="1.3.0" />
 ```
@@ -91,15 +93,33 @@ using R3;
 var topics = MqttService.For<IMyTopics>(mqttClient);
 ```
 
+### WebSocket (R3)
+
+See [WebSocket](websocket.md).
+
+```xml
+<PackageReference Include="Observables.WebSocket.R3" Version="0.1.0-preview5" />
+<PackageReference Include="R3" Version="1.3.0" />
+```
+
+```csharp
+using Observables.WebSocket;
+using R3;
+
+var hub = WebSocketService.For<IMyHub>(clientWebSocket);
+```
+
 ## Clone layout (optional)
 
-For generator development, place repositories as siblings:
+For generator development, place repositories as siblings under the **Observables** project folder (same layout as the Code Root workspace):
 
 ```
-Skymly/
-  Observables/
-  Observables.Samples/
-  Observables.Docs/
+<workspace-root>/
+  Skymly/
+    Observables/
+      Observables/
+      Observables.Samples/
+      Observables.Docs/
 ```
 
 [Observables.Samples](https://github.com/Skymly/Observables.Samples) defaults to NuGet; use `-p:UseLocalObservables=true` when `../Observables` exists.

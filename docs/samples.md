@@ -17,12 +17,13 @@ dotnet run --project Observables.Samples.RestAPI
 dotnet run --project Observables.Samples.RestAPI.Reactive
 dotnet run --project Observables.Samples.SignalR
 dotnet run --project Observables.Samples.Mqtt
+dotnet run --project Observables.Samples.WebSocket
 
 # Avalonia routed events (desktop only; not run in CI)
 dotnet run --project Observables.Samples.Events.Routed
 ```
 
-CI uses Nuke `./build.cmd Ci` (console samples only). Default NuGet version **`0.1.0-preview4`** ([Events](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview4), [RestAPI](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.0-preview4), [SignalR](https://www.nuget.org/packages/Observables.SignalR.R3/0.1.0-preview4), [Mqtt](https://www.nuget.org/packages/Observables.Mqtt.R3/0.1.0-preview4)).
+CI uses Nuke `./build.cmd Ci` (console samples only). Default NuGet version **`0.1.0-preview5`** ([Events](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview5), [RestAPI](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.0-preview5), [SignalR](https://www.nuget.org/packages/Observables.SignalR.R3/0.1.0-preview5), [Mqtt](https://www.nuget.org/packages/Observables.Mqtt.R3/0.1.0-preview5), [WebSocket](https://www.nuget.org/packages/Observables.WebSocket.R3/0.1.0-preview5)).
 
 ## Projects
 
@@ -35,6 +36,7 @@ CI uses Nuke `./build.cmd Ci` (console samples only). Default NuGet version **`0
 | **Observables.Samples.RestAPI.Reactive** | `IObservable<T>` + `FirstAsync().ToTask()`, 404 handling |
 | **Observables.Samples.SignalR** | `[Hub]` interface, `HubService.For` factory registration (CI skips live hub) |
 | **Observables.Samples.Mqtt** | `[Mqtt]` topic proxy, `MqttService.For` factory registration (CI skips live broker) |
+| **Observables.Samples.WebSocket** | `[WebSocket]` proxy, `WebSocketService.For` factory registration (CI skips live server) |
 
 ## Local generator development
 

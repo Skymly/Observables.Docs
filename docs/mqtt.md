@@ -11,7 +11,7 @@ Declarative **MQTT client** topic interfaces with compile-time proxy generation.
 
 Both include the **Observables.Mqtt** runtime (`MqttService`, `MqttObservable` bridges) and the matching Roslyn analyzer.
 
-Both packages ship on [nuget.org](https://www.nuget.org/packages/Observables.Mqtt.R3) from **`0.1.0-preview4`** (same model as Events/RestAPI/SignalR).
+Both packages ship on [nuget.org](https://www.nuget.org/packages/Observables.Mqtt.R3) from **`0.1.0-preview5`** (same model as Events/RestAPI/SignalR).
 
 Also reference [MQTTnet](https://www.nuget.org/packages/MQTTnet) **4.3.7.1207** (4.x line) and **R3** or **System.Reactive** in your app. Use the **same major version** as the meta-package — do not mix **MQTTnet 5.x** with `Observables.Mqtt` until a future release documents support.
 
@@ -68,7 +68,25 @@ await topics.Restart("device-42").FirstAsync();
 
 Topic templates use `{parameter}` placeholders bound to method parameters (`MqttTopic.Format`). MQTT `+` and `#` wildcards stay in the template literal. Subscribe members must be **parameterless properties**; publish members are **methods**.
 
-Payload deserialization (net8+) uses **System.Text.Json** for non-`string` / non-`byte[]` types unless you handle raw bytes explicitly.
+## Payload serialization
+
+`MqttObservable` and generated proxies deserialize subscribe payloads through **`MqttPayloadSerializers.Current`** (`IMqttPayloadSerializer`). The built-in default supports **`byte[]`** and UTF-8 **`string`** only — Observables.Mqtt does **not** reference System.Text.Json or other serializers.
+
+For DTO types (JSON, Protobuf, etc.), register a **typed** serializer (preferred) or replace the global fallback:
+
+```csharp
+// Per-type (recommended)
+MqttPayloadSerializers.Register<TemperatureReading>(myReadingSerializer);
+// or with delegates
+MqttPayloadSerializers.Register<int>(
+    payload => int.Parse(Encoding.UTF8.GetString(payload)),
+    value => Encoding.UTF8.GetBytes(value.ToString()));
+
+// Global fallback for unregistered types
+MqttPayloadSerializers.Current = myFallbackSerializer;
+```
+
+Future optional packages may ship ready-made adapters; the runtime stays serializer-agnostic.
 
 ## System.Reactive
 

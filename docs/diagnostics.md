@@ -50,3 +50,16 @@ Category: `Observables.SignalR`.
 | **OBS5006** | Error | Unsupported topic template, extra parameters, or subscribe placeholder syntax |
 
 Category: `Observables.Mqtt`.
+
+## WebSocket (OBS6001–OBS6006)
+
+| ID | Severity | When |
+|----|----------|------|
+| **OBS6001** | Warning | WebSocket member missing boundary attribute |
+| **OBS6002** | Error | Observables.WebSocket runtime not referenced |
+| **OBS6003** | Error | Unsupported return type on WebSocket member |
+| **OBS6004** | Error | Member shape mismatch (e.g. `[WebSocketReceive]` on a method) |
+| **OBS6005** | Error | `IObservable<T>` without Observables.WebSocket.Reactive package |
+| **OBS6006** | Error | Unsupported shape or parameter combination |
+
+Category: `Observables.WebSocket`.
