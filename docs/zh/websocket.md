@@ -11,7 +11,7 @@
 
 两包均含 **Observables.WebSocket** 运行时（`WebSocketService`、`WebSocketObservable` 桥接）及对应 Roslyn 分析器。
 
-自 **`0.1.0-preview5`** 起，两包已发布至 [nuget.org](https://www.nuget.org/packages/Observables.WebSocket.R3)（与 Events/RestAPI/SignalR/Mqtt 相同）。
+自 **`0.1.0-preview6`** 起，两包已发布至 [nuget.org](https://www.nuget.org/packages/Observables.WebSocket.R3)（与 Events/RestAPI/SignalR/Mqtt 相同）。
 
 应用侧还需引用 **R3** 或 **System.Reactive**。运行时使用 BCL **`System.Net.WebSockets.ClientWebSocket`**，无第三方 WebSocket 库依赖。
 
