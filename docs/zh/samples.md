@@ -19,12 +19,14 @@ dotnet run --project Observables.Samples.SignalR
 dotnet run --project Observables.Samples.Mqtt
 dotnet run --project Observables.Samples.WebSocket
 dotnet run --project Observables.Samples.Grpc
+dotnet run --project Observables.Samples.Sse
+dotnet run --project Observables.Samples.Sse.Reactive
 
 # Avalonia 路由事件（需图形环境；CI 不运行）
 dotnet run --project Observables.Samples.Events.Routed
 ```
 
-CI 使用 Nuke `./build.cmd Ci`（仅控制台示例）。默认 NuGet 版本 **`0.1.0-preview6`**（[Events](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview6)、[RestAPI](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.0-preview6)、[SignalR](https://www.nuget.org/packages/Observables.SignalR.R3/0.1.0-preview6)、[Mqtt](https://www.nuget.org/packages/Observables.Mqtt.R3/0.1.0-preview6)、[WebSocket](https://www.nuget.org/packages/Observables.WebSocket.R3/0.1.0-preview6)、[Grpc](https://www.nuget.org/packages/Observables.Grpc.R3/0.1.0-preview6)）。
+CI 使用 Nuke `./build.cmd Ci`（仅控制台示例）。默认 NuGet 版本 **`0.1.0-preview7`**（[Events](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview7)、[RestAPI](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.0-preview7)、[SignalR](https://www.nuget.org/packages/Observables.SignalR.R3/0.1.0-preview7)、[Mqtt](https://www.nuget.org/packages/Observables.Mqtt.R3/0.1.0-preview7)、[WebSocket](https://www.nuget.org/packages/Observables.WebSocket.R3/0.1.0-preview7)、[Grpc](https://www.nuget.org/packages/Observables.Grpc.R3/0.1.0-preview7)）。
 
 ## 项目
 
@@ -39,6 +41,8 @@ CI 使用 Nuke `./build.cmd Ci`（仅控制台示例）。默认 NuGet 版本 **
 | **Observables.Samples.Mqtt** | `[Mqtt]` 主题代理、`MqttService.For` 工厂注册（CI 不连真实 Broker） |
 | **Observables.Samples.WebSocket** | `[WebSocket]` 代理、`WebSocketService.For` 工厂注册（CI 不连真实服务端） |
 | **Observables.Samples.Grpc** | `[Grpc]` 代理、`GrpcService.For` 工厂注册（CI 不连真实服务端） |
+| **Observables.Samples.Sse** | `[Sse]` 代理、`SseService.For` 工厂注册（CI 不连真实服务端） |
+| **Observables.Samples.Sse.Reactive** | `[Sse]` `IObservable` 代理注册（CI 不连真实服务端） |
 
 ## 本地生成器开发
 

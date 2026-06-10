@@ -11,6 +11,7 @@ Compiler diagnostics emitted by Observables source generators and shared analyze
 | **OBS5007** | Warning | Empty `[Mqtt]` interface |
 | **OBS6007** | Warning | Empty `[WebSocket]` interface |
 | **OBS7007** | Error | Empty `[Grpc]` interface |
+| **OBS8007** | Warning | Empty `[Sse]` interface |
 
 Category: `Observables` / per-domain analyzer.
 
@@ -89,3 +90,16 @@ Category: `Observables.WebSocket`.
 | **OBS7007** | Error | Empty `[Grpc]` interface (analyzer) |
 
 Category: `Observables.Grpc`.
+
+## Sse (OBS8001–OBS8005, OBS8007)
+
+| ID | Severity | When |
+|----|----------|------|
+| **OBS8001** | Warning | SSE member missing `[SseEvent]` boundary attribute |
+| **OBS8002** | Error | Observables.Sse runtime not referenced |
+| **OBS8003** | Error | Unsupported return type on SSE member |
+| **OBS8004** | Error | Member shape mismatch (`[SseEvent]` must be applied to a property) |
+| **OBS8005** | Error | `IObservable<T>` without Observables.Sse.Reactive package |
+| **OBS8007** | Warning | Empty `[Sse]` interface (analyzer) |
+
+Category: `Observables.Sse`.
