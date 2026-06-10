@@ -57,7 +57,24 @@ Message types are typically `Google.Protobuf.IMessage<T>`; simple string payload
 
 ## System.Reactive
 
-Use `IObservable<T>` return types and `Observables.Grpc.Reactive`; entry point remains `GrpcService.For<T>(callInvoker)`.
+Return types use `IObservable<T>` and `Observables.Grpc.Reactive`; entry point remains `GrpcService.For<T>(callInvoker)`.
+
+## Testing
+
+### Samples and CI (no live server)
+
+[Observables.Samples.Grpc](https://github.com/Skymly/Observables.Samples/tree/main/Observables.Samples.Grpc) and **Observables.Samples.Grpc.Reactive** run `RegistrationDemo`: they call `GrpcService.For<T>(null!)` and expect `ArgumentNullException`, proving the source generator registered a factory without network I/O. GitHub Actions builds and runs these samples on every push.
+
+### Unit and E2E tests (in-memory TestServer)
+
+For real RPC round-trips in tests, use ASP.NET Core **`TestServer`** plus `GrpcChannel` wired to the server's handler. The Observables repo ships helpers under [`Observables.Grpc.Tests/Infrastructure/`](https://github.com/Skymly/Observables/blob/main/Observables.Grpc/Observables.Grpc.Tests/Infrastructure/):
+
+| Type | Role |
+|------|------|
+| `GrpcTestHost` | Starts an in-memory host with `MapGrpcService` |
+| `GrpcTestChannel` | Creates a `GrpcChannel` / `CallInvoker` backed by `TestServer.CreateHandler()` |
+
+Point `GrpcService.For<T>(invoker)` at that invoker to exercise unary and streaming paths without opening a TCP port.
 
 ## Diagnostics
 

@@ -55,6 +55,23 @@ var reply = await client.SayHello("hello").FirstAsync();
 
 返回类型使用 `IObservable<T>` 并引用 `Observables.Grpc.Reactive`；入口仍为 `GrpcService.For<T>(callInvoker)`。
 
+## 测试
+
+### 示例与 CI（无 live server）
+
+[Observables.Samples.Grpc](https://github.com/Skymly/Observables.Samples/tree/main/Observables.Samples.Grpc) 与 **Observables.Samples.Grpc.Reactive** 运行 `RegistrationDemo`：调用 `GrpcService.For<T>(null!)` 并期望 `ArgumentNullException`，在无网络 I/O 的情况下验证源生成器已注册工厂。GitHub Actions 在每次 push 时构建并运行这些示例。
+
+### 单元 / E2E（内存 TestServer）
+
+若要在测试中做真实 RPC 往返，使用 ASP.NET Core **`TestServer`**，并通过 server handler 创建 `GrpcChannel`。Observables 主仓在 [`Observables.Grpc.Tests/Infrastructure/`](https://github.com/Skymly/Observables/blob/main/Observables.Grpc/Observables.Grpc.Tests/Infrastructure/) 提供辅助类型：
+
+| 类型 | 作用 |
+|------|------|
+| `GrpcTestHost` | 启动带 `MapGrpcService` 的内存 host |
+| `GrpcTestChannel` | 基于 `TestServer.CreateHandler()` 创建 `GrpcChannel` / `CallInvoker` |
+
+将该 invoker 传给 `GrpcService.For<T>(invoker)` 即可在不开 TCP 端口的情况下测试 unary 与流式路径。
+
 ## 诊断
 
 见 [诊断](diagnostics.md#grpc-obs7001obs7007)。
