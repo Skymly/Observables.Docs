@@ -23,15 +23,17 @@ features:
   - title: SignalR
     details: Hub client proxies — invoke, send, stream, and callbacks as observables.
   - title: Mqtt
-    details: Topic publish/subscribe proxies over MQTTnet — `Observables.Mqtt.R3` / `.Reactive` on nuget.org from preview5.
+    details: Topic publish/subscribe proxies over MQTTnet — `Observables.Mqtt.R3` / `.Reactive` on nuget.org from preview6.
   - title: WebSocket
-    details: Client WebSocket proxies over BCL `ClientWebSocket` — `Observables.WebSocket.R3` / `.Reactive` from preview5.
+    details: Client WebSocket proxies over BCL `ClientWebSocket` — `Observables.WebSocket.R3` / `.Reactive` from preview6.
+  - title: gRPC
+    details: CallInvoker client proxies — unary and streaming RPC as observables (`Observables.Grpc.R3` / `.Reactive` from preview6).
 ---
 
 ## Status
 
 ::: info Preview on NuGet
-**`0.1.0-preview5`** — [Events](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview5), [RestAPI](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.0-preview5), [SignalR](https://www.nuget.org/packages/Observables.SignalR.R3/0.1.0-preview5), [Mqtt](https://www.nuget.org/packages/Observables.Mqtt.R3/0.1.0-preview5), [WebSocket](https://www.nuget.org/packages/Observables.WebSocket.R3/0.1.0-preview5), and Reactive counterparts. Try [Observables.Samples](https://github.com/Skymly/Observables.Samples) or [Getting started](./getting-started.md).
+**`0.1.0-preview6`** — **12** meta-packages on nuget.org ([Events](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview6), [RestAPI](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.0-preview6), [SignalR](https://www.nuget.org/packages/Observables.SignalR.R3/0.1.0-preview6), [Mqtt](https://www.nuget.org/packages/Observables.Mqtt.R3/0.1.0-preview6), [WebSocket](https://www.nuget.org/packages/Observables.WebSocket.R3/0.1.0-preview6), [Grpc](https://www.nuget.org/packages/Observables.Grpc.R3/0.1.0-preview6), and Reactive counterparts). Try [Observables.Samples](https://github.com/Skymly/Observables.Samples) or [Getting started](./getting-started.md).
 :::
 
 ## Where to read next

@@ -9,7 +9,7 @@
 | `Observables.SignalR.R3` | R3 `Observable<T>`；Send 为 `Observable<Unit>` |
 | `Observables.SignalR.Reactive` | `IObservable<T>`、`IObservable<Unit>` |
 
-两包均含 **Observables.SignalR** 运行时（`HubService`、`SignalRObservable` 桥接）及对应 Roslyn 分析器。**`0.1.0-preview5`** 及更新版本已发布至 [nuget.org](https://www.nuget.org/packages/Observables.SignalR.R3)（与 Events/RestAPI 相同模式）。
+两包均含 **Observables.SignalR** 运行时（`HubService`、`SignalRObservable` 桥接）及对应 Roslyn 分析器。**`0.1.0-preview6`** 及更新版本已发布至 [nuget.org](https://www.nuget.org/packages/Observables.SignalR.R3)（与 Events/RestAPI 相同模式）。
 
 应用侧还需引用 [Microsoft.AspNetCore.SignalR.Client](https://www.nuget.org/packages/Microsoft.AspNetCore.SignalR.Client) 以及 **R3** 或 **System.Reactive**。
 

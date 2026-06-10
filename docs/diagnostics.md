@@ -1,6 +1,18 @@
 # Diagnostics
 
-Compiler diagnostics emitted by Observables source generators (IDs are stable per domain).
+Compiler diagnostics emitted by Observables source generators and shared analyzers (IDs are stable per domain).
+
+## Shared (OBS0001, OBS*007)
+
+| ID | Severity | When |
+|----|----------|------|
+| **OBS0001** | Error | Both `.R3` and `.Reactive` Observables packages referenced for the same feature |
+| **OBS4007** | Warning | Empty `[Hub]` interface (SignalR) |
+| **OBS5007** | Warning | Empty `[Mqtt]` interface |
+| **OBS6007** | Warning | Empty `[WebSocket]` interface |
+| **OBS7007** | Error | Empty `[Grpc]` interface |
+
+Category: `Observables` / per-domain analyzer.
 
 ## Events (OBS2001–OBS2004)
 
@@ -63,3 +75,17 @@ Category: `Observables.Mqtt`.
 | **OBS6006** | Error | Unsupported shape or parameter combination |
 
 Category: `Observables.WebSocket`.
+
+## gRPC (OBS7001–OBS7007)
+
+| ID | Severity | When |
+|----|----------|------|
+| **OBS7001** | Warning | gRPC member missing boundary attribute |
+| **OBS7002** | Error | Observables.Grpc runtime not referenced |
+| **OBS7003** | Error | Unsupported return type on gRPC member |
+| **OBS7004** | Error | Member shape mismatch (e.g. wrong parameters for unary) |
+| **OBS7005** | Error | `IObservable<T>` without Observables.Grpc.Reactive package |
+| **OBS7006** | Error | Unsupported parameter combination or option |
+| **OBS7007** | Error | Empty `[Grpc]` interface (analyzer) |
+
+Category: `Observables.Grpc`.

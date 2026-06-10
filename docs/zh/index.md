@@ -23,15 +23,17 @@ features:
   - title: SignalR
     details: Hub 客户端代理：Invoke、Send、流与回调均可观察化。
   - title: Mqtt
-    details: 基于 MQTTnet 的主题发布/订阅代理 — `0.1.0-preview5` 起已上 nuget.org。
+    details: 基于 MQTTnet 的主题发布/订阅代理 — `0.1.0-preview6` 起已上 nuget.org。
   - title: WebSocket
-    details: 基于 BCL `ClientWebSocket` 的客户端代理 — `Observables.WebSocket.R3` / `.Reactive` 自 preview5 起。
+    details: 基于 BCL `ClientWebSocket` 的客户端代理 — `Observables.WebSocket.R3` / `.Reactive` 自 preview6 起。
+  - title: gRPC
+    details: CallInvoker 客户端代理 — Unary 与流式 RPC 可观察化（`Observables.Grpc.R3` / `.Reactive`，preview6 起）。
 ---
 
 ## 状态
 
 ::: info NuGet 预览版
-**`0.1.0-preview5`** — [Events](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview5)、[RestAPI](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.0-preview5)、[SignalR](https://www.nuget.org/packages/Observables.SignalR.R3/0.1.0-preview5)、[Mqtt](https://www.nuget.org/packages/Observables.Mqtt.R3/0.1.0-preview5)、[WebSocket](https://www.nuget.org/packages/Observables.WebSocket.R3/0.1.0-preview5) 及 Reactive 对应包。参见 [Observables.Samples](https://github.com/Skymly/Observables.Samples) 或 [快速开始](./getting-started.md)。
+**`0.1.0-preview6`** — nuget.org **12** 个元包（[Events](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview6)、[RestAPI](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.0-preview6)、[SignalR](https://www.nuget.org/packages/Observables.SignalR.R3/0.1.0-preview6)、[Mqtt](https://www.nuget.org/packages/Observables.Mqtt.R3/0.1.0-preview6)、[WebSocket](https://www.nuget.org/packages/Observables.WebSocket.R3/0.1.0-preview6)、[Grpc](https://www.nuget.org/packages/Observables.Grpc.R3/0.1.0-preview6) 及 Reactive 对应包）。参见 [Observables.Samples](https://github.com/Skymly/Observables.Samples) 或 [快速开始](./getting-started.md)。
 :::
 
 ## 下一步
