@@ -12,6 +12,7 @@ Compiler diagnostics emitted by Observables source generators and shared analyze
 | **OBS6007** | Warning | Empty `[WebSocket]` interface |
 | **OBS7007** | Error | Empty `[Grpc]` interface |
 | **OBS8007** | Warning | Empty `[Sse]` interface |
+| **OBS9007** | Warning | Empty `[Nats]` interface |
 
 Category: `Observables` / per-domain analyzer.
 
@@ -103,3 +104,17 @@ Category: `Observables.Grpc`.
 | **OBS8007** | Warning | Empty `[Sse]` interface (analyzer) |
 
 Category: `Observables.Sse`.
+
+## Nats (OBS9001–OBS9006, OBS9007)
+
+| ID | Severity | When |
+|----|----------|------|
+| **OBS9001** | Warning | Nats member missing boundary attribute or non-literal subject template |
+| **OBS9002** | Error | Observables.Nats runtime not referenced |
+| **OBS9003** | Error | Unsupported return type on Nats member |
+| **OBS9004** | Error | Member shape mismatch (e.g. `[NatsSubscribe]` on a method) |
+| **OBS9005** | Error | `IObservable<T>` without Observables.Nats.Reactive package |
+| **OBS9006** | Error | Unsupported subject template, extra parameters, or subscribe placeholder syntax |
+| **OBS9007** | Warning | Empty `[Nats]` interface (analyzer) |
+
+Category: `Observables.Nats`.

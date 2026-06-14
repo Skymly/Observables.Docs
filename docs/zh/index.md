@@ -30,12 +30,14 @@ features:
     details: CallInvoker 客户端代理 — Unary 与流式 RPC 可观察化（`Observables.Grpc.R3` / `.Reactive`）。
   - title: Sse
     details: Server-Sent Events（`text/event-stream`）代理 — 命名事件可观察化（`Observables.Sse.R3` / `.Reactive`）。
+  - title: Nats
+    details: Core NATS subject 代理 — 订阅、发布与请求-响应（`Observables.Nats.R3` / `.Reactive`）。
 ---
 
 ## 状态
 
 ::: info NuGet 预览版
-**`0.1.0-preview7`** — nuget.org **14** 个元包（[Events](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview7)、[RestAPI](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.0-preview7)、[SignalR](https://www.nuget.org/packages/Observables.SignalR.R3/0.1.0-preview7)、[Mqtt](https://www.nuget.org/packages/Observables.Mqtt.R3/0.1.0-preview7)、[WebSocket](https://www.nuget.org/packages/Observables.WebSocket.R3/0.1.0-preview7)、[Grpc](https://www.nuget.org/packages/Observables.Grpc.R3/0.1.0-preview7)、[Sse](https://www.nuget.org/packages/Observables.Sse.R3/0.1.0-preview7) 及 Reactive 对应包）。参见 [Observables.Samples](https://github.com/Skymly/Observables.Samples) 或 [快速开始](./getting-started.md)。
+**`0.1.0-preview8`** — nuget.org **16** 个元包（[Events](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview7)、[RestAPI](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.0-preview7)、[SignalR](https://www.nuget.org/packages/Observables.SignalR.R3/0.1.0-preview7)、[Mqtt](https://www.nuget.org/packages/Observables.Mqtt.R3/0.1.0-preview7)、[WebSocket](https://www.nuget.org/packages/Observables.WebSocket.R3/0.1.0-preview7)、[Grpc](https://www.nuget.org/packages/Observables.Grpc.R3/0.1.0-preview7)、[Sse](https://www.nuget.org/packages/Observables.Sse.R3/0.1.0-preview7) 及 Reactive 对应包）。参见 [Observables.Samples](https://github.com/Skymly/Observables.Samples) 或 [快速开始](./getting-started.md)。
 :::
 
 ## 下一步
