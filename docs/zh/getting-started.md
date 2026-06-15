@@ -170,7 +170,7 @@ var hub = NatsService.For<IMyHub>(natsConnection);
 
 ## 并列克隆（可选）
 
-开发生成器时可并列放置于 **Observables** 项目目录下（与 Code Root 工作区布局一致）：
+开发生成器时可并列放置于 **Observables** 项目目录下：
 
 ```
 <workspace-root>/

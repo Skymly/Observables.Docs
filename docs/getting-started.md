@@ -170,7 +170,7 @@ var hub = NatsService.For<IMyHub>(natsConnection);
 
 ## Clone layout (optional)
 
-For generator development, place repositories as siblings under the **Observables** project folder (same layout as the Code Root workspace):
+For generator development, place repositories as siblings under the **Observables** project folder:
 
 ```
 <workspace-root>/
