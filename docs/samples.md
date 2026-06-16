@@ -28,7 +28,7 @@ dotnet run --project Observables.Samples.Nats.Reactive
 dotnet run --project Observables.Samples.Events.Routed
 ```
 
-CI uses Nuke `./build.cmd Ci` (console samples only). Default NuGet version **`0.1.0-preview8`** ([Events](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview8), [RestAPI](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.0-preview8), [SignalR](https://www.nuget.org/packages/Observables.SignalR.R3/0.1.0-preview8), [Mqtt](https://www.nuget.org/packages/Observables.Mqtt.R3/0.1.0-preview8), [WebSocket](https://www.nuget.org/packages/Observables.WebSocket.R3/0.1.0-preview8), [Grpc](https://www.nuget.org/packages/Observables.Grpc.R3/0.1.0-preview8)).
+CI uses Nuke `./build.cmd Ci` (console samples only). Default NuGet version **`0.1.0`** ([Events](https://www.nuget.org/packages/Observables.Events.R3/0.1.0), [RestAPI](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.0), [SignalR](https://www.nuget.org/packages/Observables.SignalR.R3/0.1.0), [Mqtt](https://www.nuget.org/packages/Observables.Mqtt.R3/0.1.0), [WebSocket](https://www.nuget.org/packages/Observables.WebSocket.R3/0.1.0), [Grpc](https://www.nuget.org/packages/Observables.Grpc.R3/0.1.0)).
 
 ## Projects
 

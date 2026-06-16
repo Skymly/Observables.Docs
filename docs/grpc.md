@@ -11,7 +11,7 @@ Declarative **gRPC client** interfaces with compile-time proxy generation. Unary
 
 Both include the **Observables.Grpc** runtime (`GrpcService`, `GrpcMarshallers`) and the matching Roslyn analyzer.
 
-Both packages ship on [nuget.org](https://www.nuget.org/packages/Observables.Grpc.R3) from **`0.1.0-preview6`** (same model as Events/RestAPI/SignalR/Mqtt/WebSocket).
+Both packages ship on [nuget.org](https://www.nuget.org/packages/Observables.Grpc.R3) from **`0.1.0`** (same model as Events/RestAPI/SignalR/Mqtt/WebSocket).
 
 Also reference **R3** or **System.Reactive**, and create a **`GrpcChannel`** (or any `CallInvoker`) in your app. The runtime wraps **`Grpc.Core.CallInvoker`** — no `Grpc.Tools` / protoc required in the consumer project.
 

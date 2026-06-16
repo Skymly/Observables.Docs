@@ -5,29 +5,29 @@
 | Repository | Role |
 |------------|------|
 | [Observables](https://github.com/Skymly/Observables) | Roslyn source generators, runtime, tests |
-| [Observables.Samples](https://github.com/Skymly/Observables.Samples) | Demo applications (NuGet `0.1.0-preview8` by default) |
+| [Observables.Samples](https://github.com/Skymly/Observables.Samples) | Demo applications (NuGet `0.1.0` by default) |
 | [Observables.Docs](https://github.com/Skymly/Observables.Docs) | This documentation site |
 
-## NuGet packages (`0.1.0-preview8`)
+## NuGet packages (`0.1.0`)
 
 | Package ID | Feed |
 |------------|------|
-| [Observables.Events.R3](https://www.nuget.org/packages/Observables.Events.R3/0.1.0-preview8) | nuget.org |
-| [Observables.Events.Reactive](https://www.nuget.org/packages/Observables.Events.Reactive/0.1.0-preview8) | nuget.org |
-| [Observables.RestAPI.R3](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.0-preview8) | nuget.org |
-| [Observables.RestAPI.Reactive](https://www.nuget.org/packages/Observables.RestAPI.Reactive/0.1.0-preview8) | nuget.org |
-| [Observables.SignalR.R3](https://www.nuget.org/packages/Observables.SignalR.R3/0.1.0-preview8) | nuget.org |
-| [Observables.SignalR.Reactive](https://www.nuget.org/packages/Observables.SignalR.Reactive/0.1.0-preview8) | nuget.org |
-| [Observables.Mqtt.R3](https://www.nuget.org/packages/Observables.Mqtt.R3/0.1.0-preview8) | nuget.org |
-| [Observables.Mqtt.Reactive](https://www.nuget.org/packages/Observables.Mqtt.Reactive/0.1.0-preview8) | nuget.org |
-| [Observables.WebSocket.R3](https://www.nuget.org/packages/Observables.WebSocket.R3/0.1.0-preview8) | nuget.org |
-| [Observables.WebSocket.Reactive](https://www.nuget.org/packages/Observables.WebSocket.Reactive/0.1.0-preview8) | nuget.org |
-| [Observables.Grpc.R3](https://www.nuget.org/packages/Observables.Grpc.R3/0.1.0-preview8) | nuget.org |
-| [Observables.Grpc.Reactive](https://www.nuget.org/packages/Observables.Grpc.Reactive/0.1.0-preview8) | nuget.org |
-| [Observables.Sse.R3](https://www.nuget.org/packages/Observables.Sse.R3/0.1.0-preview8) | nuget.org |
-| [Observables.Sse.Reactive](https://www.nuget.org/packages/Observables.Sse.Reactive/0.1.0-preview8) | nuget.org |
-| [Observables.Nats.R3](https://www.nuget.org/packages/Observables.Nats.R3/0.1.0-preview8) | nuget.org |
-| [Observables.Nats.Reactive](https://www.nuget.org/packages/Observables.Nats.Reactive/0.1.0-preview8) | nuget.org |
+| [Observables.Events.R3](https://www.nuget.org/packages/Observables.Events.R3/0.1.0) | nuget.org |
+| [Observables.Events.Reactive](https://www.nuget.org/packages/Observables.Events.Reactive/0.1.0) | nuget.org |
+| [Observables.RestAPI.R3](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.0) | nuget.org |
+| [Observables.RestAPI.Reactive](https://www.nuget.org/packages/Observables.RestAPI.Reactive/0.1.0) | nuget.org |
+| [Observables.SignalR.R3](https://www.nuget.org/packages/Observables.SignalR.R3/0.1.0) | nuget.org |
+| [Observables.SignalR.Reactive](https://www.nuget.org/packages/Observables.SignalR.Reactive/0.1.0) | nuget.org |
+| [Observables.Mqtt.R3](https://www.nuget.org/packages/Observables.Mqtt.R3/0.1.0) | nuget.org |
+| [Observables.Mqtt.Reactive](https://www.nuget.org/packages/Observables.Mqtt.Reactive/0.1.0) | nuget.org |
+| [Observables.WebSocket.R3](https://www.nuget.org/packages/Observables.WebSocket.R3/0.1.0) | nuget.org |
+| [Observables.WebSocket.Reactive](https://www.nuget.org/packages/Observables.WebSocket.Reactive/0.1.0) | nuget.org |
+| [Observables.Grpc.R3](https://www.nuget.org/packages/Observables.Grpc.R3/0.1.0) | nuget.org |
+| [Observables.Grpc.Reactive](https://www.nuget.org/packages/Observables.Grpc.Reactive/0.1.0) | nuget.org |
+| [Observables.Sse.R3](https://www.nuget.org/packages/Observables.Sse.R3/0.1.0) | nuget.org |
+| [Observables.Sse.Reactive](https://www.nuget.org/packages/Observables.Sse.Reactive/0.1.0) | nuget.org |
+| [Observables.Nats.R3](https://www.nuget.org/packages/Observables.Nats.R3/0.1.0) | nuget.org |
+| [Observables.Nats.Reactive](https://www.nuget.org/packages/Observables.Nats.Reactive/0.1.0) | nuget.org |
 
 Also published to GitHub Packages (`https://nuget.pkg.github.com/Skymly/index.json`) when using org feed credentials.
 

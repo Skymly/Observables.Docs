@@ -11,7 +11,7 @@
 
 两包均含 **Observables.Nats** 运行时（`NatsService`、`NatsObservable` 桥接）及对应 Roslyn 分析器。
 
-NATS 域自 **`0.1.0-preview8`** 起发布（与其它域相同）。应用侧还需引用 [NATS.Client.Core](https://www.nuget.org/packages/NATS.Client.Core) 以及 **R3** 或 **System.Reactive**。
+NATS 域自 **`0.1.0`** 起发布（与其它域相同）。应用侧还需引用 [NATS.Client.Core](https://www.nuget.org/packages/NATS.Client.Core) 以及 **R3** 或 **System.Reactive**。
 
 **v1 范围**：仅 Core NATS 的 **Subscribe / Publish / Request-Reply**。**JetStream** 持久化消费记录在 Observables 设计文档的 follow-up 中，首版不包含。
 
