@@ -11,7 +11,7 @@ Declarative **Server-Sent Events** (`text/event-stream`) interfaces with compile
 
 Both include the **Observables.Sse** runtime (`SseService`, `SseConnection`, `SseObservable` bridges) and the matching Roslyn analyzer.
 
-The SSE domain is implemented and validated; it ships from **`0.1.0-preview7`** (same model as the other domains). Also reference **R3** or **System.Reactive** in your app. The runtime uses BCL **`System.Net.Http.HttpClient`** only — no third-party SSE library.
+The SSE domain is implemented and validated; it ships from **`0.1.1-preview7`** (same model as the other domains). Also reference **R3** or **System.Reactive** in your app. The runtime uses BCL **`System.Net.Http.HttpClient`** only — no third-party SSE library.
 
 ## Define an SSE proxy
 

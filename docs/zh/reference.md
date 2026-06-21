@@ -5,29 +5,29 @@
 | 仓库 | 作用 |
 |------|------|
 | [Observables](https://github.com/Skymly/Observables) | Roslyn 源生成器、运行时、测试 |
-| [Observables.Samples](https://github.com/Skymly/Observables.Samples) | 示例应用（默认 NuGet `0.1.0`） |
+| [Observables.Samples](https://github.com/Skymly/Observables.Samples) | 示例应用（默认 NuGet `0.1.1`） |
 | [Observables.Docs](https://github.com/Skymly/Observables.Docs) | 本文档站点 |
 
-## NuGet 包（`0.1.0`）
+## NuGet 包（`0.1.1`）
 
 | 包 ID | 源 |
 |-------|-----|
-| [Observables.Events.R3](https://www.nuget.org/packages/Observables.Events.R3/0.1.0) | nuget.org |
-| [Observables.Events.Reactive](https://www.nuget.org/packages/Observables.Events.Reactive/0.1.0) | nuget.org |
-| [Observables.RestAPI.R3](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.0) | nuget.org |
-| [Observables.RestAPI.Reactive](https://www.nuget.org/packages/Observables.RestAPI.Reactive/0.1.0) | nuget.org |
-| [Observables.SignalR.R3](https://www.nuget.org/packages/Observables.SignalR.R3/0.1.0) | nuget.org |
-| [Observables.SignalR.Reactive](https://www.nuget.org/packages/Observables.SignalR.Reactive/0.1.0) | nuget.org |
-| [Observables.Mqtt.R3](https://www.nuget.org/packages/Observables.Mqtt.R3/0.1.0) | nuget.org |
-| [Observables.Mqtt.Reactive](https://www.nuget.org/packages/Observables.Mqtt.Reactive/0.1.0) | nuget.org |
-| [Observables.WebSocket.R3](https://www.nuget.org/packages/Observables.WebSocket.R3/0.1.0) | nuget.org |
-| [Observables.WebSocket.Reactive](https://www.nuget.org/packages/Observables.WebSocket.Reactive/0.1.0) | nuget.org |
-| [Observables.Grpc.R3](https://www.nuget.org/packages/Observables.Grpc.R3/0.1.0) | nuget.org |
-| [Observables.Grpc.Reactive](https://www.nuget.org/packages/Observables.Grpc.Reactive/0.1.0) | nuget.org |
-| [Observables.Sse.R3](https://www.nuget.org/packages/Observables.Sse.R3/0.1.0) | nuget.org |
-| [Observables.Sse.Reactive](https://www.nuget.org/packages/Observables.Sse.Reactive/0.1.0) | nuget.org |
-| [Observables.Nats.R3](https://www.nuget.org/packages/Observables.Nats.R3/0.1.0) | nuget.org |
-| [Observables.Nats.Reactive](https://www.nuget.org/packages/Observables.Nats.Reactive/0.1.0) | nuget.org |
+| [Observables.Events.R3](https://www.nuget.org/packages/Observables.Events.R3/0.1.1) | nuget.org |
+| [Observables.Events.Reactive](https://www.nuget.org/packages/Observables.Events.Reactive/0.1.1) | nuget.org |
+| [Observables.RestAPI.R3](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.1) | nuget.org |
+| [Observables.RestAPI.Reactive](https://www.nuget.org/packages/Observables.RestAPI.Reactive/0.1.1) | nuget.org |
+| [Observables.SignalR.R3](https://www.nuget.org/packages/Observables.SignalR.R3/0.1.1) | nuget.org |
+| [Observables.SignalR.Reactive](https://www.nuget.org/packages/Observables.SignalR.Reactive/0.1.1) | nuget.org |
+| [Observables.Mqtt.R3](https://www.nuget.org/packages/Observables.Mqtt.R3/0.1.1) | nuget.org |
+| [Observables.Mqtt.Reactive](https://www.nuget.org/packages/Observables.Mqtt.Reactive/0.1.1) | nuget.org |
+| [Observables.WebSocket.R3](https://www.nuget.org/packages/Observables.WebSocket.R3/0.1.1) | nuget.org |
+| [Observables.WebSocket.Reactive](https://www.nuget.org/packages/Observables.WebSocket.Reactive/0.1.1) | nuget.org |
+| [Observables.Grpc.R3](https://www.nuget.org/packages/Observables.Grpc.R3/0.1.1) | nuget.org |
+| [Observables.Grpc.Reactive](https://www.nuget.org/packages/Observables.Grpc.Reactive/0.1.1) | nuget.org |
+| [Observables.Sse.R3](https://www.nuget.org/packages/Observables.Sse.R3/0.1.1) | nuget.org |
+| [Observables.Sse.Reactive](https://www.nuget.org/packages/Observables.Sse.Reactive/0.1.1) | nuget.org |
+| [Observables.Nats.R3](https://www.nuget.org/packages/Observables.Nats.R3/0.1.1) | nuget.org |
+| [Observables.Nats.Reactive](https://www.nuget.org/packages/Observables.Nats.Reactive/0.1.1) | nuget.org |
 
 亦可从 GitHub Packages（`https://nuget.pkg.github.com/Skymly/index.json`）还原（需凭据）。
 

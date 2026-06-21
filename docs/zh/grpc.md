@@ -11,7 +11,7 @@
 
 两包均含 **Observables.Grpc** 运行时（`GrpcService`、`GrpcMarshallers`）及对应 Roslyn 分析器。
 
-自 **`0.1.0`** 起发布至 [nuget.org](https://www.nuget.org/packages/Observables.Grpc.R3)（与 Events/RestAPI/SignalR/Mqtt/WebSocket 相同）。
+自 **`0.1.1`** 起发布至 [nuget.org](https://www.nuget.org/packages/Observables.Grpc.R3)（与 Events/RestAPI/SignalR/Mqtt/WebSocket 相同）。
 
 另需引用 **R3** 或 **System.Reactive**，并在应用中创建 **`GrpcChannel`**（或任意 `CallInvoker`）。运行时封装 **`Grpc.Core.CallInvoker`** — 消费者项目**不需要** `Grpc.Tools` / protoc。
 

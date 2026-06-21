@@ -11,7 +11,7 @@
 
 两包均含 **Observables.Sse** 运行时（`SseService`、`SseConnection`、`SseObservable` 桥接）及对应 Roslyn 分析器。
 
-SSE 域已实现并通过校验，自 **`0.1.0-preview7`** 起发布（与其它域相同）。应用侧还需引用 **R3** 或 **System.Reactive**。运行时仅使用 BCL **`System.Net.Http.HttpClient`**，无第三方 SSE 库依赖。
+SSE 域已实现并通过校验，自 **`0.1.1-preview7`** 起发布（与其它域相同）。应用侧还需引用 **R3** 或 **System.Reactive**。运行时仅使用 BCL **`System.Net.Http.HttpClient`**，无第三方 SSE 库依赖。
 
 ## 定义 SSE 代理
 

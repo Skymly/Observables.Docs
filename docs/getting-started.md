@@ -7,7 +7,7 @@
 
 ## NuGet packages (preview)
 
-**`0.1.0`** is on [nuget.org](https://www.nuget.org/packages/Observables.Events.R3) (**16** meta-packages: Events, RestAPI, SignalR, Mqtt, WebSocket, Grpc, and Sse). Each feature ships two packages (R3 and System.Reactive):
+**`0.1.1`** is on [nuget.org](https://www.nuget.org/packages/Observables.Events.R3) (**16** meta-packages: Events, RestAPI, SignalR, Mqtt, WebSocket, Grpc, and Sse). Each feature ships two packages (R3 and System.Reactive):
 
 | Package | Use when |
 |---------|----------|
@@ -25,15 +25,15 @@
 | `Observables.Grpc.Reactive` | Same → System.Reactive |
 | `Observables.Sse.R3` | Server-Sent Events proxy → R3 |
 | `Observables.Sse.Reactive` | Same → System.Reactive |
-| `Observables.Nats.R3` | Core NATS subject proxy → R3 (planned `0.1.0`) |
-| `Observables.Nats.Reactive` | Same → System.Reactive (planned `0.1.0`) |
+| `Observables.Nats.R3` | Core NATS subject proxy → R3 |
+| `Observables.Nats.Reactive` | Same → System.Reactive |
 
 Preview releases use **Git tag + NuGet only** (no GitHub Release). Always add the matching reactive runtime yourself (`R3` or `System.Reactive`).
 
 ### Events (R3)
 
 ```xml
-<PackageReference Include="Observables.Events.R3" Version="0.1.0" />
+<PackageReference Include="Observables.Events.R3" Version="0.1.1" />
 <PackageReference Include="R3" Version="1.3.0" />
 ```
 
@@ -50,7 +50,7 @@ Routed UI events (Avalonia, etc.) are included in **Events**; enable with `<Obse
 ### RestAPI (R3)
 
 ```xml
-<PackageReference Include="Observables.RestAPI.R3" Version="0.1.0" />
+<PackageReference Include="Observables.RestAPI.R3" Version="0.1.1" />
 <PackageReference Include="R3" Version="1.3.0" />
 ```
 
@@ -68,7 +68,7 @@ User reactive = await api.GetUserObservable(7).FirstAsync();
 See [SignalR](signalr.md).
 
 ```xml
-<PackageReference Include="Observables.SignalR.R3" Version="0.1.0" />
+<PackageReference Include="Observables.SignalR.R3" Version="0.1.1" />
 <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="8.0.8" />
 <PackageReference Include="R3" Version="1.3.0" />
 ```
@@ -85,7 +85,7 @@ var hub = HubService.For<IMyHub>(hubConnection);
 See [Mqtt](mqtt.md).
 
 ```xml
-<PackageReference Include="Observables.Mqtt.R3" Version="0.1.0" />
+<PackageReference Include="Observables.Mqtt.R3" Version="0.1.1" />
 <PackageReference Include="MQTTnet" Version="4.3.7.1207" />
 <PackageReference Include="R3" Version="1.3.0" />
 ```
@@ -104,7 +104,7 @@ var topics = MqttService.For<IMyTopics>(mqttClient);
 See [WebSocket](websocket.md).
 
 ```xml
-<PackageReference Include="Observables.WebSocket.R3" Version="0.1.0" />
+<PackageReference Include="Observables.WebSocket.R3" Version="0.1.1" />
 <PackageReference Include="R3" Version="1.3.0" />
 ```
 
@@ -120,7 +120,7 @@ var hub = WebSocketService.For<IMyHub>(clientWebSocket);
 See [gRPC](grpc.md).
 
 ```xml
-<PackageReference Include="Observables.Grpc.R3" Version="0.1.0" />
+<PackageReference Include="Observables.Grpc.R3" Version="0.1.1" />
 <PackageReference Include="Grpc.Net.Client" Version="2.67.0" />
 <PackageReference Include="R3" Version="1.3.0" />
 ```
@@ -139,7 +139,7 @@ var client = GrpcService.For<IMyService>(channel.CreateCallInvoker());
 See [Sse](sse.md).
 
 ```xml
-<PackageReference Include="Observables.Sse.R3" Version="0.1.0" />
+<PackageReference Include="Observables.Sse.R3" Version="0.1.1" />
 <PackageReference Include="R3" Version="1.3.0" />
 ```
 
@@ -156,7 +156,7 @@ using var sub = feed.Prices.Subscribe(tick => Console.WriteLine(tick));
 See [Nats](nats.md).
 
 ```xml
-<PackageReference Include="Observables.Nats.R3" Version="0.1.0" />
+<PackageReference Include="Observables.Nats.R3" Version="0.1.1" />
 <PackageReference Include="NATS.Client.Core" Version="2.8.1" />
 <PackageReference Include="R3" Version="1.3.0" />
 ```

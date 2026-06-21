@@ -11,7 +11,7 @@ Declarative **client WebSocket** interfaces with compile-time proxy generation. 
 
 Both include the **Observables.WebSocket** runtime (`WebSocketService`, `WebSocketObservable` bridges) and the matching Roslyn analyzer.
 
-Both packages ship on [nuget.org](https://www.nuget.org/packages/Observables.WebSocket.R3) from **`0.1.0`** (same model as Events/RestAPI/SignalR/Mqtt).
+Both packages ship on [nuget.org](https://www.nuget.org/packages/Observables.WebSocket.R3) from **`0.1.1`** (same model as Events/RestAPI/SignalR/Mqtt).
 
 Also reference **R3** or **System.Reactive** in your app. The runtime uses BCL **`System.Net.WebSockets.ClientWebSocket`** only — no third-party WebSocket library.
 

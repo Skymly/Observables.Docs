@@ -11,7 +11,7 @@
 
 两包均含 **Observables.Mqtt** 运行时（`MqttService`、`MqttObservable` 桥接）及对应 Roslyn 分析器。
 
-自 **`0.1.0`** 起，两包已发布至 [nuget.org](https://www.nuget.org/packages/Observables.Mqtt.R3)（与 Events/RestAPI/SignalR 相同）。
+自 **`0.1.1`** 起，两包已发布至 [nuget.org](https://www.nuget.org/packages/Observables.Mqtt.R3)（与 Events/RestAPI/SignalR 相同）。
 
 应用侧还需引用 [MQTTnet](https://www.nuget.org/packages/MQTTnet) **4.3.7.1207**（4.x 线）以及 **R3** 或 **System.Reactive**。请与元包使用**相同主版本**，在 Observables 明确支持之前**不要**与 **MQTTnet 5.x** 混用。
 

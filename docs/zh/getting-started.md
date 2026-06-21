@@ -7,7 +7,7 @@
 
 ## NuGet 包（预览）
 
-**`0.1.0`** 已发布至 [nuget.org](https://www.nuget.org/packages/Observables.Events.R3)（**16** 个元包：Events、RestAPI、SignalR、Mqtt、WebSocket、Grpc、Sse）。每个功能域有两个包（R3 与 System.Reactive）：
+**`0.1.1`** 已发布至 [nuget.org](https://www.nuget.org/packages/Observables.Events.R3)（**16** 个元包：Events、RestAPI、SignalR、Mqtt、WebSocket、Grpc、Sse）。每个功能域有两个包（R3 与 System.Reactive）：
 
 | 包 | 适用场景 |
 |----|----------|
@@ -25,15 +25,15 @@
 | `Observables.Grpc.Reactive` | 同上 → System.Reactive |
 | `Observables.Sse.R3` | SSE（`text/event-stream`）代理 → R3 |
 | `Observables.Sse.Reactive` | 同上 → System.Reactive |
-| `Observables.Nats.R3` | Core NATS subject 代理 → R3（规划 `0.1.0`） |
-| `Observables.Nats.Reactive` | 同上 → System.Reactive（规划 `0.1.0`） |
+| `Observables.Nats.R3` | Core NATS subject 代理 → R3 |
+| `Observables.Nats.Reactive` | 同上 → System.Reactive |
 
 预览版仅 **打 tag + 推 NuGet**，**不**创建 GitHub Release。请自行添加 `R3` 或 `System.Reactive`。
 
 ### Events（R3）
 
 ```xml
-<PackageReference Include="Observables.Events.R3" Version="0.1.0" />
+<PackageReference Include="Observables.Events.R3" Version="0.1.1" />
 <PackageReference Include="R3" Version="1.3.0" />
 ```
 
@@ -50,7 +50,7 @@ source.Events().Click.Subscribe(_ => Console.WriteLine("Clicked"));
 ### RestAPI（R3）
 
 ```xml
-<PackageReference Include="Observables.RestAPI.R3" Version="0.1.0" />
+<PackageReference Include="Observables.RestAPI.R3" Version="0.1.1" />
 <PackageReference Include="R3" Version="1.3.0" />
 ```
 
@@ -68,7 +68,7 @@ User reactive = await api.GetUserObservable(7).FirstAsync();
 见 [SignalR](signalr.md)。
 
 ```xml
-<PackageReference Include="Observables.SignalR.R3" Version="0.1.0" />
+<PackageReference Include="Observables.SignalR.R3" Version="0.1.1" />
 <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="8.0.8" />
 <PackageReference Include="R3" Version="1.3.0" />
 ```
@@ -85,7 +85,7 @@ var hub = HubService.For<IMyHub>(hubConnection);
 见 [Mqtt](mqtt.md)。
 
 ```xml
-<PackageReference Include="Observables.Mqtt.R3" Version="0.1.0" />
+<PackageReference Include="Observables.Mqtt.R3" Version="0.1.1" />
 <PackageReference Include="MQTTnet" Version="4.3.7.1207" />
 <PackageReference Include="R3" Version="1.3.0" />
 ```
@@ -104,7 +104,7 @@ var topics = MqttService.For<IMyTopics>(mqttClient);
 见 [WebSocket](websocket.md)。
 
 ```xml
-<PackageReference Include="Observables.WebSocket.R3" Version="0.1.0" />
+<PackageReference Include="Observables.WebSocket.R3" Version="0.1.1" />
 <PackageReference Include="R3" Version="1.3.0" />
 ```
 
@@ -120,7 +120,7 @@ var hub = WebSocketService.For<IMyHub>(clientWebSocket);
 见 [gRPC](grpc.md)。
 
 ```xml
-<PackageReference Include="Observables.Grpc.R3" Version="0.1.0" />
+<PackageReference Include="Observables.Grpc.R3" Version="0.1.1" />
 <PackageReference Include="Grpc.Net.Client" Version="2.67.0" />
 <PackageReference Include="R3" Version="1.3.0" />
 ```
@@ -139,7 +139,7 @@ var client = GrpcService.For<IMyService>(channel.CreateCallInvoker());
 见 [Sse](sse.md)。
 
 ```xml
-<PackageReference Include="Observables.Sse.R3" Version="0.1.0" />
+<PackageReference Include="Observables.Sse.R3" Version="0.1.1" />
 <PackageReference Include="R3" Version="1.3.0" />
 ```
 
@@ -156,7 +156,7 @@ using var sub = feed.Prices.Subscribe(tick => Console.WriteLine(tick));
 见 [Nats](nats.md)。
 
 ```xml
-<PackageReference Include="Observables.Nats.R3" Version="0.1.0" />
+<PackageReference Include="Observables.Nats.R3" Version="0.1.1" />
 <PackageReference Include="NATS.Client.Core" Version="2.8.1" />
 <PackageReference Include="R3" Version="1.3.0" />
 ```

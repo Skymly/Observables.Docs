@@ -11,7 +11,7 @@ Declarative **Core NATS** subject interfaces with compile-time proxy generation.
 
 Both include the **Observables.Nats** runtime (`NatsService`, `NatsObservable` bridges) and the matching Roslyn analyzer.
 
-The NATS domain ships from **`0.1.0`** (same model as the other domains). Also reference [NATS.Client.Core](https://www.nuget.org/packages/NATS.Client.Core) and **R3** or **System.Reactive** in your app.
+The NATS domain ships from **`0.1.1`** (same model as the other domains). Also reference [NATS.Client.Core](https://www.nuget.org/packages/NATS.Client.Core) and **R3** or **System.Reactive** in your app.
 
 **v1 scope**: Core NATS **Subscribe / Publish / Request-Reply** only. **JetStream** is documented as follow-up work in the Observables design notes — not part of the first release.
 

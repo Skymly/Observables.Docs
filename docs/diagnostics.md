@@ -10,7 +10,7 @@ Compiler diagnostics emitted by Observables source generators and shared analyze
 | **OBS4007** | Warning | Empty `[Hub]` interface (SignalR) |
 | **OBS5007** | Warning | Empty `[Mqtt]` interface |
 | **OBS6007** | Warning | Empty `[WebSocket]` interface |
-| **OBS7007** | Error | Empty `[Grpc]` interface |
+| **OBS7007** | Warning | Empty `[Grpc]` interface |
 | **OBS8007** | Warning | Empty `[Sse]` interface |
 | **OBS9007** | Warning | Empty `[Nats]` interface |
 
@@ -88,7 +88,7 @@ Category: `Observables.WebSocket`.
 | **OBS7004** | Error | Member shape mismatch (e.g. wrong parameters for unary) |
 | **OBS7005** | Error | `IObservable<T>` without Observables.Grpc.Reactive package |
 | **OBS7006** | Error | Unsupported parameter combination or option |
-| **OBS7007** | Error | Empty `[Grpc]` interface (analyzer) |
+| **OBS7007** | Warning | Empty `[Grpc]` interface (analyzer) |
 
 Category: `Observables.Grpc`.
 

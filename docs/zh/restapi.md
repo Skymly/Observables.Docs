@@ -9,7 +9,7 @@
 | [Observables.RestAPI.R3](https://www.nuget.org/packages/Observables.RestAPI.R3) | `Task<T>`、R3 `Observable<T>` 等 |
 | [Observables.RestAPI.Reactive](https://www.nuget.org/packages/Observables.RestAPI.Reactive) | `Task<T>`、`IObservable<T>` 等 |
 
-均包含 **Observables.RestAPI** 运行时。Reactive 包另需 **System.Reactive**（共享核心可能还需 **R3** 运行时）。
+均包含 **Observables.RestAPI** 运行时。请自行添加对应的反应式后端：`.R3` 包配 **R3**，`.Reactive` 包配 **System.Reactive**。同一功能域两后端互斥（见 [OBS0001](diagnostics.md#共享-obs0001obs007)）。
 
 ## 定义接口
 

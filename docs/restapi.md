@@ -9,7 +9,7 @@ Declarative HTTP client interfaces (Refit-style attributes) with implementations
 | [Observables.RestAPI.R3](https://www.nuget.org/packages/Observables.RestAPI.R3) | `Task<T>`, R3 `Observable<T>`, … |
 | [Observables.RestAPI.Reactive](https://www.nuget.org/packages/Observables.RestAPI.Reactive) | `Task<T>`, `IObservable<T>`, … |
 
-Both include the **Observables.RestAPI** runtime. Reactive package also needs **System.Reactive** (and may require **R3** at runtime for shared core types).
+Both include the **Observables.RestAPI** runtime. Add the matching reactive backend yourself: **R3** for the `.R3` package, **System.Reactive** for the `.Reactive` package. The two backends are mutually exclusive per feature (see [OBS0001](diagnostics.md#shared-obs0001obs007)).
 
 ## Define an API
 

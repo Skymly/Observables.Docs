@@ -23,7 +23,7 @@ features:
   - title: SignalR
     details: Hub 客户端代理：Invoke、Send、流与回调均可观察化。
   - title: Mqtt
-    details: 基于 MQTTnet 的主题发布/订阅代理 — `0.1.0` 起已上 nuget.org。
+    details: 基于 MQTTnet 的主题发布/订阅代理 — `0.1.1` 起已上 nuget.org。
   - title: WebSocket
     details: 基于 BCL `ClientWebSocket` 的客户端代理 — `Observables.WebSocket.R3` / `.Reactive` 自 preview6 起。
   - title: gRPC
@@ -37,7 +37,7 @@ features:
 ## 状态
 
 ::: info NuGet 预览版
-**`0.1.0`** — nuget.org **16** 个元包（[Events](https://www.nuget.org/packages/Observables.Events.R3/0.1.0)、[RestAPI](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.0)、[SignalR](https://www.nuget.org/packages/Observables.SignalR.R3/0.1.0)、[Mqtt](https://www.nuget.org/packages/Observables.Mqtt.R3/0.1.0)、[WebSocket](https://www.nuget.org/packages/Observables.WebSocket.R3/0.1.0)、[Grpc](https://www.nuget.org/packages/Observables.Grpc.R3/0.1.0)、[Sse](https://www.nuget.org/packages/Observables.Sse.R3/0.1.0) 及 Reactive 对应包）。参见 [Observables.Samples](https://github.com/Skymly/Observables.Samples) 或 [快速开始](./getting-started.md)。
+**`0.1.1`** — nuget.org **16** 个元包（[Events](https://www.nuget.org/packages/Observables.Events.R3/0.1.1)、[RestAPI](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.1)、[SignalR](https://www.nuget.org/packages/Observables.SignalR.R3/0.1.1)、[Mqtt](https://www.nuget.org/packages/Observables.Mqtt.R3/0.1.1)、[WebSocket](https://www.nuget.org/packages/Observables.WebSocket.R3/0.1.1)、[Grpc](https://www.nuget.org/packages/Observables.Grpc.R3/0.1.1)、[Sse](https://www.nuget.org/packages/Observables.Sse.R3/0.1.1) 及 Reactive 对应包）。参见 [Observables.Samples](https://github.com/Skymly/Observables.Samples) 或 [快速开始](./getting-started.md)。
 :::
 
 ## 下一步
