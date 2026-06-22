@@ -49,6 +49,8 @@ using var sub = feed.Prices.Subscribe(tick => Console.WriteLine(tick));
 
 Configure base address, default headers, and handlers on the `HttpClient` **before** constructing the `SseConnection`.
 
+`[Sse(endpointName?)]` on the interface optionally selects the endpoint name (defaults to the interface name without the leading `I`). When omitted, the endpoint name is inferred from the interface.
+
 ## System.Reactive
 
 Use `IObservable<T>` return types and `Observables.Sse.Reactive`; entry point remains `SseService.For<T>(connection)`.

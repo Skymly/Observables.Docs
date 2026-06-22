@@ -49,6 +49,8 @@ using var sub = feed.Prices.Subscribe(tick => Console.WriteLine(tick));
 
 请在构造 `SseConnection` **之前**，在 `HttpClient` 上配置基址、默认请求头与 handler。
 
+接口上的 `[Sse(endpointName?)]` 可选指定端点名称（默认去掉 leading `I` 的接口名）。省略时从接口名推断。
+
 ## System.Reactive
 
 使用 `IObservable<T>` 返回类型与 `Observables.Sse.Reactive`；入口仍为 `SseService.For<T>(connection)`。

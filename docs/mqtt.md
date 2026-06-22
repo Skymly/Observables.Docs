@@ -68,6 +68,8 @@ await topics.Restart("device-42").FirstAsync();
 
 Topic templates use `{parameter}` placeholders bound to method parameters (`MqttTopic.Format`). MQTT `+` and `#` wildcards stay in the template literal. Subscribe members must be **parameterless properties**; publish members are **methods**.
 
+`[Mqtt(clientName?)]` on the interface optionally selects the MQTT client name (defaults to the interface name without the leading `I`). When omitted, the client name is inferred from the interface.
+
 ## Payload serialization
 
 `MqttObservable` and generated proxies deserialize subscribe payloads through **`MqttPayloadSerializers.Current`** (`IMqttPayloadSerializer`). The built-in default supports **`byte[]`** and UTF-8 **`string`** only — Observables.Mqtt does **not** reference System.Text.Json or other serializers.

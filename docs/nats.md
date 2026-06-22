@@ -55,6 +55,8 @@ Subject templates use `.` as the token separator. Wildcards: `*` (single token) 
 
 Subscribe members must be **parameterless properties**; publish and request members are **methods**.
 
+`[Nats(connectionName?)]` on the interface optionally selects the NATS connection name (defaults to the interface name without the leading `I`). When omitted, the connection name is inferred from the interface.
+
 ## Payload serialization
 
 `NatsObservable` and generated proxies deserialize payloads through **`NatsPayloadSerializers`**. The built-in default supports **`byte[]`** and UTF-8 **`string`**. On .NET 8+, other types use **System.Text.Json** unless you register a custom serializer:

@@ -55,6 +55,8 @@ var hub = HubService.For<IChatHub>(connection);
 
 特性未写方法名时，默认使用成员名。方法末尾可选 `CancellationToken`，会传给 Invoke/Stream。
 
+接口上的 `[Hub(hubName?)]` 可选指定 Hub 名称（默认去掉 leading `I` 的接口名）。省略时从接口名推断。
+
 ## System.Reactive
 
 返回类型改为 `IObservable<T>`，引用 `Observables.SignalR.Reactive`；入口仍为 `HubService.For<T>(connection)`。

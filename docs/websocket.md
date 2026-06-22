@@ -60,6 +60,8 @@ await hub.Close().FirstAsync();
 
 Configure headers, TLS, keep-alive, and other `ClientWebSocket` options **before** passing the socket to `WebSocketService.For<T>`.
 
+`[WebSocket(endpointName?)]` on the interface optionally selects the endpoint name (defaults to the interface name without the leading `I`). When omitted, the endpoint name is inferred from the interface.
+
 ## System.Reactive
 
 Use `IObservable<T>` return types and `Observables.WebSocket.Reactive`; entry point remains `WebSocketService.For<T>(socket)`.

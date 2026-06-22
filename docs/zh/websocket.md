@@ -60,6 +60,8 @@ await hub.Close().FirstAsync();
 
 在将 socket 传给 `WebSocketService.For<T>` **之前**，请自行配置请求头、TLS、Keep-Alive 等 `ClientWebSocket` 选项。
 
+接口上的 `[WebSocket(endpointName?)]` 可选指定端点名称（默认去掉 leading `I` 的接口名）。省略时从接口名推断。
+
 ## System.Reactive
 
 使用 `IObservable<T>` 返回类型与 `Observables.WebSocket.Reactive`；入口仍为 `WebSocketService.For<T>(socket)`。

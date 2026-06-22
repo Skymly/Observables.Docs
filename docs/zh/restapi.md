@@ -33,6 +33,21 @@ User reactive = await api.GetUserObservable(7).FirstAsync();
 
 单次响应的 Observable 请用 **FirstAsync**（应用内建议带取消令牌）。错误类型为 **ApiException**。
 
+### 可选 `[RestApi]` 标记
+
+RestAPI 接口通常通过方法上的 HTTP 特性（`[Get]`、`[Post]` 等）识别。在接口上添加可选的 `[RestApi]` 标记，可让空接口分析器（[OBS3007](diagnostics.md#共享-obs0001obs007)）在接口尚无方法时也报告警告，或在文档与工具中显式声明代理意图：
+
+```csharp
+[RestApi]
+public interface IUserApi
+{
+    [Get("/users/{id}")]
+    Task<User> GetUserAsync(int id);
+}
+```
+
+`[RestApi]` **非必需**——源生成器无需此特性即可工作；它仅用于启用空接口诊断并作为显式声明。
+
 ## System.Reactive
 
 ```csharp
@@ -44,7 +59,7 @@ User user = await api.GetUserObservable(7).FirstAsync().ToTask();
 
 ## 诊断
 
-见 [诊断](diagnostics.md#restapi-obs3001obs3005)。
+见 [诊断](diagnostics.md#restapi-obs3001obs3007)。
 
 ## 示例
 

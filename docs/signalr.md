@@ -59,6 +59,8 @@ int count = await hub.GetUserCount().FirstAsync();
 
 Method names default to the hub method name when the attribute name is omitted. Optional trailing `CancellationToken` is forwarded to invoke/stream calls.
 
+`[Hub(hubName?)]` on the interface optionally selects the hub name (defaults to the interface name without the leading `I`). When omitted, the hub name is inferred from the interface.
+
 ## System.Reactive
 
 Use `IObservable<T>` return types and `Observables.SignalR.Reactive`; entry point remains `HubService.For<T>(connection)`.

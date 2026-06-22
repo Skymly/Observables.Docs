@@ -7,6 +7,7 @@ Compiler diagnostics emitted by Observables source generators and shared analyze
 | ID | Severity | When |
 |----|----------|------|
 | **OBS0001** | Error | Both `.R3` and `.Reactive` Observables packages referenced for the same feature |
+| **OBS3007** | Warning | Empty `[RestApi]` interface (RestAPI) |
 | **OBS4007** | Warning | Empty `[Hub]` interface (SignalR) |
 | **OBS5007** | Warning | Empty `[Mqtt]` interface |
 | **OBS6007** | Warning | Empty `[WebSocket]` interface |
@@ -27,7 +28,7 @@ Category: `Observables` / per-domain analyzer.
 
 Category: `Observables.Events`.
 
-## RestAPI (OBS3001–OBS3005)
+## RestAPI (OBS3001–OBS3005, OBS3007)
 
 | ID | Severity | When |
 |----|----------|------|
@@ -36,6 +37,7 @@ Category: `Observables.Events`.
 | **OBS3003** | Error | Unsupported return type on API method |
 | **OBS3004** | Error | Path template does not match method parameters |
 | **OBS3005** | Error | `IObservable<T>` return without Observables.RestAPI.Reactive package |
+| **OBS3007** | Warning | Empty `[RestApi]` interface (analyzer) |
 
 Category: `Observables.RestAPI`.
 

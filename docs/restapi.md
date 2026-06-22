@@ -33,6 +33,21 @@ User reactive = await api.GetUserObservable(7).FirstAsync();
 
 Use **FirstAsync** (with a cancellation token in apps) for single-response observables. Errors surface as **ApiException** (same family as Refit).
 
+### Optional `[RestApi]` marker
+
+RestAPI interfaces are normally identified by HTTP method attributes (`[Get]`, `[Post]`, …) on their methods. Apply the optional `[RestApi]` marker on the interface when you want the empty-interface analyzer ([OBS3007](diagnostics.md#shared-obs0001obs007)) to report a warning even when the interface has no methods yet, or to make the proxy intent explicit in documentation and tooling:
+
+```csharp
+[RestApi]
+public interface IUserApi
+{
+    [Get("/users/{id}")]
+    Task<User> GetUserAsync(int id);
+}
+```
+
+`[RestApi]` is **not required** for the source generator to work — it only opts the interface into the empty-interface diagnostic and serves as an explicit declaration.
+
 ## System.Reactive
 
 ```csharp
@@ -44,7 +59,7 @@ User user = await api.GetUserObservable(7).FirstAsync().ToTask();
 
 ## Diagnostics
 
-See [Diagnostics](diagnostics.md#restapi-obs3001obs3005).
+See [Diagnostics](diagnostics.md#restapi-obs3001obs3007).
 
 ## Samples
 

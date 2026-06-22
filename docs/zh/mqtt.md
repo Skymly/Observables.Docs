@@ -64,6 +64,8 @@ var topics = MqttService.For<ISensorTopics>(client);
 
 主题模板中的 `{parameter}` 与方法参数绑定（`MqttTopic.Format`）。`+` / `#` 通配符保留在模板字面量中。订阅须为**无参属性**；发布须为**方法**。
 
+接口上的 `[Mqtt(clientName?)]` 可选指定 MQTT 客户端名称（默认去掉 leading `I` 的接口名）。省略时从接口名推断。
+
 ## 载荷序列化
 
 `MqttObservable` 与生成代理通过 **`MqttPayloadSerializers.Current`**（`IMqttPayloadSerializer`）反序列化订阅载荷。内置默认仅支持 **`byte[]`** 与 UTF-8 **`string`** — **Observables.Mqtt 不引用** System.Text.Json 等序列化库。
