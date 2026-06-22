@@ -23,9 +23,9 @@ features:
   - title: SignalR
     details: Hub client proxies — invoke, send, stream, and callbacks as observables.
   - title: Mqtt
-    details: Topic publish/subscribe proxies over MQTTnet — `Observables.Mqtt.R3` / `.Reactive` on nuget.org from preview6.
+    details: Topic publish/subscribe proxies over MQTTnet — `Observables.Mqtt.R3` / `.Reactive` on nuget.org.
   - title: WebSocket
-    details: Client WebSocket proxies over BCL `ClientWebSocket` — `Observables.WebSocket.R3` / `.Reactive` from preview6.
+    details: Client WebSocket proxies over BCL `ClientWebSocket` — `Observables.WebSocket.R3` / `.Reactive` on nuget.org.
   - title: gRPC
     details: CallInvoker client proxies — unary and streaming RPC as observables (`Observables.Grpc.R3` / `.Reactive`).
   - title: Sse

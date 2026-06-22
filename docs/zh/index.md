@@ -23,9 +23,9 @@ features:
   - title: SignalR
     details: Hub 客户端代理：Invoke、Send、流与回调均可观察化。
   - title: Mqtt
-    details: 基于 MQTTnet 的主题发布/订阅代理 — `0.1.1` 起已上 nuget.org。
+    details: 基于 MQTTnet 的主题发布/订阅代理 — `Observables.Mqtt.R3` / `.Reactive` 已上 nuget.org。
   - title: WebSocket
-    details: 基于 BCL `ClientWebSocket` 的客户端代理 — `Observables.WebSocket.R3` / `.Reactive` 自 preview6 起。
+    details: 基于 BCL `ClientWebSocket` 的客户端代理 — `Observables.WebSocket.R3` / `.Reactive` 已上 nuget.org。
   - title: gRPC
     details: CallInvoker 客户端代理 — Unary 与流式 RPC 可观察化（`Observables.Grpc.R3` / `.Reactive`）。
   - title: Sse
