@@ -1,8 +1,0 @@
-docs: sync [RestApi] marker, OBS3007, and per-domain attribute parameters
-
-- Document optional [RestApi] interface marker in restapi.md (en + zh)
-- Add OBS3007 (empty RestAPI interface) to diagnostics.md shared section and
-  RestAPI table; update reference.md diagnostic range (en + zh)
-- Document optional string? parameter on [Hub], [Mqtt], [WebSocket], [Sse],
-  [Nats] interface markers in each domain page (en + zh), matching the
-  existing [Grpc(serviceName?)] pattern
