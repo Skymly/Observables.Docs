@@ -37,7 +37,7 @@ features:
 ## 状态
 
 ::: info NuGet 预览版
-**`0.1.2`** — nuget.org **16** 个元包（[Events](https://www.nuget.org/packages/Observables.Events.R3/0.1.2)、[RestAPI](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.2)、[SignalR](https://www.nuget.org/packages/Observables.SignalR.R3/0.1.2)、[Mqtt](https://www.nuget.org/packages/Observables.Mqtt.R3/0.1.2)、[WebSocket](https://www.nuget.org/packages/Observables.WebSocket.R3/0.1.2)、[Grpc](https://www.nuget.org/packages/Observables.Grpc.R3/0.1.2)、[Sse](https://www.nuget.org/packages/Observables.Sse.R3/0.1.2) 及 Reactive 对应包）。参见 [Observables.Samples](https://github.com/Skymly/Observables.Samples) 或 [快速开始](./getting-started.md)。
+**`0.1.4`** — nuget.org **16** 个元包（[Events](https://www.nuget.org/packages/Observables.Events.R3/0.1.4)、[RestAPI](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.4)、[SignalR](https://www.nuget.org/packages/Observables.SignalR.R3/0.1.4)、[Mqtt](https://www.nuget.org/packages/Observables.Mqtt.R3/0.1.4)、[WebSocket](https://www.nuget.org/packages/Observables.WebSocket.R3/0.1.4)、[Grpc](https://www.nuget.org/packages/Observables.Grpc.R3/0.1.4)、[Sse](https://www.nuget.org/packages/Observables.Sse.R3/0.1.4) 及 Reactive 对应包）。参见 [Observables.Samples](https://github.com/Skymly/Observables.Samples) 或 [快速开始](./getting-started.md)。
 :::
 
 ## 下一步

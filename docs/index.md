@@ -37,7 +37,7 @@ features:
 ## Status
 
 ::: info Preview on NuGet
-**`0.1.2`** — **16** meta-packages on nuget.org ([Events](https://www.nuget.org/packages/Observables.Events.R3/0.1.2), [RestAPI](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.2), [SignalR](https://www.nuget.org/packages/Observables.SignalR.R3/0.1.2), [Mqtt](https://www.nuget.org/packages/Observables.Mqtt.R3/0.1.2), [WebSocket](https://www.nuget.org/packages/Observables.WebSocket.R3/0.1.2), [Grpc](https://www.nuget.org/packages/Observables.Grpc.R3/0.1.2), [Sse](https://www.nuget.org/packages/Observables.Sse.R3/0.1.2), and Reactive counterparts). Try [Observables.Samples](https://github.com/Skymly/Observables.Samples) or [Getting started](./getting-started.md).
+**`0.1.4`** — **16** meta-packages on nuget.org ([Events](https://www.nuget.org/packages/Observables.Events.R3/0.1.4), [RestAPI](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.4), [SignalR](https://www.nuget.org/packages/Observables.SignalR.R3/0.1.4), [Mqtt](https://www.nuget.org/packages/Observables.Mqtt.R3/0.1.4), [WebSocket](https://www.nuget.org/packages/Observables.WebSocket.R3/0.1.4), [Grpc](https://www.nuget.org/packages/Observables.Grpc.R3/0.1.4), [Sse](https://www.nuget.org/packages/Observables.Sse.R3/0.1.4), and Reactive counterparts). Try [Observables.Samples](https://github.com/Skymly/Observables.Samples) or [Getting started](./getting-started.md).
 :::
 
 ## Where to read next
