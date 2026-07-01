@@ -28,7 +28,7 @@ dotnet run --project Observables.Samples.Nats.Reactive
 dotnet run --project Observables.Samples.Events.Routed
 ```
 
-CI uses Nuke `./build.cmd Ci` (console samples only). Default NuGet version **`0.1.5`** ([Events](https://www.nuget.org/packages/Observables.Events.R3/0.1.5), [RestAPI](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.5), [SignalR](https://www.nuget.org/packages/Observables.SignalR.R3/0.1.5), [Mqtt](https://www.nuget.org/packages/Observables.Mqtt.R3/0.1.5), [WebSocket](https://www.nuget.org/packages/Observables.WebSocket.R3/0.1.5), [Grpc](https://www.nuget.org/packages/Observables.Grpc.R3/0.1.5), [Sse](https://www.nuget.org/packages/Observables.Sse.R3/0.1.5), [Nats](https://www.nuget.org/packages/Observables.Nats.R3/0.1.5)).
+CI uses Nuke `./build.cmd Ci` (console samples only). Default NuGet version **`0.1.6-preview1`** ([Events](https://www.nuget.org/packages/Observables.Events.R3/0.1.6-preview1), [RestAPI](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.6-preview1), [SignalR](https://www.nuget.org/packages/Observables.SignalR.R3/0.1.6-preview1), [Mqtt](https://www.nuget.org/packages/Observables.Mqtt.R3/0.1.6-preview1), [WebSocket](https://www.nuget.org/packages/Observables.WebSocket.R3/0.1.6-preview1), [Grpc](https://www.nuget.org/packages/Observables.Grpc.R3/0.1.6-preview1), [Sse](https://www.nuget.org/packages/Observables.Sse.R3/0.1.6-preview1), [Nats](https://www.nuget.org/packages/Observables.Nats.R3/0.1.6-preview1)).
 
 ## Projects
 
