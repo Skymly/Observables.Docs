@@ -6,14 +6,14 @@ Compiler diagnostics emitted by Observables source generators and shared analyze
 
 | ID | Severity | When |
 |----|----------|------|
-| **OBS0001** | Error | Both `.R3` and `.Reactive` Observables packages referenced for the same feature |
-| **OBS3007** | Warning | Empty `[RestApi]` interface (RestAPI) |
-| **OBS4007** | Warning | Empty `[Hub]` interface (SignalR) |
-| **OBS5007** | Warning | Empty `[Mqtt]` interface |
-| **OBS6007** | Warning | Empty `[WebSocket]` interface |
-| **OBS7007** | Warning | Empty `[Grpc]` interface |
-| **OBS8007** | Warning | Empty `[Sse]` interface |
-| **OBS9007** | Warning | Empty `[Nats]` interface |
+| <span id="obs0001">**OBS0001**</span> | Error | Both `.R3` and `.Reactive` Observables packages referenced for the same feature |
+| <span id="obs3007">**OBS3007**</span> | Warning | Empty `[RestApi]` interface (RestAPI) |
+| <span id="obs4007">**OBS4007**</span> | Warning | Empty `[Hub]` interface (SignalR) |
+| <span id="obs5007">**OBS5007**</span> | Warning | Empty `[Mqtt]` interface |
+| <span id="obs6007">**OBS6007**</span> | Warning | Empty `[WebSocket]` interface |
+| <span id="obs7007">**OBS7007**</span> | Warning | Empty `[Grpc]` interface |
+| <span id="obs8007">**OBS8007**</span> | Warning | Empty `[Sse]` interface |
+| <span id="obs9007">**OBS9007**</span> | Warning | Empty `[Nats]` interface |
 
 Category: `Observables` / per-domain analyzer.
 
@@ -21,11 +21,11 @@ Category: `Observables` / per-domain analyzer.
 
 | ID | Severity | When |
 |----|----------|------|
-| **OBS2001** | Warning | Classic **Events()** — unsupported event delegate signature |
-| **OBS2002** | Warning | **EventHandlers()** — not `EventHandler` / `(object, T)` shape |
-| **OBS2003** | Warning | **RoutedEvents()** — unsupported routed event delegate |
-| **OBS2004** | Warning | **RoutedEventHandlers()** — unsupported routed handler delegate |
-| **OBS2005** | Error | Unexpected internal failure in the Events source generator |
+| <span id="obs2001">**OBS2001**</span> | Warning | Classic **Events()** — unsupported event delegate signature |
+| <span id="obs2002">**OBS2002**</span> | Warning | **EventHandlers()** — not `EventHandler` / `(object, T)` shape |
+| <span id="obs2003">**OBS2003**</span> | Warning | **RoutedEvents()** — unsupported routed event delegate |
+| <span id="obs2004">**OBS2004**</span> | Warning | **RoutedEventHandlers()** — unsupported routed handler delegate |
+| <span id="obs2005">**OBS2005**</span> | Error | Unexpected internal failure in the Events source generator |
 
 Category: `Observables.Events`.
 
@@ -33,13 +33,13 @@ Category: `Observables.Events`.
 
 | ID | Severity | When |
 |----|----------|------|
-| **OBS3001** | Warning | Interface method missing HTTP verb attribute or non-literal path |
-| **OBS3002** | Error | Observables.RestAPI runtime not referenced |
-| **OBS3003** | Error | Unsupported return type on API method |
-| **OBS3004** | Error | Path template does not match method parameters |
-| **OBS3005** | Error | `IObservable<T>` return without Observables.RestAPI.Reactive package |
-| **OBS3006** | Error | Unexpected internal failure in the RestAPI source generator |
-| **OBS3007** | Warning | Empty `[RestApi]` interface (analyzer) |
+| <span id="obs3001">**OBS3001**</span> | Warning | Interface method missing HTTP verb attribute or non-literal path |
+| <span id="obs3002">**OBS3002**</span> | Error | Observables.RestAPI runtime not referenced |
+| <span id="obs3003">**OBS3003**</span> | Error | Unsupported return type on API method |
+| <span id="obs3004">**OBS3004**</span> | Error | Path template does not match method parameters |
+| <span id="obs3005">**OBS3005**</span> | Error | `IObservable<T>` return without Observables.RestAPI.Reactive package |
+| <span id="obs3006">**OBS3006**</span> | Error | Unexpected internal failure in the RestAPI source generator |
+| <span id="obs3007">**OBS3007**</span> | Warning | Empty `[RestApi]` interface (analyzer) |
 
 Category: `Observables.RestAPI`.
 
@@ -47,13 +47,13 @@ Category: `Observables.RestAPI`.
 
 | ID | Severity | When |
 |----|----------|------|
-| **OBS4001** | Warning | Hub member missing boundary attribute or non-literal hub method name |
-| **OBS4002** | Error | Observables.SignalR runtime not referenced |
-| **OBS4003** | Error | Unsupported return type (must be `Observable<T>` / `IObservable<T>`; Send needs `Unit`) |
-| **OBS4004** | Error | Member shape mismatch (e.g. `[HubOn]` on a method) |
-| **OBS4005** | Error | `IObservable<T>` without Observables.SignalR.Reactive package |
-| **OBS4006** | Error | Unsupported client-to-server streaming parameter |
-| **OBS4008** | Error | Unexpected internal failure in the SignalR source generator |
+| <span id="obs4001">**OBS4001**</span> | Warning | Hub member missing boundary attribute or non-literal hub method name |
+| <span id="obs4002">**OBS4002**</span> | Error | Observables.SignalR runtime not referenced |
+| <span id="obs4003">**OBS4003**</span> | Error | Unsupported return type (must be `Observable<T>` / `IObservable<T>`; Send needs `Unit`) |
+| <span id="obs4004">**OBS4004**</span> | Error | Member shape mismatch (e.g. `[HubOn]` on a method) |
+| <span id="obs4005">**OBS4005**</span> | Error | `IObservable<T>` without Observables.SignalR.Reactive package |
+| <span id="obs4006">**OBS4006**</span> | Error | Unsupported client-to-server streaming parameter |
+| <span id="obs4008">**OBS4008**</span> | Error | Unexpected internal failure in the SignalR source generator |
 
 Category: `Observables.SignalR`.
 
@@ -61,13 +61,13 @@ Category: `Observables.SignalR`.
 
 | ID | Severity | When |
 |----|----------|------|
-| **OBS5001** | Warning | Mqtt member missing boundary attribute or non-literal topic template |
-| **OBS5002** | Error | Observables.Mqtt runtime not referenced |
-| **OBS5003** | Error | Unsupported return type on Mqtt member |
-| **OBS5004** | Error | Member shape mismatch (e.g. `[MqttSubscribe]` on a method) |
-| **OBS5005** | Error | `IObservable<T>` without Observables.Mqtt.Reactive package |
-| **OBS5006** | Error | Unsupported topic template, extra parameters, or subscribe placeholder syntax |
-| **OBS5008** | Error | Unexpected internal failure in the Mqtt source generator |
+| <span id="obs5001">**OBS5001**</span> | Warning | Mqtt member missing boundary attribute or non-literal topic template |
+| <span id="obs5002">**OBS5002**</span> | Error | Observables.Mqtt runtime not referenced |
+| <span id="obs5003">**OBS5003**</span> | Error | Unsupported return type on Mqtt member |
+| <span id="obs5004">**OBS5004**</span> | Error | Member shape mismatch (e.g. `[MqttSubscribe]` on a method) |
+| <span id="obs5005">**OBS5005**</span> | Error | `IObservable<T>` without Observables.Mqtt.Reactive package |
+| <span id="obs5006">**OBS5006**</span> | Error | Unsupported topic template, extra parameters, or subscribe placeholder syntax |
+| <span id="obs5008">**OBS5008**</span> | Error | Unexpected internal failure in the Mqtt source generator |
 
 Category: `Observables.Mqtt`.
 
@@ -75,13 +75,13 @@ Category: `Observables.Mqtt`.
 
 | ID | Severity | When |
 |----|----------|------|
-| **OBS6001** | Warning | WebSocket member missing boundary attribute |
-| **OBS6002** | Error | Observables.WebSocket runtime not referenced |
-| **OBS6003** | Error | Unsupported return type on WebSocket member |
-| **OBS6004** | Error | Member shape mismatch (e.g. `[WebSocketReceive]` on a method) |
-| **OBS6005** | Error | `IObservable<T>` without Observables.WebSocket.Reactive package |
-| **OBS6006** | Error | Unsupported shape or parameter combination |
-| **OBS6008** | Error | Unexpected internal failure in the WebSocket source generator |
+| <span id="obs6001">**OBS6001**</span> | Warning | WebSocket member missing boundary attribute |
+| <span id="obs6002">**OBS6002**</span> | Error | Observables.WebSocket runtime not referenced |
+| <span id="obs6003">**OBS6003**</span> | Error | Unsupported return type on WebSocket member |
+| <span id="obs6004">**OBS6004**</span> | Error | Member shape mismatch (e.g. `[WebSocketReceive]` on a method) |
+| <span id="obs6005">**OBS6005**</span> | Error | `IObservable<T>` without Observables.WebSocket.Reactive package |
+| <span id="obs6006">**OBS6006**</span> | Error | Unsupported shape or parameter combination |
+| <span id="obs6008">**OBS6008**</span> | Error | Unexpected internal failure in the WebSocket source generator |
 
 Category: `Observables.WebSocket`.
 
@@ -89,14 +89,14 @@ Category: `Observables.WebSocket`.
 
 | ID | Severity | When |
 |----|----------|------|
-| **OBS7001** | Warning | gRPC member missing boundary attribute |
-| **OBS7002** | Error | Observables.Grpc runtime not referenced |
-| **OBS7003** | Error | Unsupported return type on gRPC member |
-| **OBS7004** | Error | Member shape mismatch (e.g. wrong parameters for unary) |
-| **OBS7005** | Error | `IObservable<T>` without Observables.Grpc.Reactive package |
-| **OBS7006** | Error | Unsupported parameter combination or option |
-| **OBS7007** | Warning | Empty `[Grpc]` interface (analyzer) |
-| **OBS7008** | Error | Unexpected internal failure in the gRPC source generator |
+| <span id="obs7001">**OBS7001**</span> | Warning | gRPC member missing boundary attribute |
+| <span id="obs7002">**OBS7002**</span> | Error | Observables.Grpc runtime not referenced |
+| <span id="obs7003">**OBS7003**</span> | Error | Unsupported return type on gRPC member |
+| <span id="obs7004">**OBS7004**</span> | Error | Member shape mismatch (e.g. wrong parameters for unary) |
+| <span id="obs7005">**OBS7005**</span> | Error | `IObservable<T>` without Observables.Grpc.Reactive package |
+| <span id="obs7006">**OBS7006**</span> | Error | Unsupported parameter combination or option |
+| <span id="obs7007">**OBS7007**</span> | Warning | Empty `[Grpc]` interface (analyzer) |
+| <span id="obs7008">**OBS7008**</span> | Error | Unexpected internal failure in the gRPC source generator |
 
 Category: `Observables.Grpc`.
 
@@ -104,13 +104,13 @@ Category: `Observables.Grpc`.
 
 | ID | Severity | When |
 |----|----------|------|
-| **OBS8001** | Warning | SSE member missing `[SseEvent]` boundary attribute |
-| **OBS8002** | Error | Observables.Sse runtime not referenced |
-| **OBS8003** | Error | Unsupported return type on SSE member |
-| **OBS8004** | Error | Member shape mismatch (`[SseEvent]` must be applied to a property) |
-| **OBS8005** | Error | `IObservable<T>` without Observables.Sse.Reactive package |
-| **OBS8006** | Error | Unexpected internal failure in the Sse source generator |
-| **OBS8007** | Warning | Empty `[Sse]` interface (analyzer) |
+| <span id="obs8001">**OBS8001**</span> | Warning | SSE member missing `[SseEvent]` boundary attribute |
+| <span id="obs8002">**OBS8002**</span> | Error | Observables.Sse runtime not referenced |
+| <span id="obs8003">**OBS8003**</span> | Error | Unsupported return type on SSE member |
+| <span id="obs8004">**OBS8004**</span> | Error | Member shape mismatch (`[SseEvent]` must be applied to a property) |
+| <span id="obs8005">**OBS8005**</span> | Error | `IObservable<T>` without Observables.Sse.Reactive package |
+| <span id="obs8006">**OBS8006**</span> | Error | Unexpected internal failure in the Sse source generator |
+| <span id="obs8007">**OBS8007**</span> | Warning | Empty `[Sse]` interface (analyzer) |
 
 Category: `Observables.Sse`.
 
@@ -118,13 +118,13 @@ Category: `Observables.Sse`.
 
 | ID | Severity | When |
 |----|----------|------|
-| **OBS9001** | Warning | Nats member missing boundary attribute or non-literal subject template |
-| **OBS9002** | Error | Observables.Nats runtime not referenced |
-| **OBS9003** | Error | Unsupported return type on Nats member |
-| **OBS9004** | Error | Member shape mismatch (e.g. `[NatsSubscribe]` on a method) |
-| **OBS9005** | Error | `IObservable<T>` without Observables.Nats.Reactive package |
-| **OBS9006** | Error | Unsupported subject template, extra parameters, or subscribe placeholder syntax |
-| **OBS9007** | Warning | Empty `[Nats]` interface (analyzer) |
-| **OBS9008** | Error | Unexpected internal failure in the Nats source generator |
+| <span id="obs9001">**OBS9001**</span> | Warning | Nats member missing boundary attribute or non-literal subject template |
+| <span id="obs9002">**OBS9002**</span> | Error | Observables.Nats runtime not referenced |
+| <span id="obs9003">**OBS9003**</span> | Error | Unsupported return type on Nats member |
+| <span id="obs9004">**OBS9004**</span> | Error | Member shape mismatch (e.g. `[NatsSubscribe]` on a method) |
+| <span id="obs9005">**OBS9005**</span> | Error | `IObservable<T>` without Observables.Nats.Reactive package |
+| <span id="obs9006">**OBS9006**</span> | Error | Unsupported subject template, extra parameters, or subscribe placeholder syntax |
+| <span id="obs9007">**OBS9007**</span> | Warning | Empty `[Nats]` interface (analyzer) |
+| <span id="obs9008">**OBS9008**</span> | Error | Unexpected internal failure in the Nats source generator |
 
 Category: `Observables.Nats`.
