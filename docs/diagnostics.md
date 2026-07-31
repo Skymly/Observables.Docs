@@ -14,6 +14,7 @@ Compiler diagnostics emitted by Observables source generators and shared analyze
 | <span id="obs7007">**OBS7007**</span> | Warning | Empty `[Grpc]` interface |
 | <span id="obs8007">**OBS8007**</span> | Warning | Empty `[Sse]` interface |
 | <span id="obs9007">**OBS9007**</span> | Warning | Empty `[Nats]` interface |
+| <span id="obs10007">**OBS10007**</span> | Warning | Empty `[Postgres]` interface |
 
 Category: `Observables` / per-domain analyzer.
 
@@ -128,3 +129,20 @@ Category: `Observables.Sse`.
 | <span id="obs9008">**OBS9008**</span> | Error | Unexpected internal failure in the Nats source generator |
 
 Category: `Observables.Nats`.
+
+<span id="postgres-obs10001obs10008-obs10007"></span>
+
+## Postgres (OBS10001–OBS10008, OBS10007)
+
+| ID | Severity | When |
+|----|----------|------|
+| <span id="obs10001">**OBS10001**</span> | Warning | Postgres member missing `[Listen]`/`[Notify]` or non-literal channel name |
+| <span id="obs10002">**OBS10002**</span> | Error | Observables.Postgres runtime not referenced |
+| <span id="obs10003">**OBS10003**</span> | Error | Unsupported return type on Postgres member |
+| <span id="obs10004">**OBS10004**</span> | Error | Member shape mismatch (e.g. `[Listen]` on a method) |
+| <span id="obs10005">**OBS10005**</span> | Error | `IObservable<T>` without Observables.Postgres.Reactive package |
+| <span id="obs10006">**OBS10006**</span> | Error | Unsupported channel name, `{param}` placeholder, or Notify parameter shape |
+| <span id="obs10007">**OBS10007**</span> | Warning | Empty `[Postgres]` interface (analyzer) |
+| <span id="obs10008">**OBS10008**</span> | Error | Unexpected internal failure in the Postgres source generator |
+
+Category: `Observables.Postgres`.

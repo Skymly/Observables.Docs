@@ -32,6 +32,8 @@ features:
     details: Server-Sent Events (`text/event-stream`) proxies — named events as observables (`Observables.Sse.R3` / `.Reactive`).
   - title: Nats
     details: Core NATS subject proxies — subscribe, publish, and request-reply (`Observables.Nats.R3` / `.Reactive`).
+  - title: Postgres
+    details: PostgreSQL LISTEN/NOTIFY channel proxies — dedicated connection + keepalive (`Observables.Postgres.R3` / `.Reactive`, pending nuget.org).
 ---
 
 ## Status

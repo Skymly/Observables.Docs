@@ -28,6 +28,7 @@
 | [Observables.Sse.Reactive](https://www.nuget.org/packages/Observables.Sse.Reactive/0.1.6) | nuget.org |
 | [Observables.Nats.R3](https://www.nuget.org/packages/Observables.Nats.R3/0.1.6) | nuget.org |
 | [Observables.Nats.Reactive](https://www.nuget.org/packages/Observables.Nats.Reactive/0.1.6) | nuget.org |
+| `Observables.Postgres.R3` / `.Reactive` | 主仓已落地（待 nuget.org） |
 
 亦可从 GitHub Packages（`https://nuget.pkg.github.com/Skymly/index.json`）还原（需凭据）。
 
@@ -43,6 +44,7 @@
 | Grpc | `Observables.Grpc.R3.SourceGenerators` | `Observables.Grpc.Reactive.SourceGenerators` | 运行时在元包内 |
 | Sse | `Observables.Sse.R3.SourceGenerators` | `Observables.Sse.Reactive.SourceGenerators` | 运行时在元包内 |
 | Nats | `Observables.Nats.R3.SourceGenerators` | `Observables.Nats.Reactive.SourceGenerators` | 运行时在元包内 |
+| Postgres | `Observables.Postgres.R3.SourceGenerators` | `Observables.Postgres.Reactive.SourceGenerators` | 运行时在元包内；待 nuget.org |
 
 ## 外部运行时
 
@@ -51,4 +53,4 @@
 
 ## 诊断
 
-见 [诊断](diagnostics.md) 专页（Events `OBS2001`–`OBS2005`、RestAPI `OBS3001`–`OBS3006` + `OBS3007`、SignalR `OBS4001`–`OBS4008`、Mqtt `OBS5001`–`OBS5008`、WebSocket `OBS6001`–`OBS6008`、gRPC `OBS7001`–`OBS7008`、Sse `OBS8001`–`OBS8006` + `OBS8007`、Nats `OBS9001`–`OBS9008` + `OBS9007`、共享 `OBS0001`）。
+见 [诊断](diagnostics.md) 专页（Events `OBS2001`–`OBS2005`、RestAPI `OBS3001`–`OBS3006` + `OBS3007`、SignalR `OBS4001`–`OBS4008`、Mqtt `OBS5001`–`OBS5008`、WebSocket `OBS6001`–`OBS6008`、gRPC `OBS7001`–`OBS7008`、Sse `OBS8001`–`OBS8006` + `OBS8007`、Nats `OBS9001`–`OBS9008` + `OBS9007`、Postgres `OBS10001`–`OBS10008` + `OBS10007`、共享 `OBS0001`）。
