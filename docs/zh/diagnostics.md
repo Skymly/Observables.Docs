@@ -14,6 +14,7 @@ Observables 源生成器与共享分析器在编译期报告的诊断 ID（按�
 | <span id="obs7007">**OBS7007**</span> | 警告 | 空 `[Grpc]` 接口 |
 | <span id="obs8007">**OBS8007**</span> | 警告 | 空 `[Sse]` 接口 |
 | <span id="obs9007">**OBS9007**</span> | 警告 | 空 `[Nats]` 接口 |
+| <span id="obs10007">**OBS10007**</span> | 警告 | 空 `[Postgres]` 接口 |
 
 类别：`Observables` / 各域分析器。
 
@@ -128,3 +129,20 @@ Observables 源生成器与共享分析器在编译期报告的诊断 ID（按�
 | <span id="obs9008">**OBS9008**</span> | 错误 | Nats 源生成器发生意外内部错误 |
 
 类别：`Observables.Nats`。
+
+<span id="postgres-obs10001obs10008-obs10007"></span>
+
+## Postgres（OBS10001–OBS10008、OBS10007）
+
+| ID | 级别 | 场景 |
+|----|------|------|
+| <span id="obs10001">**OBS10001**</span> | 警告 | Postgres 成员缺少 `[Listen]`/`[Notify]` 或通道名非常量 |
+| <span id="obs10002">**OBS10002**</span> | 错误 | 未引用 Observables.Postgres 运行时 |
+| <span id="obs10003">**OBS10003**</span> | 错误 | 不支持的返回类型 |
+| <span id="obs10004">**OBS10004**</span> | 错误 | 成员形态与特性不匹配（如方法上使用 `[Listen]`） |
+| <span id="obs10005">**OBS10005**</span> | 错误 | 使用 `IObservable<T>` 但未引用 Observables.Postgres.Reactive |
+| <span id="obs10006">**OBS10006**</span> | 错误 | 不支持的通道名、`{param}` 占位符或 Notify 参数形态 |
+| <span id="obs10007">**OBS10007**</span> | 警告 | 空 `[Postgres]` 接口（分析器） |
+| <span id="obs10008">**OBS10008**</span> | 错误 | Postgres 源生成器发生意外内部错误 |
+
+类别：`Observables.Postgres`。

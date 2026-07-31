@@ -27,6 +27,8 @@
 | `Observables.Sse.Reactive` | Same → System.Reactive |
 | `Observables.Nats.R3` | Core NATS subject proxy → R3 |
 | `Observables.Nats.Reactive` | Same → System.Reactive |
+| `Observables.Postgres.R3` | PostgreSQL LISTEN/NOTIFY → R3 (**pending nuget.org**) |
+| `Observables.Postgres.Reactive` | Same → System.Reactive (**pending nuget.org**) |
 
 Preview releases use **Git tag + NuGet only** (no GitHub Release). Always add the matching reactive runtime yourself (`R3` or `System.Reactive`).
 
@@ -166,6 +168,21 @@ using Observables.Nats;
 using R3;
 
 var hub = NatsService.For<IMyHub>(natsConnection);
+```
+
+### Postgres (R3)
+
+See [Postgres](postgres.md). Packages are implemented in-repo but **not yet on nuget.org** — use a local feed or project references until the next release.
+
+```csharp
+using Observables.Postgres;
+using Npgsql;
+using R3;
+
+await using var connection = new NpgsqlConnection(
+    "Host=localhost;Database=app;Username=app;Password=…;Pooling=false;Keepalive=30");
+await connection.OpenAsync();
+var hub = PostgresService.For<IMyHub>(connection);
 ```
 
 ## Clone layout (optional)

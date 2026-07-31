@@ -32,6 +32,8 @@ features:
     details: Server-Sent Events（`text/event-stream`）代理 — 命名事件可观察化（`Observables.Sse.R3` / `.Reactive`）。
   - title: Nats
     details: Core NATS subject 代理 — 订阅、发布与请求-响应（`Observables.Nats.R3` / `.Reactive`）。
+  - title: Postgres
+    details: PostgreSQL LISTEN/NOTIFY 通道代理 — 专用连接与 keepalive（`Observables.Postgres.R3` / `.Reactive`，待 nuget.org 发版）。
 ---
 
 ## 状态

@@ -27,6 +27,8 @@
 | `Observables.Sse.Reactive` | 同上 → System.Reactive |
 | `Observables.Nats.R3` | Core NATS subject 代理 → R3 |
 | `Observables.Nats.Reactive` | 同上 → System.Reactive |
+| `Observables.Postgres.R3` | PostgreSQL LISTEN/NOTIFY → R3（**待 nuget.org**） |
+| `Observables.Postgres.Reactive` | 同上 → System.Reactive（**待 nuget.org**） |
 
 预览版仅 **打 tag + 推 NuGet**，**不**创建 GitHub Release。请自行添加 `R3` 或 `System.Reactive`。
 
@@ -166,6 +168,21 @@ using Observables.Nats;
 using R3;
 
 var hub = NatsService.For<IMyHub>(natsConnection);
+```
+
+### Postgres（R3）
+
+见 [Postgres](postgres.md)。包已在主仓落地，但 **尚未上架 nuget.org** — 发版前请用本地源或项目引用。
+
+```csharp
+using Observables.Postgres;
+using Npgsql;
+using R3;
+
+await using var connection = new NpgsqlConnection(
+    "Host=localhost;Database=app;Username=app;Password=…;Pooling=false;Keepalive=30");
+await connection.OpenAsync();
+var hub = PostgresService.For<IMyHub>(connection);
 ```
 
 ## 并列克隆（可选）

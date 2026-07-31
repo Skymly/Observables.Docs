@@ -28,6 +28,7 @@
 | [Observables.Sse.Reactive](https://www.nuget.org/packages/Observables.Sse.Reactive/0.1.6) | nuget.org |
 | [Observables.Nats.R3](https://www.nuget.org/packages/Observables.Nats.R3/0.1.6) | nuget.org |
 | [Observables.Nats.Reactive](https://www.nuget.org/packages/Observables.Nats.Reactive/0.1.6) | nuget.org |
+| `Observables.Postgres.R3` / `.Reactive` | In-repo (pending nuget.org) |
 
 Also published to GitHub Packages (`https://nuget.pkg.github.com/Skymly/index.json`) when using org feed credentials.
 
@@ -43,6 +44,7 @@ Also published to GitHub Packages (`https://nuget.pkg.github.com/Skymly/index.js
 | Grpc | `Observables.Grpc.R3.SourceGenerators` | `Observables.Grpc.Reactive.SourceGenerators` | Runtime in meta-package |
 | Sse | `Observables.Sse.R3.SourceGenerators` | `Observables.Sse.Reactive.SourceGenerators` | Runtime in meta-package |
 | Nats | `Observables.Nats.R3.SourceGenerators` | `Observables.Nats.Reactive.SourceGenerators` | Runtime in meta-package |
+| Postgres | `Observables.Postgres.R3.SourceGenerators` | `Observables.Postgres.Reactive.SourceGenerators` | Runtime in meta-package; pending nuget.org |
 
 ## External runtimes
 
@@ -51,4 +53,4 @@ Also published to GitHub Packages (`https://nuget.pkg.github.com/Skymly/index.js
 
 ## Diagnostics
 
-See the [Diagnostics](diagnostics.md) page (Events `OBS2001`–`OBS2005`, RestAPI `OBS3001`–`OBS3006` + `OBS3007`, SignalR `OBS4001`–`OBS4008`, Mqtt `OBS5001`–`OBS5008`, WebSocket `OBS6001`–`OBS6008`, gRPC `OBS7001`–`OBS7008`, Sse `OBS8001`–`OBS8006` + `OBS8007`, Nats `OBS9001`–`OBS9008` + `OBS9007`, shared `OBS0001`).
+See the [Diagnostics](diagnostics.md) page (Events `OBS2001`–`OBS2005`, RestAPI `OBS3001`–`OBS3006` + `OBS3007`, SignalR `OBS4001`–`OBS4008`, Mqtt `OBS5001`–`OBS5008`, WebSocket `OBS6001`–`OBS6008`, gRPC `OBS7001`–`OBS7008`, Sse `OBS8001`–`OBS8006` + `OBS8007`, Nats `OBS9001`–`OBS9008` + `OBS9007`, Postgres `OBS10001`–`OBS10008` + `OBS10007`, shared `OBS0001`).
