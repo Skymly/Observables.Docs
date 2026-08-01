@@ -11,11 +11,7 @@
 
 两包均含 **Observables.Postgres** 运行时（`PostgresService`、`PostgresObservable` 桥接）及对应 Roslyn 分析器。
 
-::: warning 尚未上架 nuget.org
-Postgres 已在 [Observables](https://github.com/Skymly/Observables) 主仓落地（本地 PackVerify：**18** 包），但 **尚未** 发布到 nuget.org（`0.1.6` 仍为 **16** 包）。下一版维护者批准发版后可按其它域方式安装；在此之前请使用本地 nupkg 源或项目/分析器引用。
-:::
-
-应用侧还需引用 [Npgsql](https://www.nuget.org/packages/Npgsql) 以及 **R3** 或 **System.Reactive**。
+Postgres 域自 **`0.1.7`** 起发布（与其它域相同）。应用侧还需引用 [Npgsql](https://www.nuget.org/packages/Npgsql) 以及 **R3** 或 **System.Reactive**。
 
 **v1 范围**：仅 LISTEN/NOTIFY。逻辑复制、slot、LSN、ack/checkpoint 等结算类 API **不在范围内**。
 

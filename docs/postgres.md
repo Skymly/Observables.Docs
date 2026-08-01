@@ -11,11 +11,7 @@ Declarative **PostgreSQL LISTEN/NOTIFY** channel interfaces with compile-time pr
 
 Both include the **Observables.Postgres** runtime (`PostgresService`, `PostgresObservable` bridges) and the matching Roslyn analyzer.
 
-::: warning Pending nuget.org
-Postgres is implemented in the [Observables](https://github.com/Skymly/Observables) library tree (local PackVerify: **18** packages) but is **not** on nuget.org yet (`0.1.6` remains **16** packages). After the next maintainer-approved release, install like other domains. Until then, consume via a local nupkg feed or project/analyzer references.
-:::
-
-Also reference [Npgsql](https://www.nuget.org/packages/Npgsql) and **R3** or **System.Reactive** in your app.
+The Postgres domain ships from **`0.1.7`** (same model as the other domains). Also reference [Npgsql](https://www.nuget.org/packages/Npgsql) and **R3** or **System.Reactive** in your app.
 
 **v1 scope**: LISTEN/NOTIFY only. Logical replication, slots, LSN, and ack/checkpoint APIs are **out of scope**.
 

@@ -33,13 +33,13 @@ features:
   - title: Nats
     details: Core NATS subject 代理 — 订阅、发布与请求-响应（`Observables.Nats.R3` / `.Reactive`）。
   - title: Postgres
-    details: PostgreSQL LISTEN/NOTIFY 通道代理 — 专用连接与 keepalive（`Observables.Postgres.R3` / `.Reactive`，待 nuget.org 发版）。
+    details: PostgreSQL LISTEN/NOTIFY 通道代理 — 专用连接与 keepalive（`Observables.Postgres.R3` / `.Reactive` 已上 nuget.org）。
 ---
 
 ## 状态
 
 ::: info NuGet 预览版
-**`0.1.6`** — nuget.org **16** 个元包（[Events](https://www.nuget.org/packages/Observables.Events.R3/0.1.6)、[RestAPI](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.6)、[SignalR](https://www.nuget.org/packages/Observables.SignalR.R3/0.1.6)、[Mqtt](https://www.nuget.org/packages/Observables.Mqtt.R3/0.1.6)、[WebSocket](https://www.nuget.org/packages/Observables.WebSocket.R3/0.1.6)、[Grpc](https://www.nuget.org/packages/Observables.Grpc.R3/0.1.6)、[Sse](https://www.nuget.org/packages/Observables.Sse.R3/0.1.6) 及 Reactive 对应包）。参见 [Observables.Samples](https://github.com/Skymly/Observables.Samples) 或 [快速开始](./getting-started.md)。
+**`0.1.7`** — nuget.org **18** 个元包（[Events](https://www.nuget.org/packages/Observables.Events.R3/0.1.7)、[RestAPI](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.7)、[SignalR](https://www.nuget.org/packages/Observables.SignalR.R3/0.1.7)、[Mqtt](https://www.nuget.org/packages/Observables.Mqtt.R3/0.1.7)、[WebSocket](https://www.nuget.org/packages/Observables.WebSocket.R3/0.1.7)、[Grpc](https://www.nuget.org/packages/Observables.Grpc.R3/0.1.7)、[Sse](https://www.nuget.org/packages/Observables.Sse.R3/0.1.7)、[Nats](https://www.nuget.org/packages/Observables.Nats.R3/0.1.7)、[Postgres](https://www.nuget.org/packages/Observables.Postgres.R3/0.1.7) 及 Reactive 对应包）。参见 [Observables.Samples](https://github.com/Skymly/Observables.Samples) 或 [快速开始](./getting-started.md)。
 :::
 
 ## 下一步
