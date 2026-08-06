@@ -28,7 +28,7 @@ dotnet run --project Observables.Samples.Nats.Reactive
 dotnet run --project Observables.Samples.Events.Routed
 ```
 
-CI 使用 Nuke `./build.cmd Ci`（仅控制台示例）。默认 NuGet 版本 **`0.1.7`**（[Events](https://www.nuget.org/packages/Observables.Events.R3/0.1.7)、[RestAPI](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.7)、[SignalR](https://www.nuget.org/packages/Observables.SignalR.R3/0.1.7)、[Mqtt](https://www.nuget.org/packages/Observables.Mqtt.R3/0.1.7)、[WebSocket](https://www.nuget.org/packages/Observables.WebSocket.R3/0.1.7)、[Grpc](https://www.nuget.org/packages/Observables.Grpc.R3/0.1.7)、[Sse](https://www.nuget.org/packages/Observables.Sse.R3/0.1.7)、[Nats](https://www.nuget.org/packages/Observables.Nats.R3/0.1.7)、[Postgres](https://www.nuget.org/packages/Observables.Postgres.R3/0.1.7)）。
+CI 使用 Nuke `./build.cmd Ci`（仅控制台示例）。默认 NuGet 版本 **`0.1.9`**（[Events](https://www.nuget.org/packages/Observables.Events.R3/0.1.9)、[RestAPI](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.9)、[SignalR](https://www.nuget.org/packages/Observables.SignalR.R3/0.1.9)、[Mqtt](https://www.nuget.org/packages/Observables.Mqtt.R3/0.1.9)、[WebSocket](https://www.nuget.org/packages/Observables.WebSocket.R3/0.1.9)、[Grpc](https://www.nuget.org/packages/Observables.Grpc.R3/0.1.9)、[Sse](https://www.nuget.org/packages/Observables.Sse.R3/0.1.9)、[Nats](https://www.nuget.org/packages/Observables.Nats.R3/0.1.9)、[Postgres](https://www.nuget.org/packages/Observables.Postgres.R3/0.1.9)、[Redis](https://www.nuget.org/packages/Observables.Redis.R3/0.1.9)）。
 
 ## 项目
 

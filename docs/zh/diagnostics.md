@@ -15,6 +15,7 @@ Observables 源生成器与共享分析器在编译期报告的诊断 ID（按�
 | <span id="obs8007">**OBS8007**</span> | 警告 | 空 `[Sse]` 接口 |
 | <span id="obs9007">**OBS9007**</span> | 警告 | 空 `[Nats]` 接口 |
 | <span id="obs10007">**OBS10007**</span> | 警告 | 空 `[Postgres]` 接口 |
+| <span id="obs11007">**OBS11007**</span> | 警告 | 空 `[Redis]` 接口 |
 
 类别：`Observables` / 各域分析器。
 
@@ -146,3 +147,20 @@ Observables 源生成器与共享分析器在编译期报告的诊断 ID（按�
 | <span id="obs10008">**OBS10008**</span> | 错误 | Postgres 源生成器发生意外内部错误 |
 
 类别：`Observables.Postgres`。
+
+<span id="redis-obs11001obs11008-obs11007"></span>
+
+## Redis（OBS11001–OBS11008、OBS11007）
+
+| ID | 级别 | 场景 |
+|----|------|------|
+| <span id="obs11001">**OBS11001**</span> | 警告 | Redis 成员缺少边界特性或 Channel 非常量 |
+| <span id="obs11002">**OBS11002**</span> | 错误 | 未引用 Observables.Redis 运行时 |
+| <span id="obs11003">**OBS11003**</span> | 错误 | 不支持的返回类型 |
+| <span id="obs11004">**OBS11004**</span> | 错误 | 成员形态与特性不匹配（如方法上使用 `[RedisSubscribe]`） |
+| <span id="obs11005">**OBS11005**</span> | 错误 | 使用 `IObservable<T>` 但未引用 Observables.Redis.Reactive |
+| <span id="obs11006">**OBS11006**</span> | 错误 | Channel/模板违规（Subscribe `{param}`、Publish glob、参数形态等） |
+| <span id="obs11007">**OBS11007**</span> | 警告 | 空 `[Redis]` 接口（分析器） |
+| <span id="obs11008">**OBS11008**</span> | 错误 | Redis 源生成器发生意外内部错误 |
+
+类别：`Observables.Redis`。
