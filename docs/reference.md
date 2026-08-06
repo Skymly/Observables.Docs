@@ -5,31 +5,33 @@
 | Repository | Role |
 |------------|------|
 | [Observables](https://github.com/Skymly/Observables) | Roslyn source generators, runtime, tests |
-| [Observables.Samples](https://github.com/Skymly/Observables.Samples) | Demo applications (NuGet `0.1.7` by default) |
+| [Observables.Samples](https://github.com/Skymly/Observables.Samples) | Demo applications (NuGet `0.1.9` by default) |
 | [Observables.Docs](https://github.com/Skymly/Observables.Docs) | This documentation site |
 
-## NuGet packages (`0.1.7`)
+## NuGet packages (`0.1.9`)
 
 | Package ID | Feed |
 |------------|------|
-| [Observables.Events.R3](https://www.nuget.org/packages/Observables.Events.R3/0.1.7) | nuget.org |
-| [Observables.Events.Reactive](https://www.nuget.org/packages/Observables.Events.Reactive/0.1.7) | nuget.org |
-| [Observables.RestAPI.R3](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.7) | nuget.org |
-| [Observables.RestAPI.Reactive](https://www.nuget.org/packages/Observables.RestAPI.Reactive/0.1.7) | nuget.org |
-| [Observables.SignalR.R3](https://www.nuget.org/packages/Observables.SignalR.R3/0.1.7) | nuget.org |
-| [Observables.SignalR.Reactive](https://www.nuget.org/packages/Observables.SignalR.Reactive/0.1.7) | nuget.org |
-| [Observables.Mqtt.R3](https://www.nuget.org/packages/Observables.Mqtt.R3/0.1.7) | nuget.org |
-| [Observables.Mqtt.Reactive](https://www.nuget.org/packages/Observables.Mqtt.Reactive/0.1.7) | nuget.org |
-| [Observables.WebSocket.R3](https://www.nuget.org/packages/Observables.WebSocket.R3/0.1.7) | nuget.org |
-| [Observables.WebSocket.Reactive](https://www.nuget.org/packages/Observables.WebSocket.Reactive/0.1.7) | nuget.org |
-| [Observables.Grpc.R3](https://www.nuget.org/packages/Observables.Grpc.R3/0.1.7) | nuget.org |
-| [Observables.Grpc.Reactive](https://www.nuget.org/packages/Observables.Grpc.Reactive/0.1.7) | nuget.org |
-| [Observables.Sse.R3](https://www.nuget.org/packages/Observables.Sse.R3/0.1.7) | nuget.org |
-| [Observables.Sse.Reactive](https://www.nuget.org/packages/Observables.Sse.Reactive/0.1.7) | nuget.org |
-| [Observables.Nats.R3](https://www.nuget.org/packages/Observables.Nats.R3/0.1.7) | nuget.org |
-| [Observables.Nats.Reactive](https://www.nuget.org/packages/Observables.Nats.Reactive/0.1.7) | nuget.org |
-| [Observables.Postgres.R3](https://www.nuget.org/packages/Observables.Postgres.R3/0.1.7) | nuget.org |
-| [Observables.Postgres.Reactive](https://www.nuget.org/packages/Observables.Postgres.Reactive/0.1.7) | nuget.org |
+| [Observables.Events.R3](https://www.nuget.org/packages/Observables.Events.R3/0.1.9) | nuget.org |
+| [Observables.Events.Reactive](https://www.nuget.org/packages/Observables.Events.Reactive/0.1.9) | nuget.org |
+| [Observables.RestAPI.R3](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.9) | nuget.org |
+| [Observables.RestAPI.Reactive](https://www.nuget.org/packages/Observables.RestAPI.Reactive/0.1.9) | nuget.org |
+| [Observables.SignalR.R3](https://www.nuget.org/packages/Observables.SignalR.R3/0.1.9) | nuget.org |
+| [Observables.SignalR.Reactive](https://www.nuget.org/packages/Observables.SignalR.Reactive/0.1.9) | nuget.org |
+| [Observables.Mqtt.R3](https://www.nuget.org/packages/Observables.Mqtt.R3/0.1.9) | nuget.org |
+| [Observables.Mqtt.Reactive](https://www.nuget.org/packages/Observables.Mqtt.Reactive/0.1.9) | nuget.org |
+| [Observables.WebSocket.R3](https://www.nuget.org/packages/Observables.WebSocket.R3/0.1.9) | nuget.org |
+| [Observables.WebSocket.Reactive](https://www.nuget.org/packages/Observables.WebSocket.Reactive/0.1.9) | nuget.org |
+| [Observables.Grpc.R3](https://www.nuget.org/packages/Observables.Grpc.R3/0.1.9) | nuget.org |
+| [Observables.Grpc.Reactive](https://www.nuget.org/packages/Observables.Grpc.Reactive/0.1.9) | nuget.org |
+| [Observables.Sse.R3](https://www.nuget.org/packages/Observables.Sse.R3/0.1.9) | nuget.org |
+| [Observables.Sse.Reactive](https://www.nuget.org/packages/Observables.Sse.Reactive/0.1.9) | nuget.org |
+| [Observables.Nats.R3](https://www.nuget.org/packages/Observables.Nats.R3/0.1.9) | nuget.org |
+| [Observables.Nats.Reactive](https://www.nuget.org/packages/Observables.Nats.Reactive/0.1.9) | nuget.org |
+| [Observables.Postgres.R3](https://www.nuget.org/packages/Observables.Postgres.R3/0.1.9) | nuget.org |
+| [Observables.Postgres.Reactive](https://www.nuget.org/packages/Observables.Postgres.Reactive/0.1.9) | nuget.org |
+| [Observables.Redis.R3](https://www.nuget.org/packages/Observables.Redis.R3/0.1.9) | nuget.org |
+| [Observables.Redis.Reactive](https://www.nuget.org/packages/Observables.Redis.Reactive/0.1.9) | nuget.org |
 
 Also published to GitHub Packages (`https://nuget.pkg.github.com/Skymly/index.json`) when using org feed credentials.
 
@@ -46,6 +48,7 @@ Also published to GitHub Packages (`https://nuget.pkg.github.com/Skymly/index.js
 | Sse | `Observables.Sse.R3.SourceGenerators` | `Observables.Sse.Reactive.SourceGenerators` | Runtime in meta-package |
 | Nats | `Observables.Nats.R3.SourceGenerators` | `Observables.Nats.Reactive.SourceGenerators` | Runtime in meta-package |
 | Postgres | `Observables.Postgres.R3.SourceGenerators` | `Observables.Postgres.Reactive.SourceGenerators` | Runtime in meta-package |
+| Redis | `Observables.Redis.R3.SourceGenerators` | `Observables.Redis.Reactive.SourceGenerators` | Runtime in meta-package |
 
 ## External runtimes
 
@@ -54,4 +57,4 @@ Also published to GitHub Packages (`https://nuget.pkg.github.com/Skymly/index.js
 
 ## Diagnostics
 
-See the [Diagnostics](diagnostics.md) page (Events `OBS2001`–`OBS2005`, RestAPI `OBS3001`–`OBS3006` + `OBS3007`, SignalR `OBS4001`–`OBS4008`, Mqtt `OBS5001`–`OBS5008`, WebSocket `OBS6001`–`OBS6008`, gRPC `OBS7001`–`OBS7008`, Sse `OBS8001`–`OBS8006` + `OBS8007`, Nats `OBS9001`–`OBS9008` + `OBS9007`, Postgres `OBS10001`–`OBS10008` + `OBS10007`, shared `OBS0001`).
+See the [Diagnostics](diagnostics.md) page (Events `OBS2001`–`OBS2005`, RestAPI `OBS3001`–`OBS3006` + `OBS3007`, SignalR `OBS4001`–`OBS4008`, Mqtt `OBS5001`–`OBS5008`, WebSocket `OBS6001`–`OBS6008`, gRPC `OBS7001`–`OBS7008`, Sse `OBS8001`–`OBS8006` + `OBS8007`, Nats `OBS9001`–`OBS9008` + `OBS9007`, Postgres `OBS10001`–`OBS10008` + `OBS10007`, Redis `OBS11001`–`OBS11008` + `OBS11007`, shared `OBS0001`).

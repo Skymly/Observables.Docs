@@ -15,6 +15,7 @@ Compiler diagnostics emitted by Observables source generators and shared analyze
 | <span id="obs8007">**OBS8007**</span> | Warning | Empty `[Sse]` interface |
 | <span id="obs9007">**OBS9007**</span> | Warning | Empty `[Nats]` interface |
 | <span id="obs10007">**OBS10007**</span> | Warning | Empty `[Postgres]` interface |
+| <span id="obs11007">**OBS11007**</span> | Warning | Empty `[Redis]` interface |
 
 Category: `Observables` / per-domain analyzer.
 
@@ -146,3 +147,20 @@ Category: `Observables.Nats`.
 | <span id="obs10008">**OBS10008**</span> | Error | Unexpected internal failure in the Postgres source generator |
 
 Category: `Observables.Postgres`.
+
+<span id="redis-obs11001obs11008-obs11007"></span>
+
+## Redis (OBS11001–OBS11008, OBS11007)
+
+| ID | Severity | When |
+|----|----------|------|
+| <span id="obs11001">**OBS11001**</span> | Warning | Redis member missing boundary attribute or non-literal Channel |
+| <span id="obs11002">**OBS11002**</span> | Error | Observables.Redis runtime not referenced |
+| <span id="obs11003">**OBS11003**</span> | Error | Unsupported return type on Redis member |
+| <span id="obs11004">**OBS11004**</span> | Error | Member shape mismatch (e.g. `[RedisSubscribe]` on a method) |
+| <span id="obs11005">**OBS11005**</span> | Error | `IObservable<T>` without Observables.Redis.Reactive package |
+| <span id="obs11006">**OBS11006**</span> | Error | Channel/template violation (Subscribe `{param}`, Publish glob, parameter shape) |
+| <span id="obs11007">**OBS11007**</span> | Warning | Empty `[Redis]` interface (analyzer) |
+| <span id="obs11008">**OBS11008**</span> | Error | Unexpected internal failure in the Redis source generator |
+
+Category: `Observables.Redis`.

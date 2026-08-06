@@ -34,12 +34,14 @@ features:
     details: Core NATS subject proxies — subscribe, publish, and request-reply (`Observables.Nats.R3` / `.Reactive`).
   - title: Postgres
     details: PostgreSQL LISTEN/NOTIFY channel proxies — dedicated connection + keepalive (`Observables.Postgres.R3` / `.Reactive` on nuget.org).
+  - title: Redis
+    details: Redis Pub/Sub channel proxies — Subscribe/Publish via `IConnectionMultiplexer` (`Observables.Redis.R3` / `.Reactive` on nuget.org).
 ---
 
 ## Status
 
 ::: info Preview on NuGet
-**`0.1.7`** — **18** meta-packages on nuget.org ([Events](https://www.nuget.org/packages/Observables.Events.R3/0.1.7), [RestAPI](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.7), [SignalR](https://www.nuget.org/packages/Observables.SignalR.R3/0.1.7), [Mqtt](https://www.nuget.org/packages/Observables.Mqtt.R3/0.1.7), [WebSocket](https://www.nuget.org/packages/Observables.WebSocket.R3/0.1.7), [Grpc](https://www.nuget.org/packages/Observables.Grpc.R3/0.1.7), [Sse](https://www.nuget.org/packages/Observables.Sse.R3/0.1.7), [Nats](https://www.nuget.org/packages/Observables.Nats.R3/0.1.7), [Postgres](https://www.nuget.org/packages/Observables.Postgres.R3/0.1.7), and Reactive counterparts). Try [Observables.Samples](https://github.com/Skymly/Observables.Samples) or [Getting started](./getting-started.md).
+**`0.1.9`** — **20** meta-packages on nuget.org ([Events](https://www.nuget.org/packages/Observables.Events.R3/0.1.9), [RestAPI](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.9), [SignalR](https://www.nuget.org/packages/Observables.SignalR.R3/0.1.9), [Mqtt](https://www.nuget.org/packages/Observables.Mqtt.R3/0.1.9), [WebSocket](https://www.nuget.org/packages/Observables.WebSocket.R3/0.1.9), [Grpc](https://www.nuget.org/packages/Observables.Grpc.R3/0.1.9), [Sse](https://www.nuget.org/packages/Observables.Sse.R3/0.1.9), [Nats](https://www.nuget.org/packages/Observables.Nats.R3/0.1.9), [Postgres](https://www.nuget.org/packages/Observables.Postgres.R3/0.1.9), [Redis](https://www.nuget.org/packages/Observables.Redis.R3/0.1.9), and Reactive counterparts). Try [Observables.Samples](https://github.com/Skymly/Observables.Samples) or [Getting started](./getting-started.md).
 :::
 
 ## Where to read next
