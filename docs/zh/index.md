@@ -41,7 +41,7 @@ features:
 ## 状态
 
 ::: info NuGet 预览版
-**`0.1.9`** — nuget.org **20** 个元包（[Events](https://www.nuget.org/packages/Observables.Events.R3/0.1.9)、[RestAPI](https://www.nuget.org/packages/Observables.RestAPI.R3/0.1.9)、[SignalR](https://www.nuget.org/packages/Observables.SignalR.R3/0.1.9)、[Mqtt](https://www.nuget.org/packages/Observables.Mqtt.R3/0.1.9)、[WebSocket](https://www.nuget.org/packages/Observables.WebSocket.R3/0.1.9)、[Grpc](https://www.nuget.org/packages/Observables.Grpc.R3/0.1.9)、[Sse](https://www.nuget.org/packages/Observables.Sse.R3/0.1.9)、[Nats](https://www.nuget.org/packages/Observables.Nats.R3/0.1.9)、[Postgres](https://www.nuget.org/packages/Observables.Postgres.R3/0.1.9)、[Redis](https://www.nuget.org/packages/Observables.Redis.R3/0.1.9) 及 Reactive 对应包）。参见 [Observables.Samples](https://github.com/Skymly/Observables.Samples) 或 [快速开始](./getting-started.md)。
+**`0.2.1`** — nuget.org **20** 个元包（[Events](https://www.nuget.org/packages/Observables.Events.R3/0.2.1)、[RestAPI](https://www.nuget.org/packages/Observables.RestAPI.R3/0.2.1)、[SignalR](https://www.nuget.org/packages/Observables.SignalR.R3/0.2.1)、[Mqtt](https://www.nuget.org/packages/Observables.Mqtt.R3/0.2.1)、[WebSocket](https://www.nuget.org/packages/Observables.WebSocket.R3/0.2.1)、[Grpc](https://www.nuget.org/packages/Observables.Grpc.R3/0.2.1)、[Sse](https://www.nuget.org/packages/Observables.Sse.R3/0.2.1)、[Nats](https://www.nuget.org/packages/Observables.Nats.R3/0.2.1)、[Postgres](https://www.nuget.org/packages/Observables.Postgres.R3/0.2.1)、[Redis](https://www.nuget.org/packages/Observables.Redis.R3/0.2.1) 及 Reactive 对应包）。参见 [Observables.Samples](https://github.com/Skymly/Observables.Samples) 或 [快速开始](./getting-started.md)。
 :::
 
 ## 下一步

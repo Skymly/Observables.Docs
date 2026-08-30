@@ -33,6 +33,10 @@ User reactive = await api.GetUserObservable(7).FirstAsync();
 
 Use **FirstAsync** (with a cancellation token in apps) for single-response observables. Errors surface as **ApiException** (same family as Refit).
 
+### `IApiResponse<T>`
+
+Return `IApiResponse<T>` when you need status, headers, or error details without throwing. The wrapper implements `IDisposable` and **owns** the underlying `HttpResponseMessage` — dispose the `IApiResponse` (not the inner HTTP response) when you are done reading content.
+
 ### Optional `[RestApi]` marker
 
 RestAPI interfaces are normally identified by HTTP method attributes (`[Get]`, `[Post]`, …) on their methods. Apply the optional `[RestApi]` marker on the interface when you want the empty-interface analyzer ([OBS3007](diagnostics.md#shared-obs0001obs007)) to report a warning even when the interface has no methods yet, or to make the proxy intent explicit in documentation and tooling:

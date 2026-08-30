@@ -33,6 +33,10 @@ User reactive = await api.GetUserObservable(7).FirstAsync();
 
 单次响应的 Observable 请用 **FirstAsync**（应用内建议带取消令牌）。错误类型为 **ApiException**。
 
+### `IApiResponse<T>`
+
+需要查看状态码、响应头或错误且不抛异常时，返回 `IApiResponse<T>`。该包装实现 `IDisposable`，并**拥有**底层 `HttpResponseMessage` —— 读完内容后 dispose `IApiResponse` 即可，不要单独 dispose 内部 HTTP 响应。
+
 ### 可选 `[RestApi]` 标记
 
 RestAPI 接口通常通过方法上的 HTTP 特性（`[Get]`、`[Post]` 等）识别。在接口上添加可选的 `[RestApi]` 标记，可让空接口分析器（[OBS3007](diagnostics.md#共享-obs0001obs007)）在接口尚无方法时也报告警告，或在文档与工具中显式声明代理意图：
