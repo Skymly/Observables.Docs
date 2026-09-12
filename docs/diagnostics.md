@@ -88,7 +88,7 @@ Category: `Observables.Mqtt`.
 
 Category: `Observables.WebSocket`.
 
-## gRPC (OBS7001–OBS7008, OBS7007)
+## gRPC (OBS7001–OBS7009, OBS7007)
 
 | ID | Severity | When |
 |----|----------|------|
@@ -100,6 +100,7 @@ Category: `Observables.WebSocket`.
 | <span id="obs7006">**OBS7006**</span> | Error | Unsupported parameter combination or option |
 | <span id="obs7007">**OBS7007**</span> | Warning | Empty `[Grpc]` interface (analyzer) |
 | <span id="obs7008">**OBS7008**</span> | Error | Unexpected internal failure in the gRPC source generator |
+| <span id="obs7009">**OBS7009**</span> | Error | Request or response type is not `string` or `Google.Protobuf.IMessage<T>` |
 
 Category: `Observables.Grpc`.
 
