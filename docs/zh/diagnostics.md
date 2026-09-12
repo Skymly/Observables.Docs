@@ -2,11 +2,12 @@
 
 Observables 源生成器与共享分析器在编译期报告的诊断 ID（按功能域分段）。
 
-## 共享（OBS0001、OBS*007）
+## 共享（OBS0001、OBS0002、OBS*007）
 
 | ID | 级别 | 场景 |
 |----|------|------|
-| <span id="obs0001">**OBS0001**</span> | 错误 | 同一功能域同时引用 `.R3` 与 `.Reactive` 包 |
+| <span id="obs0001">**OBS0001**</span> | 错误 | 同一功能域同时引用 Observables `.R3` 与 `.Reactive` 包（不计独立 `R3` 程序集） |
+| <span id="obs0002">**OBS0002**</span> | 错误 | 带标记的代理接口是开放泛型 |
 | <span id="obs3007">**OBS3007**</span> | 警告 | 空 `[RestApi]` 接口（RestAPI） |
 | <span id="obs4007">**OBS4007**</span> | 警告 | 空 `[Hub]` 接口（SignalR） |
 | <span id="obs5007">**OBS5007**</span> | 警告 | 空 `[Mqtt]` 接口 |
