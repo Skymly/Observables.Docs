@@ -2,11 +2,12 @@
 
 Compiler diagnostics emitted by Observables source generators and shared analyzers (IDs are stable per domain).
 
-## Shared (OBS0001, OBS*007)
+## Shared (OBS0001, OBS0002, OBS*007)
 
 | ID | Severity | When |
 |----|----------|------|
-| <span id="obs0001">**OBS0001**</span> | Error | Both `.R3` and `.Reactive` Observables packages referenced for the same feature |
+| <span id="obs0001">**OBS0001**</span> | Error | Both Observables `.R3` and `.Reactive` packages referenced for the same feature (not the standalone `R3` library) |
+| <span id="obs0002">**OBS0002**</span> | Error | Marked proxy interface is an open generic type |
 | <span id="obs3007">**OBS3007**</span> | Warning | Empty `[RestApi]` interface (RestAPI) |
 | <span id="obs4007">**OBS4007**</span> | Warning | Empty `[Hub]` interface (SignalR) |
 | <span id="obs5007">**OBS5007**</span> | Warning | Empty `[Mqtt]` interface |
