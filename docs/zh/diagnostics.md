@@ -88,7 +88,7 @@ Observables 源生成器与共享分析器在编译期报告的诊断 ID（按�
 
 类别：`Observables.WebSocket`。
 
-## gRPC（OBS7001–OBS7008、OBS7007）
+## gRPC（OBS7001–OBS7009、OBS7007）
 
 | ID | 级别 | 场景 |
 |----|------|------|
@@ -100,6 +100,7 @@ Observables 源生成器与共享分析器在编译期报告的诊断 ID（按�
 | <span id="obs7006">**OBS7006**</span> | 错误 | 不支持的参数组合或选项 |
 | <span id="obs7007">**OBS7007**</span> | 警告 | 空 `[Grpc]` 接口（分析器） |
 | <span id="obs7008">**OBS7008**</span> | 错误 | gRPC 源生成器发生意外内部错误 |
+| <span id="obs7009">**OBS7009**</span> | 错误 | 请求/响应类型不是 `string` 或 `Google.Protobuf.IMessage<T>` |
 
 类别：`Observables.Grpc`。
 
