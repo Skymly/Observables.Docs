@@ -37,6 +37,14 @@ Use **FirstAsync** (with a cancellation token in apps) for single-response obser
 
 Return `IApiResponse<T>` when you need status, headers, or error details without throwing. The wrapper implements `IDisposable` and **owns** the underlying `HttpResponseMessage` — dispose the `IApiResponse` (not the inner HTTP response) when you are done reading content.
 
+### HttpClient lifetime
+
+`RestService.For<T>(httpClient)` uses the `HttpClient` you pass and does **not** dispose it.
+
+`RestService.For<T>("https://api.example.com")` creates an `HttpClient` for that base address. Generated proxies implement `IDisposable` and dispose that client only when RestAPI created it. If your interface extends `IDisposable`, call `Dispose()` on the proxy when finished.
+
+Query parameters default to `UriFormat.UriEscaped`. A trailing `CancellationToken` on a method is forwarded regardless of the parameter name.
+
 ### Optional `[RestApi]` marker
 
 RestAPI interfaces are normally identified by HTTP method attributes (`[Get]`, `[Post]`, …) on their methods. Apply the optional `[RestApi]` marker on the interface when you want the empty-interface analyzer ([OBS3007](diagnostics.md#shared-obs0001obs007)) to report a warning even when the interface has no methods yet, or to make the proxy intent explicit in documentation and tooling:

@@ -53,7 +53,7 @@ await foreach (var item in client.StreamItems("seed").ToAsyncEnumerable())
 
 `[Grpc(serviceName?)]` on the interface selects the gRPC service name (defaults to interface name without leading `I`).
 
-Message types are typically `Google.Protobuf.IMessage<T>`; simple string payloads use `GrpcMarshallers.String` in generated code.
+Message types must be `string` or `Google.Protobuf.IMessage<T>`. Simple string payloads use `GrpcMarshallers.String` in generated code. Other request/response types (POCOs, primitives, …) are reported as [OBS7009](diagnostics.md#obs7009) and that member is skipped so the rest of the proxy still compiles.
 
 ## System.Reactive
 
@@ -78,7 +78,7 @@ Point `GrpcService.For<T>(invoker)` at that invoker to exercise unary and stream
 
 ## Diagnostics
 
-See [Diagnostics](diagnostics.md#grpc-obs7001obs7007).
+See [Diagnostics](diagnostics.md#grpc-obs7001obs7009-obs7007).
 
 ## Design notes
 

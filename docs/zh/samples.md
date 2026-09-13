@@ -16,19 +16,26 @@ dotnet run --project Observables.Samples.Events.Reactive
 dotnet run --project Observables.Samples.RestAPI
 dotnet run --project Observables.Samples.RestAPI.Reactive
 dotnet run --project Observables.Samples.SignalR
+dotnet run --project Observables.Samples.SignalR.Reactive
 dotnet run --project Observables.Samples.Mqtt
+dotnet run --project Observables.Samples.Mqtt.Reactive
 dotnet run --project Observables.Samples.WebSocket
+dotnet run --project Observables.Samples.WebSocket.Reactive
 dotnet run --project Observables.Samples.Grpc
+dotnet run --project Observables.Samples.Grpc.Reactive
 dotnet run --project Observables.Samples.Sse
 dotnet run --project Observables.Samples.Sse.Reactive
 dotnet run --project Observables.Samples.Nats
 dotnet run --project Observables.Samples.Nats.Reactive
+dotnet run --project Observables.Samples.Postgres
+dotnet run --project Observables.Samples.Postgres.Reactive
+dotnet run --project Observables.Samples.Redis
 
 # Avalonia 路由事件（需图形环境；CI 不运行）
 dotnet run --project Observables.Samples.Events.Routed
 ```
 
-CI 使用 Nuke `./build.cmd Ci`（仅控制台示例）。默认 NuGet 版本 **`0.2.1`**（[Events](https://www.nuget.org/packages/Observables.Events.R3/0.2.1)、[RestAPI](https://www.nuget.org/packages/Observables.RestAPI.R3/0.2.1)、[SignalR](https://www.nuget.org/packages/Observables.SignalR.R3/0.2.1)、[Mqtt](https://www.nuget.org/packages/Observables.Mqtt.R3/0.2.1)、[WebSocket](https://www.nuget.org/packages/Observables.WebSocket.R3/0.2.1)、[Grpc](https://www.nuget.org/packages/Observables.Grpc.R3/0.2.1)、[Sse](https://www.nuget.org/packages/Observables.Sse.R3/0.2.1)、[Nats](https://www.nuget.org/packages/Observables.Nats.R3/0.2.1)、[Postgres](https://www.nuget.org/packages/Observables.Postgres.R3/0.2.1)、[Redis](https://www.nuget.org/packages/Observables.Redis.R3/0.2.1)）。
+CI 使用 Nuke `./build.cmd Ci`（仅控制台示例）。默认 NuGet 版本 **`0.2.2`**（[Events](https://www.nuget.org/packages/Observables.Events.R3/0.2.2)、[RestAPI](https://www.nuget.org/packages/Observables.RestAPI.R3/0.2.2)、[SignalR](https://www.nuget.org/packages/Observables.SignalR.R3/0.2.2)、[Mqtt](https://www.nuget.org/packages/Observables.Mqtt.R3/0.2.2)、[WebSocket](https://www.nuget.org/packages/Observables.WebSocket.R3/0.2.2)、[Grpc](https://www.nuget.org/packages/Observables.Grpc.R3/0.2.2)、[Sse](https://www.nuget.org/packages/Observables.Sse.R3/0.2.2)、[Nats](https://www.nuget.org/packages/Observables.Nats.R3/0.2.2)、[Postgres](https://www.nuget.org/packages/Observables.Postgres.R3/0.2.2)、[Redis](https://www.nuget.org/packages/Observables.Redis.R3/0.2.2)）。
 
 ## 项目
 
@@ -40,13 +47,20 @@ CI 使用 Nuke `./build.cmd Ci`（仅控制台示例）。默认 NuGet 版本 **
 | **Observables.Samples.RestAPI** | `Task` / `Observable<T>`、列表 GET、`ApiException`（MockHttp） |
 | **Observables.Samples.RestAPI.Reactive** | `IObservable<T>`、`FirstAsync().ToTask()`、404 |
 | **Observables.Samples.SignalR** | `[Hub]` 接口、`HubService.For` 工厂注册（CI 不连真实 Hub） |
+| **Observables.Samples.SignalR.Reactive** | `[Hub]` `IObservable` 代理注册（CI 不连真实 Hub） |
 | **Observables.Samples.Mqtt** | `[Mqtt]` 主题代理、`MqttService.For` 工厂注册（CI 不连真实 Broker） |
+| **Observables.Samples.Mqtt.Reactive** | `[Mqtt]` `IObservable` 代理注册（CI 不连真实 Broker） |
 | **Observables.Samples.WebSocket** | `[WebSocket]` 代理、`WebSocketService.For` 工厂注册（CI 不连真实服务端） |
+| **Observables.Samples.WebSocket.Reactive** | `[WebSocket]` `IObservable` 代理注册（CI 不连真实服务端） |
 | **Observables.Samples.Grpc** | `[Grpc]` 代理、`GrpcService.For` 工厂注册（CI 不连真实服务端） |
+| **Observables.Samples.Grpc.Reactive** | `[Grpc]` `IObservable` 代理注册（CI 不连真实服务端） |
 | **Observables.Samples.Sse** | `[Sse]` 代理、`SseService.For` 工厂注册（CI 不连真实服务端） |
 | **Observables.Samples.Sse.Reactive** | `[Sse]` `IObservable` 代理注册（CI 不连真实服务端） |
 | **Observables.Samples.Nats** | `[Nats]` subject 代理、`NatsService.For` 工厂注册（CI 不连真实服务端） |
 | **Observables.Samples.Nats.Reactive** | `[Nats]` `IObservable` 代理注册（CI 不连真实服务端） |
+| **Observables.Samples.Postgres** | `[Postgres]` LISTEN/NOTIFY 代理注册（CI 不连真实服务端） |
+| **Observables.Samples.Postgres.Reactive** | `[Postgres]` `IObservable` LISTEN/NOTIFY 代理注册（CI 不连真实服务端） |
+| **Observables.Samples.Redis** | `[Redis]` Pub/Sub 代理注册（CI 不连真实服务端） |
 
 ## 本地生成器开发
 

@@ -88,6 +88,8 @@ Observables 源生成器与共享分析器在编译期报告的诊断 ID（按�
 
 类别：`Observables.WebSocket`。
 
+<span id="grpc-obs7001obs7009-obs7007"></span>
+
 ## gRPC（OBS7001–OBS7009、OBS7007）
 
 | ID | 级别 | 场景 |

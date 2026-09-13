@@ -16,19 +16,26 @@ dotnet run --project Observables.Samples.Events.Reactive
 dotnet run --project Observables.Samples.RestAPI
 dotnet run --project Observables.Samples.RestAPI.Reactive
 dotnet run --project Observables.Samples.SignalR
+dotnet run --project Observables.Samples.SignalR.Reactive
 dotnet run --project Observables.Samples.Mqtt
+dotnet run --project Observables.Samples.Mqtt.Reactive
 dotnet run --project Observables.Samples.WebSocket
+dotnet run --project Observables.Samples.WebSocket.Reactive
 dotnet run --project Observables.Samples.Grpc
+dotnet run --project Observables.Samples.Grpc.Reactive
 dotnet run --project Observables.Samples.Sse
 dotnet run --project Observables.Samples.Sse.Reactive
 dotnet run --project Observables.Samples.Nats
 dotnet run --project Observables.Samples.Nats.Reactive
+dotnet run --project Observables.Samples.Postgres
+dotnet run --project Observables.Samples.Postgres.Reactive
+dotnet run --project Observables.Samples.Redis
 
 # Avalonia routed events (desktop only; not run in CI)
 dotnet run --project Observables.Samples.Events.Routed
 ```
 
-CI uses Nuke `./build.cmd Ci` (console samples only). Default NuGet version **`0.2.1`** ([Events](https://www.nuget.org/packages/Observables.Events.R3/0.2.1), [RestAPI](https://www.nuget.org/packages/Observables.RestAPI.R3/0.2.1), [SignalR](https://www.nuget.org/packages/Observables.SignalR.R3/0.2.1), [Mqtt](https://www.nuget.org/packages/Observables.Mqtt.R3/0.2.1), [WebSocket](https://www.nuget.org/packages/Observables.WebSocket.R3/0.2.1), [Grpc](https://www.nuget.org/packages/Observables.Grpc.R3/0.2.1), [Sse](https://www.nuget.org/packages/Observables.Sse.R3/0.2.1), [Nats](https://www.nuget.org/packages/Observables.Nats.R3/0.2.1), [Postgres](https://www.nuget.org/packages/Observables.Postgres.R3/0.2.1), [Redis](https://www.nuget.org/packages/Observables.Redis.R3/0.2.1)).
+CI uses Nuke `./build.cmd Ci` (console samples only). Default NuGet version **`0.2.2`** ([Events](https://www.nuget.org/packages/Observables.Events.R3/0.2.2), [RestAPI](https://www.nuget.org/packages/Observables.RestAPI.R3/0.2.2), [SignalR](https://www.nuget.org/packages/Observables.SignalR.R3/0.2.2), [Mqtt](https://www.nuget.org/packages/Observables.Mqtt.R3/0.2.2), [WebSocket](https://www.nuget.org/packages/Observables.WebSocket.R3/0.2.2), [Grpc](https://www.nuget.org/packages/Observables.Grpc.R3/0.2.2), [Sse](https://www.nuget.org/packages/Observables.Sse.R3/0.2.2), [Nats](https://www.nuget.org/packages/Observables.Nats.R3/0.2.2), [Postgres](https://www.nuget.org/packages/Observables.Postgres.R3/0.2.2), [Redis](https://www.nuget.org/packages/Observables.Redis.R3/0.2.2)).
 
 ## Projects
 
@@ -40,13 +47,20 @@ CI uses Nuke `./build.cmd Ci` (console samples only). Default NuGet version **`0
 | **Observables.Samples.RestAPI** | `Task` / `Observable<T>`, list GET, `ApiException` with MockHttp |
 | **Observables.Samples.RestAPI.Reactive** | `IObservable<T>` + `FirstAsync().ToTask()`, 404 handling |
 | **Observables.Samples.SignalR** | `[Hub]` interface, `HubService.For` factory registration (CI skips live hub) |
+| **Observables.Samples.SignalR.Reactive** | `[Hub]` `IObservable` proxy registration (CI skips live hub) |
 | **Observables.Samples.Mqtt** | `[Mqtt]` topic proxy, `MqttService.For` factory registration (CI skips live broker) |
+| **Observables.Samples.Mqtt.Reactive** | `[Mqtt]` `IObservable` proxy registration (CI skips live broker) |
 | **Observables.Samples.WebSocket** | `[WebSocket]` proxy, `WebSocketService.For` factory registration (CI skips live server) |
+| **Observables.Samples.WebSocket.Reactive** | `[WebSocket]` `IObservable` proxy registration (CI skips live server) |
 | **Observables.Samples.Grpc** | `[Grpc]` proxy, `GrpcService.For` factory registration (CI skips live server) |
+| **Observables.Samples.Grpc.Reactive** | `[Grpc]` `IObservable` proxy registration (CI skips live server) |
 | **Observables.Samples.Sse** | `[Sse]` proxy, `SseService.For` factory registration (CI skips live server) |
 | **Observables.Samples.Sse.Reactive** | `[Sse]` `IObservable` proxy registration (CI skips live server) |
 | **Observables.Samples.Nats** | `[Nats]` subject proxy, `NatsService.For` factory registration (CI skips live server) |
 | **Observables.Samples.Nats.Reactive** | `[Nats]` `IObservable` proxy registration (CI skips live server) |
+| **Observables.Samples.Postgres** | `[Postgres]` LISTEN/NOTIFY proxy registration (CI skips live server) |
+| **Observables.Samples.Postgres.Reactive** | `[Postgres]` `IObservable` LISTEN/NOTIFY proxy registration (CI skips live server) |
+| **Observables.Samples.Redis** | `[Redis]` Pub/Sub proxy registration (CI skips live server) |
 
 ## Local generator development
 

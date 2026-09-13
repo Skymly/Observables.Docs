@@ -40,8 +40,8 @@ features:
 
 ## Status
 
-::: info Preview on NuGet
-**`0.2.1`** — **20** meta-packages on nuget.org ([Events](https://www.nuget.org/packages/Observables.Events.R3/0.2.1), [RestAPI](https://www.nuget.org/packages/Observables.RestAPI.R3/0.2.1), [SignalR](https://www.nuget.org/packages/Observables.SignalR.R3/0.2.1), [Mqtt](https://www.nuget.org/packages/Observables.Mqtt.R3/0.2.1), [WebSocket](https://www.nuget.org/packages/Observables.WebSocket.R3/0.2.1), [Grpc](https://www.nuget.org/packages/Observables.Grpc.R3/0.2.1), [Sse](https://www.nuget.org/packages/Observables.Sse.R3/0.2.1), [Nats](https://www.nuget.org/packages/Observables.Nats.R3/0.2.1), [Postgres](https://www.nuget.org/packages/Observables.Postgres.R3/0.2.1), [Redis](https://www.nuget.org/packages/Observables.Redis.R3/0.2.1), and Reactive counterparts). Try [Observables.Samples](https://github.com/Skymly/Observables.Samples) or [Getting started](./getting-started.md).
+::: info On NuGet
+**`0.2.2`** — **20** meta-packages on nuget.org ([Events](https://www.nuget.org/packages/Observables.Events.R3/0.2.2), [RestAPI](https://www.nuget.org/packages/Observables.RestAPI.R3/0.2.2), [SignalR](https://www.nuget.org/packages/Observables.SignalR.R3/0.2.2), [Mqtt](https://www.nuget.org/packages/Observables.Mqtt.R3/0.2.2), [WebSocket](https://www.nuget.org/packages/Observables.WebSocket.R3/0.2.2), [Grpc](https://www.nuget.org/packages/Observables.Grpc.R3/0.2.2), [Sse](https://www.nuget.org/packages/Observables.Sse.R3/0.2.2), [Nats](https://www.nuget.org/packages/Observables.Nats.R3/0.2.2), [Postgres](https://www.nuget.org/packages/Observables.Postgres.R3/0.2.2), [Redis](https://www.nuget.org/packages/Observables.Redis.R3/0.2.2), and Reactive counterparts). Try [Observables.Samples](https://github.com/Skymly/Observables.Samples) or [Getting started](./getting-started.md).
 :::
 
 ## Where to read next
