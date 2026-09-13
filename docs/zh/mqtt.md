@@ -39,7 +39,7 @@ using R3;
 [Mqtt]
 public interface ISensorTopics
 {
-    [MqttSubscribe("sensors/{deviceId}/temperature")]
+    [MqttSubscribe("sensors/+/temperature")]
     Observable<double> Temperature { get; }
 
     [MqttPublish("commands/{deviceId}/restart")]
