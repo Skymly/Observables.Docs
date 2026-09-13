@@ -49,7 +49,7 @@ var reply = await client.SayHello("hello").FirstAsync();
 
 接口上的 `[Grpc(serviceName?)]` 指定 gRPC 服务名（默认去掉 leading `I` 的接口名）。
 
-消息类型通常为 `Google.Protobuf.IMessage<T>`；简单字符串载荷在生成代码中使用 `GrpcMarshallers.String`。
+消息类型必须是 `string` 或 `Google.Protobuf.IMessage<T>`。简单字符串载荷在生成代码中使用 `GrpcMarshallers.String`。其它请求/响应类型（POCO、基元等）会报告 [OBS7009](diagnostics.md#obs7009)，该成员被跳过，其余代理仍可编译。
 
 ## System.Reactive
 
@@ -74,7 +74,7 @@ var reply = await client.SayHello("hello").FirstAsync();
 
 ## 诊断
 
-见 [诊断](diagnostics.md#grpc-obs7001obs7007)。
+见 [诊断](diagnostics.md#grpc-obs7001obs7009-obs7007)。
 
 ## 设计说明
 

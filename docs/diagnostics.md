@@ -88,6 +88,8 @@ Category: `Observables.Mqtt`.
 
 Category: `Observables.WebSocket`.
 
+<span id="grpc-obs7001obs7009-obs7007"></span>
+
 ## gRPC (OBS7001–OBS7009, OBS7007)
 
 | ID | Severity | When |
