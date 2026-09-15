@@ -9,7 +9,7 @@
 | `Observables.Nats.R3` | R3 `Observable<T>`；发布为 `Observable<Unit>`；请求为冷流单值 |
 | `Observables.Nats.Reactive` | `IObservable<T>`、`IObservable<Unit>` |
 
-两包均含 **Observables.Nats** 运行时（`NatsService`、`NatsObservable` 桥接）及对应 Roslyn 分析器。
+两包均含后端中立的 **Observables.Nats** 运行时（`NatsService`）及对应 Roslyn 分析器。`NatsObservable` 这层 R3 桥接只随 `.R3` 包发布；`.Reactive` 包装的是它自己的 System.Reactive 适配器。
 
 NATS 域自 **`0.1.1`** 起发布（与其它域相同）。应用侧还需引用 [NATS.Client.Core](https://www.nuget.org/packages/NATS.Client.Core) 以及 **R3** 或 **System.Reactive**。
 

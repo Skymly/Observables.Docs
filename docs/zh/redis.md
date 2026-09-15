@@ -9,7 +9,7 @@
 | `Observables.Redis.R3` | R3 `Observable<T>`；Publish → `Observable<Unit>` |
 | `Observables.Redis.Reactive` | `IObservable<T>`、`IObservable<Unit>` |
 
-两包均含 **Observables.Redis** 运行时（`RedisService`、`RedisObservable` 桥接）及对应 Roslyn 分析器。
+两包均含后端中立的 **Observables.Redis** 运行时（`RedisService`）及对应 Roslyn 分析器。`RedisObservable` 这层 R3 桥接只随 `.R3` 包发布；`.Reactive` 包装的是它自己的 System.Reactive 适配器。
 
 Redis 域自 **`0.1.9`** 起发布（与其它域相同）。应用侧还需引用 [StackExchange.Redis](https://www.nuget.org/packages/StackExchange.Redis) 以及 **R3** 或 **System.Reactive**。
 

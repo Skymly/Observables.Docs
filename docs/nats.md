@@ -9,7 +9,7 @@ Declarative **Core NATS** subject interfaces with compile-time proxy generation.
 | `Observables.Nats.R3` | R3 `Observable<T>`; publish → `Observable<Unit>`; request → cold single-value stream |
 | `Observables.Nats.Reactive` | `IObservable<T>`, `IObservable<Unit>` |
 
-Both include the **Observables.Nats** runtime (`NatsService`, `NatsObservable` bridges) and the matching Roslyn analyzer.
+Both include the backend-neutral **Observables.Nats** runtime (`NatsService`) and the matching Roslyn analyzer. The `NatsObservable` R3 bridges ship only in the `.R3` package; the `.Reactive` package carries its System.Reactive adapter instead.
 
 The NATS domain ships from **`0.1.1`** (same model as the other domains). Also reference [NATS.Client.Core](https://www.nuget.org/packages/NATS.Client.Core) and **R3** or **System.Reactive** in your app.
 

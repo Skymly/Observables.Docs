@@ -9,7 +9,7 @@
 | `Observables.Postgres.R3` | R3 `Observable<T>`；Notify 为 `Observable<Unit>` |
 | `Observables.Postgres.Reactive` | `IObservable<T>`、`IObservable<Unit>` |
 
-两包均含 **Observables.Postgres** 运行时（`PostgresService`、`PostgresObservable` 桥接）及对应 Roslyn 分析器。
+两包均含后端中立的 **Observables.Postgres** 运行时（`PostgresService`）及对应 Roslyn 分析器。`PostgresObservable` 这层 R3 桥接只随 `.R3` 包发布；`.Reactive` 包装的是它自己的 System.Reactive 适配器。
 
 Postgres 域自 **`0.1.7`** 起发布（与其它域相同）。应用侧还需引用 [Npgsql](https://www.nuget.org/packages/Npgsql) 以及 **R3** 或 **System.Reactive**。
 

@@ -9,7 +9,7 @@ Declarative **MQTT client** topic interfaces with compile-time proxy generation.
 | `Observables.Mqtt.R3` | R3 `Observable<T>`; publish → `Observable<Unit>` |
 | `Observables.Mqtt.Reactive` | `IObservable<T>`, `IObservable<Unit>` |
 
-Both include the **Observables.Mqtt** runtime (`MqttService`, `MqttObservable` bridges) and the matching Roslyn analyzer.
+Both include the backend-neutral **Observables.Mqtt** runtime (`MqttService`) and the matching Roslyn analyzer. The `MqttObservable` R3 bridges ship only in the `.R3` package; the `.Reactive` package carries its System.Reactive adapter instead.
 
 Both packages ship on [nuget.org](https://www.nuget.org/packages/Observables.Mqtt.R3) from **`0.1.1`** (same model as Events/RestAPI/SignalR).
 
