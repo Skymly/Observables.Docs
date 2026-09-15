@@ -34,7 +34,7 @@ public interface IEchoHub
     [WebSocketSend]
     Observable<Unit> SendText(string message, CancellationToken cancellationToken = default);
 
-    [WebSocketReceive("echo")]
+    [WebSocketReceive]
     Observable<string> EchoText { get; }
 }
 
@@ -74,7 +74,23 @@ await hub.SendChat("hello").FirstAsync();
 
 方法无参数时省略 `payload`，多参数时 `payload` 为参数组成的对象。信封是 JSON，所以具名发送仅 **net8+** 可用，netstandard2.0 上抛 `NotSupportedException`；信封里的 `byte[]` 参数会编码成 base64 而不再是二进制帧。没写名字的发送仍按上面的原始分派走。
 
-`[WebSocketReceive(messageName)]` 同样接受名字，但接收循环目前不按它过滤。
+### 具名接收
+
+`[WebSocketReceive(messageName)]` 读的是同一个信封：只有 `type` 对得上的帧才会发出，`payload` 反序列化为 `T`：
+
+```csharp
+[WebSocketReceive("chat.send")]
+Observable<string> Chats { get; }
+
+// 收到文本帧：{"type":"chat.send","payload":"hello"}
+// Chats 发出： "hello"
+```
+
+发给别的名字、以及压根不是信封的帧一律跳过，而不是当成错误——同一个 socket 上每个成员都会看到每一帧，「这条不是我的」才是常态。没写名字的接收拿到的仍是原始帧。
+
+`payload` 恒按 JSON 解，和发送端对称：具名的 `string` 接收拿到的是不带引号的字符串，具名的 `byte[]` 接收会把具名发送写出的 base64 解回字节。因此具名接收同样仅 **net8+** 可用，netstandard2.0 上抛 `NotSupportedException`。
+
+具名发送不带参数时信封里没有 `payload`，此时具名接收无从构造 `T`，抛 `InvalidOperationException`。要观察这类纯信号，用不具名接收看原始帧。
 
 ## System.Reactive
 

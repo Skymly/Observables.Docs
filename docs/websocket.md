@@ -34,7 +34,7 @@ public interface IEchoHub
     [WebSocketSend]
     Observable<Unit> SendText(string message, CancellationToken cancellationToken = default);
 
-    [WebSocketReceive("echo")]
+    [WebSocketReceive]
     Observable<string> EchoText { get; }
 }
 
@@ -74,7 +74,23 @@ await hub.SendChat("hello").FirstAsync();
 
 `payload` is omitted when the method takes no arguments and becomes an object when it takes several. Because the envelope is JSON, named sends work on **net8+** only and throw `NotSupportedException` on netstandard2.0; a `byte[]` argument inside an envelope is base64-encoded rather than sent as a binary frame. Sends without a name keep the plain dispatch described above.
 
-`[WebSocketReceive(messageName)]` accepts a name too, but the receive loop does not filter on it yet.
+### Named receives
+
+`[WebSocketReceive(messageName)]` reads the same envelope. The member emits only the frames whose `type` matches, with `payload` deserialized as `T`:
+
+```csharp
+[WebSocketReceive("chat.send")]
+Observable<string> Chats { get; }
+
+// text frame in: {"type":"chat.send","payload":"hello"}
+// Chats emits:   "hello"
+```
+
+Frames addressed to another name, and frames that are not envelopes at all, are skipped rather than reported as errors — every member on a socket sees every frame, so "not mine" is the normal case. A receive without a name still gets the raw frame.
+
+`payload` always goes through the JSON serializer, mirroring the send side: a named `string` receive gets the string unquoted, and a named `byte[]` receive decodes the base64 a named send produced. Named receives are therefore **net8+** only and throw `NotSupportedException` on netstandard2.0.
+
+A named send with no arguments omits `payload`, so a named receive has nothing to build `T` from and throws `InvalidOperationException`. Use an unnamed receive to observe those as raw frames.
 
 ## System.Reactive
 
