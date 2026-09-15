@@ -9,7 +9,7 @@ Declarative **Redis Pub/Sub** channel interfaces with compile-time proxy generat
 | `Observables.Redis.R3` | R3 `Observable<T>`; Publish → `Observable<Unit>` |
 | `Observables.Redis.Reactive` | `IObservable<T>`, `IObservable<Unit>` |
 
-Both include the **Observables.Redis** runtime (`RedisService`, `RedisObservable` bridges) and the matching Roslyn analyzer.
+Both include the backend-neutral **Observables.Redis** runtime (`RedisService`) and the matching Roslyn analyzer. The `RedisObservable` R3 bridges ship only in the `.R3` package; the `.Reactive` package carries its System.Reactive adapter instead.
 
 The Redis domain ships from **`0.1.9`** (same model as the other domains). Also reference [StackExchange.Redis](https://www.nuget.org/packages/StackExchange.Redis) and **R3** or **System.Reactive** in your app.
 

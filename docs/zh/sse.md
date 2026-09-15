@@ -9,7 +9,7 @@
 | `Observables.Sse.R3` | R3 `Observable<T>` |
 | `Observables.Sse.Reactive` | `IObservable<T>` |
 
-两包均含 **Observables.Sse** 运行时（`SseService`、`SseConnection`、`SseObservable` 桥接）及对应 Roslyn 分析器。
+两包均含后端中立的 **Observables.Sse** 运行时（`SseService`、`SseConnection`）及对应 Roslyn 分析器。`SseObservable` 这层 R3 桥接只随 `.R3` 包发布；`.Reactive` 包装的是它自己的 System.Reactive 适配器。
 
 SSE 域已实现并通过校验，自 **`0.1.0-preview7`** 起发布（与其它域相同）。应用侧还需引用 **R3** 或 **System.Reactive**。运行时仅使用 BCL **`System.Net.Http.HttpClient`**，无第三方 SSE 库依赖。
 

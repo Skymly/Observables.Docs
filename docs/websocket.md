@@ -9,7 +9,7 @@ Declarative **client WebSocket** interfaces with compile-time proxy generation. 
 | `Observables.WebSocket.R3` | R3 `Observable<T>`, `Observable<Unit>` for lifecycle/send |
 | `Observables.WebSocket.Reactive` | `IObservable<T>`, `IObservable<Unit>` |
 
-Both include the **Observables.WebSocket** runtime (`WebSocketService`, `WebSocketObservable` bridges) and the matching Roslyn analyzer.
+Both include the backend-neutral **Observables.WebSocket** runtime (`WebSocketService`) and the matching Roslyn analyzer. The `WebSocketObservable` R3 bridges ship only in the `.R3` package; the `.Reactive` package carries its System.Reactive adapter instead.
 
 Both packages ship on [nuget.org](https://www.nuget.org/packages/Observables.WebSocket.R3) from **`0.1.1`** (same model as Events/RestAPI/SignalR/Mqtt).
 

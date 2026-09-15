@@ -9,7 +9,7 @@ Declarative **Server-Sent Events** (`text/event-stream`) interfaces with compile
 | `Observables.Sse.R3` | R3 `Observable<T>` |
 | `Observables.Sse.Reactive` | `IObservable<T>` |
 
-Both include the **Observables.Sse** runtime (`SseService`, `SseConnection`, `SseObservable` bridges) and the matching Roslyn analyzer.
+Both include the backend-neutral **Observables.Sse** runtime (`SseService`, `SseConnection`) and the matching Roslyn analyzer. The `SseObservable` R3 bridges ship only in the `.R3` package; the `.Reactive` package carries its System.Reactive adapter instead.
 
 The SSE domain is implemented and validated; it ships from **`0.1.0-preview7`** (same model as the other domains). Also reference **R3** or **System.Reactive** in your app. The runtime uses BCL **`System.Net.Http.HttpClient`** only — no third-party SSE library.
 

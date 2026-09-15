@@ -9,7 +9,7 @@
 | `Observables.WebSocket.R3` | R3 `Observable<T>`；生命周期/发送为 `Observable<Unit>` |
 | `Observables.WebSocket.Reactive` | `IObservable<T>`、`IObservable<Unit>` |
 
-两包均含 **Observables.WebSocket** 运行时（`WebSocketService`、`WebSocketObservable` 桥接）及对应 Roslyn 分析器。
+两包均含后端中立的 **Observables.WebSocket** 运行时（`WebSocketService`）及对应 Roslyn 分析器。`WebSocketObservable` 这层 R3 桥接只随 `.R3` 包发布；`.Reactive` 包装的是它自己的 System.Reactive 适配器。
 
 自 **`0.1.1`** 起，两包已发布至 [nuget.org](https://www.nuget.org/packages/Observables.WebSocket.R3)（与 Events/RestAPI/SignalR/Mqtt 相同）。
 

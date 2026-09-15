@@ -9,7 +9,7 @@ Declarative **PostgreSQL LISTEN/NOTIFY** channel interfaces with compile-time pr
 | `Observables.Postgres.R3` | R3 `Observable<T>`; Notify → `Observable<Unit>` |
 | `Observables.Postgres.Reactive` | `IObservable<T>`, `IObservable<Unit>` |
 
-Both include the **Observables.Postgres** runtime (`PostgresService`, `PostgresObservable` bridges) and the matching Roslyn analyzer.
+Both include the backend-neutral **Observables.Postgres** runtime (`PostgresService`) and the matching Roslyn analyzer. The `PostgresObservable` R3 bridges ship only in the `.R3` package; the `.Reactive` package carries its System.Reactive adapter instead.
 
 The Postgres domain ships from **`0.1.7`** (same model as the other domains). Also reference [Npgsql](https://www.nuget.org/packages/Npgsql) and **R3** or **System.Reactive** in your app.
 
