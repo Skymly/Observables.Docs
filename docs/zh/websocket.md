@@ -60,7 +60,21 @@ await hub.Close().FirstAsync();
 
 在将 socket 传给 `WebSocketService.For<T>` **之前**，请自行配置请求头、TLS、Keep-Alive 等 `ClientWebSocket` 选项。
 
-接口上的 `[WebSocket(endpointName?)]` 可选指定端点名称（默认去掉 leading `I` 的接口名）。省略时从接口名推断。
+### 具名发送
+
+裸 socket 没有 subject 或 topic 可寻址，所以 `[WebSocketSend(messageName)]` 里的名字只能随报文一起走。具名发送不再直接发原始负载，而是发一个 JSON 信封：
+
+```csharp
+[WebSocketSend("chat.send")]
+Observable<Unit> SendChat(string message, CancellationToken cancellationToken = default);
+
+await hub.SendChat("hello").FirstAsync();
+// 文本帧：{"type":"chat.send","payload":"hello"}
+```
+
+方法无参数时省略 `payload`，多参数时 `payload` 为参数组成的对象。信封是 JSON，所以具名发送仅 **net8+** 可用，netstandard2.0 上抛 `NotSupportedException`；信封里的 `byte[]` 参数会编码成 base64 而不再是二进制帧。没写名字的发送仍按上面的原始分派走。
+
+`[WebSocketReceive(messageName)]` 同样接受名字，但接收循环目前不按它过滤。
 
 ## System.Reactive
 

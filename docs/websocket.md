@@ -60,7 +60,21 @@ await hub.Close().FirstAsync();
 
 Configure headers, TLS, keep-alive, and other `ClientWebSocket` options **before** passing the socket to `WebSocketService.For<T>`.
 
-`[WebSocket(endpointName?)]` on the interface optionally selects the endpoint name (defaults to the interface name without the leading `I`). When omitted, the endpoint name is inferred from the interface.
+### Named sends
+
+A raw socket has no subject or topic to address, so the name in `[WebSocketSend(messageName)]` travels in the message itself. A named send frames a JSON envelope instead of the raw payload:
+
+```csharp
+[WebSocketSend("chat.send")]
+Observable<Unit> SendChat(string message, CancellationToken cancellationToken = default);
+
+await hub.SendChat("hello").FirstAsync();
+// text frame: {"type":"chat.send","payload":"hello"}
+```
+
+`payload` is omitted when the method takes no arguments and becomes an object when it takes several. Because the envelope is JSON, named sends work on **net8+** only and throw `NotSupportedException` on netstandard2.0; a `byte[]` argument inside an envelope is base64-encoded rather than sent as a binary frame. Sends without a name keep the plain dispatch described above.
+
+`[WebSocketReceive(messageName)]` accepts a name too, but the receive loop does not filter on it yet.
 
 ## System.Reactive
 
