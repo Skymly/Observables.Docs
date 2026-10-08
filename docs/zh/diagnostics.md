@@ -2,6 +2,8 @@
 
 Observables 源生成器与共享分析器在编译期报告的诊断 ID（按功能域分段）。
 
+OBS*002 报告正在运行的生成器对应的消费者包：`Observables.<Feature>.R3` 或 `Observables.<Feature>.Reactive`。
+
 ## 共享（OBS0001、OBS0002、OBS*007）
 
 | ID | 级别 | 场景 |
@@ -32,31 +34,33 @@ Observables 源生成器与共享分析器在编译期报告的诊断 ID（按�
 
 类别：`Observables.Events`。
 
-## RestAPI（OBS3001–OBS3006、OBS3007）
+## RestAPI（OBS3001–OBS3008、OBS3007）
 
 | ID | 级别 | 场景 |
 |----|------|------|
 | <span id="obs3001">**OBS3001**</span> | 警告 | 接口方法缺少 HTTP 特性或 path 非常量 |
-| <span id="obs3002">**OBS3002**</span> | 错误 | 未引用 Observables.RestAPI 运行时 |
+| <span id="obs3002">**OBS3002**</span> | 错误 | 未引用 Observables.RestAPI.R3 / Observables.RestAPI.Reactive 消费者包 |
 | <span id="obs3003">**OBS3003**</span> | 错误 | 不支持的返回类型 |
 | <span id="obs3004">**OBS3004**</span> | 错误 | 路径模板与参数不匹配 |
 | <span id="obs3005">**OBS3005**</span> | 错误 | 返回 `IObservable<T>` 但未引用 Observables.RestAPI.Reactive |
 | <span id="obs3006">**OBS3006**</span> | 错误 | RestAPI 源生成器发生意外内部错误 |
 | <span id="obs3007">**OBS3007**</span> | 警告 | 空 `[RestApi]` 接口（分析器） |
+| <span id="obs3008">**OBS3008**</span> | 错误 | 同一方法声明了多个 `[Body]` 参数 |
 
 类别：`Observables.RestAPI`。
 
-## SignalR（OBS4001–OBS4008）
+## SignalR（OBS4001–OBS4009）
 
 | ID | 级别 | 场景 |
 |----|------|------|
 | <span id="obs4001">**OBS4001**</span> | 警告 | Hub 成员缺少边界特性或 hub 方法名非常量 |
-| <span id="obs4002">**OBS4002**</span> | 错误 | 未引用 Observables.SignalR 运行时 |
+| <span id="obs4002">**OBS4002**</span> | 错误 | 未引用 Observables.SignalR.R3 / Observables.SignalR.Reactive 消费者包 |
 | <span id="obs4003">**OBS4003**</span> | 错误 | 不支持的返回类型（须为 `Observable<T>` / `IObservable<T>`；Send 须 `Unit`） |
 | <span id="obs4004">**OBS4004**</span> | 错误 | 成员形态与特性不匹配（如方法上使用 `[HubOn]`） |
 | <span id="obs4005">**OBS4005**</span> | 错误 | 使用 `IObservable<T>` 但未引用 Observables.SignalR.Reactive |
 | <span id="obs4006">**OBS4006**</span> | 错误 | 不支持的客户端→服务端流式参数 |
 | <span id="obs4008">**OBS4008**</span> | 错误 | SignalR 源生成器发生意外内部错误 |
+| <span id="obs4009">**OBS4009**</span> | 错误 | 同一成员声明了多个 SignalR 边界特性 |
 
 类别：`Observables.SignalR`。
 
@@ -65,7 +69,7 @@ Observables 源生成器与共享分析器在编译期报告的诊断 ID（按�
 | ID | 级别 | 场景 |
 |----|------|------|
 | <span id="obs5001">**OBS5001**</span> | 警告 | Mqtt 成员缺少边界特性或主题模板非常量 |
-| <span id="obs5002">**OBS5002**</span> | 错误 | 未引用 Observables.Mqtt 运行时 |
+| <span id="obs5002">**OBS5002**</span> | 错误 | 未引用 Observables.Mqtt.R3 / Observables.Mqtt.Reactive 消费者包 |
 | <span id="obs5003">**OBS5003**</span> | 错误 | 不支持的返回类型 |
 | <span id="obs5004">**OBS5004**</span> | 错误 | 成员形态与特性不匹配（如方法上使用 `[MqttSubscribe]`） |
 | <span id="obs5005">**OBS5005**</span> | 错误 | 使用 `IObservable<T>` 但未引用 Observables.Mqtt.Reactive |
@@ -79,7 +83,7 @@ Observables 源生成器与共享分析器在编译期报告的诊断 ID（按�
 | ID | 级别 | 场景 |
 |----|--------|----------|
 | <span id="obs6001">**OBS6001**</span> | 警告 | WebSocket 成员缺少边界特性 |
-| <span id="obs6002">**OBS6002**</span> | 错误 | 未引用 Observables.WebSocket 运行时 |
+| <span id="obs6002">**OBS6002**</span> | 错误 | 未引用 Observables.WebSocket.R3 / Observables.WebSocket.Reactive 消费者包 |
 | <span id="obs6003">**OBS6003**</span> | 错误 | WebSocket 成员返回类型不受支持 |
 | <span id="obs6004">**OBS6004**</span> | 错误 | 成员形态与特性不匹配（如方法上使用 `[WebSocketReceive]`） |
 | <span id="obs6005">**OBS6005**</span> | 错误 | 使用 `IObservable<T>` 但未引用 Observables.WebSocket.Reactive |
@@ -90,12 +94,12 @@ Observables 源生成器与共享分析器在编译期报告的诊断 ID（按�
 
 <span id="grpc-obs7001obs7009-obs7007"></span>
 
-## gRPC（OBS7001–OBS7009、OBS7007）
+## gRPC（OBS7001–OBS7010、OBS7007）
 
 | ID | 级别 | 场景 |
 |----|------|------|
 | <span id="obs7001">**OBS7001**</span> | 警告 | gRPC 成员缺少边界特性 |
-| <span id="obs7002">**OBS7002**</span> | 错误 | 未引用 Observables.Grpc 运行时 |
+| <span id="obs7002">**OBS7002**</span> | 错误 | 未引用 Observables.Grpc.R3 / Observables.Grpc.Reactive 消费者包 |
 | <span id="obs7003">**OBS7003**</span> | 错误 | gRPC 成员返回类型不受支持 |
 | <span id="obs7004">**OBS7004**</span> | 错误 | 成员形态与边界特性不匹配 |
 | <span id="obs7005">**OBS7005**</span> | 错误 | 使用 `IObservable<T>` 但未引用 Observables.Grpc.Reactive |
@@ -103,6 +107,7 @@ Observables 源生成器与共享分析器在编译期报告的诊断 ID（按�
 | <span id="obs7007">**OBS7007**</span> | 警告 | 空 `[Grpc]` 接口（分析器） |
 | <span id="obs7008">**OBS7008**</span> | 错误 | gRPC 源生成器发生意外内部错误 |
 | <span id="obs7009">**OBS7009**</span> | 错误 | 请求/响应类型不是 `string` 或 `Google.Protobuf.IMessage<T>` |
+| <span id="obs7010">**OBS7010**</span> | 错误 | 同一成员声明了多个 gRPC 边界特性 |
 
 类别：`Observables.Grpc`。
 
@@ -111,7 +116,7 @@ Observables 源生成器与共享分析器在编译期报告的诊断 ID（按�
 | ID | 级别 | 场景 |
 |----|------|------|
 | <span id="obs8001">**OBS8001**</span> | 警告 | SSE 成员缺少 `[SseEvent]` 边界特性 |
-| <span id="obs8002">**OBS8002**</span> | 错误 | 未引用 Observables.Sse 运行时 |
+| <span id="obs8002">**OBS8002**</span> | 错误 | 未引用 Observables.Sse.R3 / Observables.Sse.Reactive 消费者包 |
 | <span id="obs8003">**OBS8003**</span> | 错误 | SSE 成员返回类型不受支持 |
 | <span id="obs8004">**OBS8004**</span> | 错误 | 成员形态与特性不匹配（`[SseEvent]` 须用于属性） |
 | <span id="obs8005">**OBS8005**</span> | 错误 | 使用 `IObservable<T>` 但未引用 Observables.Sse.Reactive |
@@ -125,7 +130,7 @@ Observables 源生成器与共享分析器在编译期报告的诊断 ID（按�
 | ID | 级别 | 场景 |
 |----|------|------|
 | <span id="obs9001">**OBS9001**</span> | 警告 | Nats 成员缺少边界特性或 subject 模板非常量 |
-| <span id="obs9002">**OBS9002**</span> | 错误 | 未引用 Observables.Nats 运行时 |
+| <span id="obs9002">**OBS9002**</span> | 错误 | 未引用 Observables.Nats.R3 / Observables.Nats.Reactive 消费者包 |
 | <span id="obs9003">**OBS9003**</span> | 错误 | 不支持的返回类型 |
 | <span id="obs9004">**OBS9004**</span> | 错误 | 成员形态与特性不匹配（如方法上使用 `[NatsSubscribe]`） |
 | <span id="obs9005">**OBS9005**</span> | 错误 | 使用 `IObservable<T>` 但未引用 Observables.Nats.Reactive |
@@ -142,7 +147,7 @@ Observables 源生成器与共享分析器在编译期报告的诊断 ID（按�
 | ID | 级别 | 场景 |
 |----|------|------|
 | <span id="obs10001">**OBS10001**</span> | 警告 | Postgres 成员缺少 `[Listen]`/`[Notify]` 或通道名非常量 |
-| <span id="obs10002">**OBS10002**</span> | 错误 | 未引用 Observables.Postgres 运行时 |
+| <span id="obs10002">**OBS10002**</span> | 错误 | 未引用 Observables.Postgres.R3 / Observables.Postgres.Reactive 消费者包 |
 | <span id="obs10003">**OBS10003**</span> | 错误 | 不支持的返回类型 |
 | <span id="obs10004">**OBS10004**</span> | 错误 | 成员形态与特性不匹配（如方法上使用 `[Listen]`） |
 | <span id="obs10005">**OBS10005**</span> | 错误 | 使用 `IObservable<T>` 但未引用 Observables.Postgres.Reactive |
@@ -159,7 +164,7 @@ Observables 源生成器与共享分析器在编译期报告的诊断 ID（按�
 | ID | 级别 | 场景 |
 |----|------|------|
 | <span id="obs11001">**OBS11001**</span> | 警告 | Redis 成员缺少边界特性或 Channel 非常量 |
-| <span id="obs11002">**OBS11002**</span> | 错误 | 未引用 Observables.Redis 运行时 |
+| <span id="obs11002">**OBS11002**</span> | 错误 | 未引用 Observables.Redis.R3 / Observables.Redis.Reactive 消费者包 |
 | <span id="obs11003">**OBS11003**</span> | 错误 | 不支持的返回类型 |
 | <span id="obs11004">**OBS11004**</span> | 错误 | 成员形态与特性不匹配（如方法上使用 `[RedisSubscribe]`） |
 | <span id="obs11005">**OBS11005**</span> | 错误 | 使用 `IObservable<T>` 但未引用 Observables.Redis.Reactive |
