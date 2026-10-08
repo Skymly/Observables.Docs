@@ -2,6 +2,8 @@
 
 Compiler diagnostics emitted by Observables source generators and shared analyzers (IDs are stable per domain).
 
+OBS*002 reports the consumer package for the generator that is running: `Observables.<Feature>.R3` or `Observables.<Feature>.Reactive`.
+
 ## Shared (OBS0001, OBS0002, OBS*007)
 
 | ID | Severity | When |
@@ -32,31 +34,33 @@ Category: `Observables` / per-domain analyzer.
 
 Category: `Observables.Events`.
 
-## RestAPI (OBS3001–OBS3006, OBS3007)
+## RestAPI (OBS3001–OBS3008, OBS3007)
 
 | ID | Severity | When |
 |----|----------|------|
 | <span id="obs3001">**OBS3001**</span> | Warning | Interface method missing HTTP verb attribute or non-literal path |
-| <span id="obs3002">**OBS3002**</span> | Error | Observables.RestAPI runtime not referenced |
+| <span id="obs3002">**OBS3002**</span> | Error | Observables.RestAPI.R3 / Observables.RestAPI.Reactive package not referenced |
 | <span id="obs3003">**OBS3003**</span> | Error | Unsupported return type on API method |
 | <span id="obs3004">**OBS3004**</span> | Error | Path template does not match method parameters |
 | <span id="obs3005">**OBS3005**</span> | Error | `IObservable<T>` return without Observables.RestAPI.Reactive package |
 | <span id="obs3006">**OBS3006**</span> | Error | Unexpected internal failure in the RestAPI source generator |
 | <span id="obs3007">**OBS3007**</span> | Warning | Empty `[RestApi]` interface (analyzer) |
+| <span id="obs3008">**OBS3008**</span> | Error | More than one `[Body]` parameter on a method |
 
 Category: `Observables.RestAPI`.
 
-## SignalR (OBS4001–OBS4008)
+## SignalR (OBS4001–OBS4009)
 
 | ID | Severity | When |
 |----|----------|------|
 | <span id="obs4001">**OBS4001**</span> | Warning | Hub member missing boundary attribute or non-literal hub method name |
-| <span id="obs4002">**OBS4002**</span> | Error | Observables.SignalR runtime not referenced |
+| <span id="obs4002">**OBS4002**</span> | Error | Observables.SignalR.R3 / Observables.SignalR.Reactive package not referenced |
 | <span id="obs4003">**OBS4003**</span> | Error | Unsupported return type (must be `Observable<T>` / `IObservable<T>`; Send needs `Unit`) |
 | <span id="obs4004">**OBS4004**</span> | Error | Member shape mismatch (e.g. `[HubOn]` on a method) |
 | <span id="obs4005">**OBS4005**</span> | Error | `IObservable<T>` without Observables.SignalR.Reactive package |
 | <span id="obs4006">**OBS4006**</span> | Error | Unsupported client-to-server streaming parameter |
 | <span id="obs4008">**OBS4008**</span> | Error | Unexpected internal failure in the SignalR source generator |
+| <span id="obs4009">**OBS4009**</span> | Error | More than one SignalR boundary attribute on one member |
 
 Category: `Observables.SignalR`.
 
@@ -65,7 +69,7 @@ Category: `Observables.SignalR`.
 | ID | Severity | When |
 |----|----------|------|
 | <span id="obs5001">**OBS5001**</span> | Warning | Mqtt member missing boundary attribute or non-literal topic template |
-| <span id="obs5002">**OBS5002**</span> | Error | Observables.Mqtt runtime not referenced |
+| <span id="obs5002">**OBS5002**</span> | Error | Observables.Mqtt.R3 / Observables.Mqtt.Reactive package not referenced |
 | <span id="obs5003">**OBS5003**</span> | Error | Unsupported return type on Mqtt member |
 | <span id="obs5004">**OBS5004**</span> | Error | Member shape mismatch (e.g. `[MqttSubscribe]` on a method) |
 | <span id="obs5005">**OBS5005**</span> | Error | `IObservable<T>` without Observables.Mqtt.Reactive package |
@@ -79,7 +83,7 @@ Category: `Observables.Mqtt`.
 | ID | Severity | When |
 |----|----------|------|
 | <span id="obs6001">**OBS6001**</span> | Warning | WebSocket member missing boundary attribute |
-| <span id="obs6002">**OBS6002**</span> | Error | Observables.WebSocket runtime not referenced |
+| <span id="obs6002">**OBS6002**</span> | Error | Observables.WebSocket.R3 / Observables.WebSocket.Reactive package not referenced |
 | <span id="obs6003">**OBS6003**</span> | Error | Unsupported return type on WebSocket member |
 | <span id="obs6004">**OBS6004**</span> | Error | Member shape mismatch (e.g. `[WebSocketReceive]` on a method) |
 | <span id="obs6005">**OBS6005**</span> | Error | `IObservable<T>` without Observables.WebSocket.Reactive package |
@@ -90,12 +94,12 @@ Category: `Observables.WebSocket`.
 
 <span id="grpc-obs7001obs7009-obs7007"></span>
 
-## gRPC (OBS7001–OBS7009, OBS7007)
+## gRPC (OBS7001–OBS7010, OBS7007)
 
 | ID | Severity | When |
 |----|----------|------|
 | <span id="obs7001">**OBS7001**</span> | Warning | gRPC member missing boundary attribute |
-| <span id="obs7002">**OBS7002**</span> | Error | Observables.Grpc runtime not referenced |
+| <span id="obs7002">**OBS7002**</span> | Error | Observables.Grpc.R3 / Observables.Grpc.Reactive package not referenced |
 | <span id="obs7003">**OBS7003**</span> | Error | Unsupported return type on gRPC member |
 | <span id="obs7004">**OBS7004**</span> | Error | Member shape mismatch (e.g. wrong parameters for unary) |
 | <span id="obs7005">**OBS7005**</span> | Error | `IObservable<T>` without Observables.Grpc.Reactive package |
@@ -103,6 +107,7 @@ Category: `Observables.WebSocket`.
 | <span id="obs7007">**OBS7007**</span> | Warning | Empty `[Grpc]` interface (analyzer) |
 | <span id="obs7008">**OBS7008**</span> | Error | Unexpected internal failure in the gRPC source generator |
 | <span id="obs7009">**OBS7009**</span> | Error | Request or response type is not `string` or `Google.Protobuf.IMessage<T>` |
+| <span id="obs7010">**OBS7010**</span> | Error | More than one gRPC boundary attribute on one member |
 
 Category: `Observables.Grpc`.
 
@@ -111,7 +116,7 @@ Category: `Observables.Grpc`.
 | ID | Severity | When |
 |----|----------|------|
 | <span id="obs8001">**OBS8001**</span> | Warning | SSE member missing `[SseEvent]` boundary attribute |
-| <span id="obs8002">**OBS8002**</span> | Error | Observables.Sse runtime not referenced |
+| <span id="obs8002">**OBS8002**</span> | Error | Observables.Sse.R3 / Observables.Sse.Reactive package not referenced |
 | <span id="obs8003">**OBS8003**</span> | Error | Unsupported return type on SSE member |
 | <span id="obs8004">**OBS8004**</span> | Error | Member shape mismatch (`[SseEvent]` must be applied to a property) |
 | <span id="obs8005">**OBS8005**</span> | Error | `IObservable<T>` without Observables.Sse.Reactive package |
@@ -125,7 +130,7 @@ Category: `Observables.Sse`.
 | ID | Severity | When |
 |----|----------|------|
 | <span id="obs9001">**OBS9001**</span> | Warning | Nats member missing boundary attribute or non-literal subject template |
-| <span id="obs9002">**OBS9002**</span> | Error | Observables.Nats runtime not referenced |
+| <span id="obs9002">**OBS9002**</span> | Error | Observables.Nats.R3 / Observables.Nats.Reactive package not referenced |
 | <span id="obs9003">**OBS9003**</span> | Error | Unsupported return type on Nats member |
 | <span id="obs9004">**OBS9004**</span> | Error | Member shape mismatch (e.g. `[NatsSubscribe]` on a method) |
 | <span id="obs9005">**OBS9005**</span> | Error | `IObservable<T>` without Observables.Nats.Reactive package |
@@ -142,7 +147,7 @@ Category: `Observables.Nats`.
 | ID | Severity | When |
 |----|----------|------|
 | <span id="obs10001">**OBS10001**</span> | Warning | Postgres member missing `[Listen]`/`[Notify]` or non-literal channel name |
-| <span id="obs10002">**OBS10002**</span> | Error | Observables.Postgres runtime not referenced |
+| <span id="obs10002">**OBS10002**</span> | Error | Observables.Postgres.R3 / Observables.Postgres.Reactive package not referenced |
 | <span id="obs10003">**OBS10003**</span> | Error | Unsupported return type on Postgres member |
 | <span id="obs10004">**OBS10004**</span> | Error | Member shape mismatch (e.g. `[Listen]` on a method) |
 | <span id="obs10005">**OBS10005**</span> | Error | `IObservable<T>` without Observables.Postgres.Reactive package |
@@ -159,7 +164,7 @@ Category: `Observables.Postgres`.
 | ID | Severity | When |
 |----|----------|------|
 | <span id="obs11001">**OBS11001**</span> | Warning | Redis member missing boundary attribute or non-literal Channel |
-| <span id="obs11002">**OBS11002**</span> | Error | Observables.Redis runtime not referenced |
+| <span id="obs11002">**OBS11002**</span> | Error | Observables.Redis.R3 / Observables.Redis.Reactive package not referenced |
 | <span id="obs11003">**OBS11003**</span> | Error | Unsupported return type on Redis member |
 | <span id="obs11004">**OBS11004**</span> | Error | Member shape mismatch (e.g. `[RedisSubscribe]` on a method) |
 | <span id="obs11005">**OBS11005**</span> | Error | `IObservable<T>` without Observables.Redis.Reactive package |
