@@ -35,7 +35,7 @@ dotnet run --project Observables.Samples.Redis
 dotnet run --project Observables.Samples.Events.Routed
 ```
 
-CI uses Nuke `./build.cmd Ci` (console samples only). Default NuGet version **`0.3.1`** ([Events](https://www.nuget.org/packages/Observables.Events.R3/0.3.1), [RestAPI](https://www.nuget.org/packages/Observables.RestAPI.R3/0.3.1), [SignalR](https://www.nuget.org/packages/Observables.SignalR.R3/0.3.1), [Mqtt](https://www.nuget.org/packages/Observables.Mqtt.R3/0.3.1), [WebSocket](https://www.nuget.org/packages/Observables.WebSocket.R3/0.3.1), [Grpc](https://www.nuget.org/packages/Observables.Grpc.R3/0.3.1), [Sse](https://www.nuget.org/packages/Observables.Sse.R3/0.3.1), [Nats](https://www.nuget.org/packages/Observables.Nats.R3/0.3.1), [Postgres](https://www.nuget.org/packages/Observables.Postgres.R3/0.3.1), [Redis](https://www.nuget.org/packages/Observables.Redis.R3/0.3.1)).
+CI uses Nuke `./build.cmd Ci` (console samples only). Default NuGet version **`0.4.0`** ([Events](https://www.nuget.org/packages/Observables.Events.R3/0.4.0), [RestAPI](https://www.nuget.org/packages/Observables.RestAPI.R3/0.4.0), [SignalR](https://www.nuget.org/packages/Observables.SignalR.R3/0.4.0), [Mqtt](https://www.nuget.org/packages/Observables.Mqtt.R3/0.4.0), [WebSocket](https://www.nuget.org/packages/Observables.WebSocket.R3/0.4.0), [Grpc](https://www.nuget.org/packages/Observables.Grpc.R3/0.4.0), [Sse](https://www.nuget.org/packages/Observables.Sse.R3/0.4.0), [Nats](https://www.nuget.org/packages/Observables.Nats.R3/0.4.0), [Postgres](https://www.nuget.org/packages/Observables.Postgres.R3/0.4.0), [Redis](https://www.nuget.org/packages/Observables.Redis.R3/0.4.0)).
 
 ## Projects
 
