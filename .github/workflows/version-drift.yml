@@ -56,12 +56,13 @@ jobs:
         run: |
           $ErrorActionPreference = 'Stop'
 
-          # The current version may only appear as the %%OBS_VERSION%% token;
-          # literals live solely in .vitepress/observables-version.ts.
-          # Historical "ships from X.Y.Z" prose is intentional and untouched.
+          # The current Observables version may only appear as the
+          # %%OBS_VERSION%% token; literals live solely in
+          # .vitepress/observables-version.ts. Third-party package versions
+          # and historical "ships from X.Y.Z" prose are intentional.
           $bad = @()
-          $bad += git grep -nE 'Version="[0-9]+\.[0-9]+\.[0-9]+' -- docs/
-          $bad += git grep -nE 'nuget\.org/packages/Observables\.[A-Za-z]+\.(R3|Reactive)/[0-9]' -- docs/
+          $bad += git grep -nE 'Observables\.[A-Za-z.]+" Version="[0-9]' -- docs/
+          $bad += git grep -nE 'nuget\.org/packages/Observables\.[A-Za-z.]+/[0-9]' -- docs/
           if ($bad.Count -gt 0) {
               $bad | ForEach-Object { Write-Host "::error::$_" }
               throw 'Hardcoded version literal(s) found; use the %%OBS_VERSION%% token instead.'
