@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 import { readSiteMeta } from './site-meta.node'
+import { observablesVersion } from './observables-version'
 
 const siteBuildMeta = readSiteMeta()
 
@@ -54,6 +55,14 @@ export default defineConfig({
   description: 'Roslyn source generators bridging events, HTTP, and messaging to R3 and System.Reactive',
   base: '/Observables.Docs/',
   cleanUrls: true,
+  markdown: {
+    config: (md) => {
+      md.core.ruler.before('normalize', 'observables-version', (state) => {
+        state.src = state.src.replaceAll('%%OBS_VERSION%%', observablesVersion)
+        return true
+      })
+    },
+  },
   lastUpdated: {
     formatOptions: {
       dateStyle: 'medium',
