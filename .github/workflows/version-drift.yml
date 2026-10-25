@@ -51,31 +51,20 @@ jobs:
           }
           Write-Host "Referenced version $referenced == latest stable on nuget.org."
 
-      - name: Scan for stale stable-version literals
+      - name: Assert markdown uses the %%OBS_VERSION%% token
         shell: pwsh
         run: |
           $ErrorActionPreference = 'Stop'
-          $ProgressPreference = 'SilentlyContinue'
-          $indexUrl = 'https://api.nuget.org/v3-flatcontainer/observables.events.r3/index.json'
-          $versions = @((Invoke-RestMethod $indexUrl).versions)
 
-          $source = Get-Content -Raw '.vitepress/observables-version.ts'
-          $referenced = [regex]::Match($source, "observablesVersion\s*=\s*'([^']+)'").Groups[1].Value
-
-          # Any released *stable* version other than the referenced one is a
-          # leftover literal. Boundaries exclude previews (0.1.0-preview7),
-          # v-prefixed tags (v0.3.0) and longer numbers (10.1.0).
-          $staleStable = @($versions | Where-Object { $_ -ne $referenced -and $_ -notmatch '-' })
-          if ($staleStable.Count -eq 0) {
-              Write-Host 'No stale stable versions to scan for.'
-              exit 0
+          # The current version may only appear as the %%OBS_VERSION%% token;
+          # literals live solely in .vitepress/observables-version.ts.
+          # Historical "ships from X.Y.Z" prose is intentional and untouched.
+          $bad = @()
+          $bad += git grep -nE 'Version="[0-9]+\.[0-9]+\.[0-9]+' -- docs/
+          $bad += git grep -nE 'nuget\.org/packages/Observables\.[A-Za-z]+\.(R3|Reactive)/[0-9]' -- docs/
+          if ($bad.Count -gt 0) {
+              $bad | ForEach-Object { Write-Host "::error::$_" }
+              throw 'Hardcoded version literal(s) found; use the %%OBS_VERSION%% token instead.'
           }
-          $alt = ($staleStable | ForEach-Object { [regex]::Escape($_) }) -join '|'
-          $pattern = "(^|[^0-9A-Za-z.])($alt)([^0-9A-Za-z.-]|$)"
-          $hits = @(git grep -nE $pattern --)
-          if ($LASTEXITCODE -eq 0) {
-              $hits | ForEach-Object { Write-Host "::error::$_" }
-              throw "Found $($hits.Count) stale version literal(s). Run: pwsh scripts/sync-observables-version.ps1 -Version $referenced"
-          }
-          if ($LASTEXITCODE -gt 1) { throw "git grep failed (exit $LASTEXITCODE)." }
-          Write-Host 'No stale version literals found.'
+          Write-Host 'All version references use the %%OBS_VERSION%% token.'
+          exit 0
