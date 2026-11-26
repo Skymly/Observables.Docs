@@ -1,10 +1,8 @@
-# Observables.Docs — AI agent notes
+# Observables.Docs
 
-## Scope
+VitePress documentation site only for [Skymly/Observables](https://github.com/Skymly/Observables). Source generator and API changes belong in the main repository.
 
-Documentation site only (VitePress). Generator and API changes belong in [Observables](https://github.com/Skymly/Observables).
-
-## Commands
+## Build & Verify
 
 ```bash
 npm install
@@ -12,17 +10,14 @@ npm run docs:dev
 npm run docs:build
 ```
 
-## Version sync
+## Version Sync
 
-- `.vitepress/observables-version.ts` is the single source for the shown package version; pages use the `%%OBS_VERSION%%` token.
-- `pwsh scripts/sync-observables-version.ps1 -Version <x.y.z>` rewrites it. The Observables release pipeline calls it to open a bump PR after a stable release.
-- `.github/workflows/version-drift.yml` asserts the referenced version equals the latest stable on nuget.org and scans for stale version literals.
+- `.vitepress/observables-version.ts` is the single source for the displayed package version; markdown pages reference `%%OBS_VERSION%%`.
+- `pwsh scripts/sync-observables-version.ps1 -Version <x.y.z>` rewrites it (called automatically by the Observables stable release pipeline).
+- `.github/workflows/version-drift.yml` asserts alignment with nuget.org's latest stable version and rejects hardcoded version literals.
 
-## Language
+## Docs & Language
 
-- User-facing docs: English under `docs/`, 简体中文 under `docs/zh/` (keep pairs in sync when editing guides).
+- Keep user-facing guides paired in sync between English (`docs/`) and Simplified Chinese (`docs/zh/`).
 - Commit messages and GitHub Issue/PR text: **English**.
-
-## Git
-
-- Do not commit or push unless the user asks.
+- Do not commit or push unless explicitly requested.
